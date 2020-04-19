@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private  static int SPLASH_SCREEN = 4000;
+    private  static int SPLASH_SCREEN = 5000;
 
     ImageView splashImage;
     Animation topAnim;
