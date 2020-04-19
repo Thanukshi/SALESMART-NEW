@@ -10,25 +10,26 @@
 
     <TextView
         android:id="@+id/tv1_StartUP"
-        android:layout_width="312dp"
-        android:layout_height="113dp"
+        android:layout_width="334dp"
+        android:layout_height="136dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="325dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="25dp"
-        android:fontFamily="@font/bitter_italic"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/bangers"
         android:gravity="center"
         android:text="@string/welcome"
-        android:textColor="#ffff00"
+        android:textColor="#E8E800"
         android:textColorHighlight="@color/design_default_color_on_secondary"
-        android:textSize="60sp"
-        android:textStyle="bold|italic"
+        android:textSize="80sp"
         app:layout_constraintBottom_toTopOf="@+id/imageLoad"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageLoad"
