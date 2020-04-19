@@ -7,12 +7,14 @@
     tools:context=".MainActivity"
     android:background="@drawable/login">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/TV1Start"
-        />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="212dp"
+        android:layout_height="98dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="328dp" />
 
 
     <ImageView
@@ -31,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo1" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
