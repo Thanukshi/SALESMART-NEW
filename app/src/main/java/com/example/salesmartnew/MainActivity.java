@@ -9,11 +9,13 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private  static int SPLASH_SCREEN = 5000;
 
+    TextView welcome;
     ImageView splashImage;
     Animation topAnim, bottomAnim;
 
@@ -25,11 +27,13 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-
+        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
+        welcome = findViewById(R.id.tv1_StartUP);
         splashImage = findViewById(R.id.imageLoad);
 
+        welcome.setAnimation(topAnim);
         splashImage.setAnimation(bottomAnim);
 
         new Handler().postDelayed(new Runnable() {
