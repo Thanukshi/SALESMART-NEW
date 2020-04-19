@@ -25,5 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
+
+        splashImage = findViewById(R.id.imageLoad);
+
+        splashImage.setAnimation(topAnim);
     }
 }
