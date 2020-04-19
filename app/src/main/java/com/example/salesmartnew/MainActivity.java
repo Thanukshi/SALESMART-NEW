@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private  static int SPLASH_SCREEN = 5000;
 
     ImageView splashImage;
-    Animation topAnim;
+    Animation topAnim, bottomAnim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        topAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
         splashImage = findViewById(R.id.imageLoad);
 
-        splashImage.setAnimation(topAnim);
+        splashImage.setAnimation(bottomAnim);
 
         new Handler().postDelayed(new Runnable() {
             @Override

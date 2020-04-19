@@ -7,6 +7,14 @@
     tools:context=".MainActivity"
     android:background="@drawable/login">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/TV1Start"
+        />
+
+
+
     <ImageView
         android:id="@+id/imageLoad"
         android:layout_width="224dp"
