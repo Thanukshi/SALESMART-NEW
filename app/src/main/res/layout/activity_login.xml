@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/logoLogin"
-
+            android:visibility="gone"
             android:layout_marginTop="35dp"
             tools:ignore="DuplicateIds">
 
@@ -130,7 +130,7 @@
             android:id="@+id/rl2Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:visibility="gone"
             android:layout_below="@id/rl1Login"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true">
@@ -151,7 +151,7 @@
 
         <RelativeLayout
             android:id="@+id/rl3Login"
-
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="236dp"
             android:layout_below="@id/rl2Login">
@@ -166,11 +166,14 @@
                 android:id="@+id/Text4Login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginBottom="60dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/signUpText"
                 android:textColor="@color/colorAllBlack"
@@ -178,17 +181,26 @@
 
             <TextView
                 android:id="@+id/Text5Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="70dp"
+                android:layout_width="61dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/line"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="49dp"
+                android:layout_toEndOf="@+id/Text4Login"
+                android:layout_toRightOf="@+id/Text4Login"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="@string/start_"
+                android:text="@string/signUpLogin"
                 android:textColor="@color/colorAllBlack"
-                android:textStyle="bold" />
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:ignore="UnknownId" />
 
 
         </RelativeLayout>
