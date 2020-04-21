@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -20,8 +21,8 @@ public class WelcomeScreen extends AppCompatActivity {
     private ViewPager screenPage;
     WelcomeViewPageAdaptor welcomeViewPageAdaptor;
     TabLayout tabIndicator;
-    Button btnNxt;
-    int position;
+    ImageButton btnNxt;
+    int position = 0;
     Button btnGetStarted;
 
     @Override
@@ -38,7 +39,7 @@ public class WelcomeScreen extends AppCompatActivity {
         //getSupportActionBar().hide();
 
         //initialize the view
-        btnNxt = findViewById(R.id.imageButton);
+        btnNxt = findViewById(R.id.imageButton_Welcome);
         tabIndicator = findViewById(R.id.tabLayout1_WelcomeScreen);
         btnGetStarted = findViewById(R.id.getStarted_Welcome);
 
@@ -55,7 +56,26 @@ public class WelcomeScreen extends AppCompatActivity {
         //setup tab layout with view pager
         tabIndicator.setupWithViewPager(screenPage);
 
+        btnNxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                position = screenPage.getCurrentItem();
+                if (position < myList.size()){
+                    position++;
+                    screenPage.setCurrentItem(position);
+                }
 
+                if (position == myList.size()){
+                    loadLastScreen();
+                }
+            }
+
+            private void loadLastScreen() {
+                btnNxt.setVisibility(View.INVISIBLE);
+                btnGetStarted.setVisibility(View.INVISIBLE);
+                tabIndicator.setVisibility(View.INVISIBLE);
+            }
+        });
 
 
     }
