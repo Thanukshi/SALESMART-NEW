@@ -122,20 +122,48 @@
     </LinearLayout>
 
     <Button
-        android:layout_below="@id/linear1Login"
         android:id="@+id/btn1Login"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="50dp"
-        android:text="Login Here"
-        android:textAllCaps="false"
-        android:background="@drawable/btn_bg"
-        android:textColor="@color/colorAllBlack"
-        android:fontFamily="sans-serif-medium"
-        android:paddingRight="70dp"
-        android:paddingLeft="70dp"
+        android:layout_below="@id/linear1Login"
         android:layout_centerHorizontal="true"
-        android:textSize="16sp" />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:text="@string/btnLogin"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAllBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1Login"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@id/Text3Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="229dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/signUpText"
+        android:textColor="@color/colorAllBlack"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1Login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
