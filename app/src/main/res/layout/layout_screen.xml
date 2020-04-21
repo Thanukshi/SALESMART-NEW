@@ -19,6 +19,7 @@
         android:layout_height="65dp"
         android:text="TextView"
         android:textSize="32dp"
+        android:textColor="@color/welcome_title_color"
         app:layout_constraintBottom_toTopOf="@+id/guideline1_WelcomeScreen"
         app:layout_constraintTop_toTopOf="@+id/guideline1_WelcomeScreen"
         tools:layout_editor_absoluteX="118dp" />
