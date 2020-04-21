@@ -153,7 +153,7 @@
 
     <RelativeLayout
         android:id="@+id/rl3Login"
-        android:visibility="gone"
+
         android:layout_width="match_parent"
         android:layout_height="236dp"
         android:layout_below="@id/rl2Login">
@@ -164,15 +164,32 @@
             android:background="@color/colorAllBlack" />
 
         <TextView
-            android:id="@+id/Text5Login"
+            android:id="@+id/Text4Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="130dp"
-            android:text=""
-            android:textStyle="bold"
-            android:textColor="@color/colorAllBlack"
             android:fontFamily="sans-serif-condensed-medium"
-            android:layout_centerHorizontal="true"/>
+            android:text="@string/signUpLogin"
+            android:textColor="@color/colorAllBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text4Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginRight="39dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/signUpLogin"
+            android:textColor="@color/colorAllBlack"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
