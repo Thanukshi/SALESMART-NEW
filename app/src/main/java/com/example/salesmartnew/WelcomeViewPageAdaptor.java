@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
@@ -27,6 +29,9 @@ public class WelcomeViewPageAdaptor extends PagerAdapter {
 
         LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View welcomeScreen = inflater.inflate(R.layout.layout_screen, null);
+
+        ImageView imageSlide = welcomeScreen.findViewById(R.id.image1_WelcomeScreen);
+        TextView title = welcomeScreen.findViewById(R.id.title_WelcomeScreen);
     }
 
     @Override
