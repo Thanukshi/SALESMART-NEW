@@ -28,11 +28,15 @@ public class WelcomeViewPageAdaptor extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
         LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View welcomeScreen = inflater.inflate(R.layout.layout_screen, null);
+        View layoutScreen = inflater.inflate(R.layout.layout_screen, null);
 
-        ImageView imageSlide = welcomeScreen.findViewById(R.id.image1_WelcomeScreen);
-        TextView title = welcomeScreen.findViewById(R.id.title_WelcomeScreen);
-        TextView Description = welcomeScreen.findViewById(R.id.description_WelcomeScreen);
+        ImageView imageSlide = layoutScreen.findViewById(R.id.image1_WelcomeScreen);
+        TextView title = layoutScreen.findViewById(R.id.title_WelcomeScreen);
+        TextView description = layoutScreen.findViewById(R.id.description_WelcomeScreen);
+
+        title.setText(myListScreen.get(position).getTitle());
+        description.setText(myListScreen.get(position).getDescription);
+        imageSlide.setImageResource(myListScreen.get(position).getWelcomeImage);
     }
 
     @Override
