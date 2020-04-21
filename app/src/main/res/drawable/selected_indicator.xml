@@ -6,7 +6,7 @@
         <shape android:shape="ring"
             android:innerRadius="3dp"
             android:thickness="2dp"
-            android:useLevel="false">
+            android:useLevel="true">
 
             <solid android:color="@color/welcome_start_color"/>
         </shape>
