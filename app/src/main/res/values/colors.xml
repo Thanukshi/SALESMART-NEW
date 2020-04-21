@@ -7,7 +7,7 @@
     <color name="colorAll">#ffffff</color>
 
     <!-- colors for buttons -->
-    <color name="colorAccent">#03DAC5</color>
+    <color name="welcome_start_color">#4c84ff</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorAccent">#03DAC5</color>
 
