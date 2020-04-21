@@ -38,7 +38,7 @@ public class WelcomeScreen extends AppCompatActivity {
         //getSupportActionBar().hide();
 
         //initialize the view
-        btnNxt = findViewById(R.id.image1_WelcomeScreen);
+        btnNxt = findViewById(R.id.imageButton);
         tabIndicator = findViewById(R.id.tabLayout1_WelcomeScreen);
         btnGetStarted = findViewById(R.id.getStarted_Welcome);
 
