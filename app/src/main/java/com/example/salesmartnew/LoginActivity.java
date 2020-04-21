@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         public void run() {
             relLay1.setVisibility( View.VISIBLE );
             relLay2.setVisibility( View.VISIBLE );
-            //relLay3.setVisibility( View.VISIBLE );
+            relLay3.setVisibility( View.VISIBLE );
         }
     };
 
@@ -40,18 +40,18 @@ public class LoginActivity extends AppCompatActivity {
 
         relLay1 = (RelativeLayout)findViewById( R.id.rl1Login );
         relLay2 = (RelativeLayout)findViewById( R.id.rl2Login );
-        //relLay3 = (RelativeLayout)findViewById( R.id.rl3Login );
+        relLay3 = (RelativeLayout)findViewById( R.id.rl3Login );
 
         handler.postDelayed( runnable, 1000 );
 
-        //textV5 = findViewById( R.id.Text5Login );
-       // textV5.setOnClickListener( new View.OnClickListener() {
-          //  @Override
-            //public void onClick(View view) {
-               // Intent sign = new Intent( LoginActivity.this,DashBoard.class );
-                //startActivity( sign );
-           // }
-       // } );
+        textV5 = findViewById( R.id.Text5Login );
+        textV5.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sign = new Intent( LoginActivity.this,DashBoard.class );
+                startActivity( sign );
+           }
+        } );
 
         String text = "Sign UP";
 
@@ -65,12 +65,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void updateDrawState(@NonNull TextPaint ds) {
                 super.updateDrawState( ds );
-                ds.setColor( Color.BLUE );
+                ds.setColor( Color.);
             }
         };
-        //sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
-        //textV5.setText( sp );
-        //textV5.setMovementMethod( LinkMovementMethod.getInstance() );
+        sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+        textV5.setText( sp );
+        textV5.setMovementMethod( LinkMovementMethod.getInstance() );
 
         btnLogin = findViewById( R.id.btn1Login );
 
