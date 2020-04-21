@@ -124,6 +124,9 @@
 
         </RelativeLayout>
 
+
+
+    </RelativeLayout>
         <RelativeLayout
             android:id="@+id/rl2Login"
             android:layout_width="wrap_content"
@@ -131,7 +134,8 @@
             android:visibility="gone"
             android:layout_below="@id/rl1Login"
             android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            tools:ignore="NotSibling">
 
             <TextView
                 android:id="@id/Text3Login"
@@ -146,6 +150,29 @@
                 android:paddingRight="20dp"/>
 
         </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl3Login"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="236dp"
+        android:layout_below="@id/rl2Login">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="120dp"
+            android:background="@color/colorAllBlack" />
+
+        <TextView
+            android:id="@+id/Text5Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/colorAllBlack"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 
