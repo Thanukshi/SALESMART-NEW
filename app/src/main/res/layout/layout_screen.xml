@@ -25,6 +25,7 @@
         android:textColor="@color/welcome_title_color"
         android:textSize="32dp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline1_WelcomeScreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
