@@ -8,7 +8,7 @@
 
     <!-- colors for buttons -->
     <color name="welcome_start_color">#4c84ff</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="welcome_end_color">#18a3fe</color>
     <color name="colorAccent">#03DAC5</color>
 
 
