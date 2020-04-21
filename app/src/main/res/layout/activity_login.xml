@@ -4,4 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_design"/>
+    android:background="@drawable/login_design">
+
+    <ImageView
+        android:id="@+id/logoLogin"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/Text1Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textColor="@color/colorAllBlack"
+        android:fontFamily="sans-serif-medium"
+        android:text="Login"/>
+
+    <LinearLayout
+        android:id="@+id/linear1Login"
+        android:layout_below="@id/Text1Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear2Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Text2Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="User Name"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/colorAllBlack"/>
+
+            <EditText
+                android:id="@+id/ET1Login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_bg"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorAllBlack"/>
+
+            <TextView
+                android:id="@+id/Text3Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Password"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/colorAllBlack"/>
+
+            <EditText
+                android:id="@+id/ET2Login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_bg"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorAllBlack"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
