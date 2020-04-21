@@ -63,6 +63,7 @@
 
     <Button
         android:id="@+id/getStarted_Welcome"
+        android:visibility="invisible"
         android:layout_width="153dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
