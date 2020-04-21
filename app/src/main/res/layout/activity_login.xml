@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="110dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_centerInParent="true">
@@ -27,6 +27,7 @@
             android:id="@+id/rl1Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:visibility="gone"
             android:layout_below="@+id/logoLogin"
             tools:ignore="DuplicateIds">
@@ -43,6 +44,7 @@
 
             <LinearLayout
                 android:id="@+id/linear1Login"
+                android:layout_marginTop="10dp"
                 android:layout_below="@id/Text1Login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -58,11 +60,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:text="User Name"
                         android:textAllCaps="true"
-                        android:textSize="15sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textColor="@color/colorAllBlack"/>
+                        android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/ET1Login"
@@ -73,19 +75,19 @@
                         android:fontFamily="sans-serif-light"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/colorAllBlack"/>
+                        android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/Text3Login"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:text="Password"
                         android:textAllCaps="true"
-                        android:textSize="15sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textColor="@color/colorAllBlack"/>
+                        android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/ET2Login"
@@ -96,8 +98,8 @@
                         android:fontFamily="sans-serif-light"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/colorAllBlack"/>
+                        android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
