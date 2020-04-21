@@ -19,24 +19,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="42dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginLeft="352dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
+        app:srcCompat="@drawable/forward_arrow_black"
+        tools:ignore="VectorDrawableCompat" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout1_WelcomeScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginRight="130dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
         android:layout_marginBottom="35dp"
+        android:background="@drawable/selector_indicator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen">
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/selector_indicator"
             android:text="Monday" />
 
         <com.google.android.material.tabs.TabItem
@@ -49,21 +70,5 @@
             android:layout_height="wrap_content"
             android:text="Wednesday" />
     </com.google.android.material.tabs.TabLayout>
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="42dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginLeft="59dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tabLayout1_WelcomeScreen"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
-        app:srcCompat="@drawable/forward_arrow_black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
