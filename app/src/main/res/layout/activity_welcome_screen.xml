@@ -62,7 +62,7 @@
     </com.google.android.material.tabs.TabLayout>
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/getStarted_Welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -70,7 +70,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="65dp"
-        android:text="Button"
+        android:text="@string/start_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
