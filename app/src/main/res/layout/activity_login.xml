@@ -147,68 +147,24 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/rl3Login"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="236dp"
-            android:layout_below="@id/rl2Login">
-
-            <View
-                android:layout_width="120dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="50dp"
-                android:background="@color/colorAllBlack" />
-
-            <TextView
-                android:id="@+id/Text4Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="Or"
-                android:textColor="@color/colorAllBlack"
-                android:textSize="15sp" />
-
-            <View
-                android:layout_width="120dp"
-                android:layout_height="1dp"
-                android:layout_centerHorizontal="false"
-                android:layout_marginLeft="210dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/colorAllBlack" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_marginTop="120dp"
-                android:background="@color/colorAllBlack" />
-
-            <TextView
-                android:id="@+id/Text5Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="130dp"
-                android:text="Sign UP"
-                android:textStyle="bold"
-                android:textColor="@color/colorAllBlack"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:layout_centerHorizontal="true"
-                />
-
-
-        </RelativeLayout>
-
-
     </RelativeLayout>
 
-
-
-
-
 </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
