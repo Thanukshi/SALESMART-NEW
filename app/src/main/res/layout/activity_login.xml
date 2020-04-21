@@ -163,16 +163,32 @@
                 android:background="@color/colorAllBlack" />
 
             <TextView
+                android:id="@+id/Text4Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="70dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/signUpText"
+                android:textColor="@color/colorAllBlack"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/Text5Login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="200dp"
                 android:layout_marginTop="70dp"
-                android:text="d"
-                android:textStyle="bold"
-                android:textColor="@color/colorAllBlack"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:layout_centerHorizontal="true"
-                />
+                android:text="@string/start_"
+                android:textColor="@color/colorAllBlack"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>
