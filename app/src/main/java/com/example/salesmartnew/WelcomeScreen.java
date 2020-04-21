@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -17,6 +18,7 @@ public class WelcomeScreen extends AppCompatActivity {
     private ViewPager screenPage;
     WelcomeViewPageAdaptor welcomeViewPageAdaptor;
     TabLayout tabIndicator;
+    ImageView btnNxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
