@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -19,6 +20,7 @@ public class WelcomeScreen extends AppCompatActivity {
     WelcomeViewPageAdaptor welcomeViewPageAdaptor;
     TabLayout tabIndicator;
     ImageView btnNxt;
+    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +36,11 @@ public class WelcomeScreen extends AppCompatActivity {
         //getSupportActionBar().hide();
 
         //initialize the view
+        btnNxt = findViewById(R.id.image1_WelcomeScreen);
         tabIndicator = findViewById(R.id.tabLayout1_WelcomeScreen);
 
         //fill list screen
-        List<ScreenItems> myList = new ArrayList<>();
+        final List<ScreenItems> myList = new ArrayList<>();
         myList.add(new ScreenItems("Kitchen Tools", "You can buy new types of kitchen equipments for your kitchen.",R.drawable.onboard_kitchen));
         myList.add(new ScreenItems("Fast Delivery", "You can buy new types of kitchen equipments for your kitchen.",R.drawable.onboard_kitchen5));
         myList.add(new ScreenItems("Easy Payments", "You can buy new types of kitchen equipments for your kitchen.",R.drawable.onboard_kitchen4));
@@ -48,5 +51,26 @@ public class WelcomeScreen extends AppCompatActivity {
 
         //setup tab layout with view pager
         tabIndicator.setupWithViewPager(screenPage);
+
+
+
+        //btnNext on click listner
+        btnNxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                position = screenPage.getCurrentItem();
+                    if(position < myList.size()){
+                        position++;
+                        screenPage.setCurrentItem(position);
+                    }
+
+                    if (position == myList.size()){
+                        loadLastScreen();
+                    }
+            }
+        });
+    }
+
+    private void loadLastScreen() {
     }
 }
