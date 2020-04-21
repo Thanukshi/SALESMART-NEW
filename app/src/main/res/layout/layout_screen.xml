@@ -51,7 +51,7 @@
     <ImageView
         android:id="@+id/image1_WelcomeScreen"
         android:layout_width="298dp"
-        android:layout_height="259dp"
+        android:layout_height="220dp"
         android:layout_marginStart="55dp"
         android:layout_marginLeft="55dp"
         android:layout_marginTop="115dp"
