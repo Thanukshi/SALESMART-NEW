@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="User Name"
+                android:text="@string/userName"
                 android:textAllCaps="true"
                 android:textColor="@color/colorAllBlack"
                 android:textSize="15sp" />
