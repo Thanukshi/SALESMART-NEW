@@ -12,6 +12,7 @@
 
     <!-- colors for tab and text -->
     <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="tab_indicator_gray">#c0c0c0</color>
 
 
 </resources>
