@@ -121,5 +121,21 @@
 
     </LinearLayout>
 
+    <Button
+        android:layout_below="@id/linear1Login"
+        android:id="@+id/btn1Login"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Login Here"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/colorAllBlack"
+        android:fontFamily="sans-serif-medium"
+        android:paddingRight="70dp"
+        android:paddingLeft="70dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
