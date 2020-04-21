@@ -14,7 +14,7 @@
         app:layout_constraintGuide_percent="0.57" />
 
     <TextView
-        android:id="@+id/textView1_WelcomeScreen"
+        android:id="@+id/title_WelcomeScreen"
         android:layout_width="209dp"
         android:layout_height="65dp"
         android:layout_marginStart="16dp"
@@ -30,4 +30,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline1_WelcomeScreen"
         app:layout_constraintVertical_bias="0.138" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="210dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_WelcomeScreen" />
 </androidx.constraintlayout.widget.ConstraintLayout>
