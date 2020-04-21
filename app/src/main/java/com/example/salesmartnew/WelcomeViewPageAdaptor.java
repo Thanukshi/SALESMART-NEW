@@ -1,6 +1,7 @@
 package com.example.salesmartnew;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -23,7 +24,9 @@ public class WelcomeViewPageAdaptor extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        return super.instantiateItem(container, position);
+
+        LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View welcomeScreen = inflater.inflate(R.layout.layout_screen, null);
     }
 
     @Override
