@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.57" />
 
     <TextView
         android:id="@+id/title_WelcomeScreen"
@@ -51,16 +51,8 @@
         android:id="@+id/image1_WelcomeScreen"
         android:layout_width="298dp"
         android:layout_height="220dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toTopOf="@+id/title_WelcomeScreen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/onboard_kitchen" />
+        app:srcCompat="@drawable/onboard_kitchen"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="70dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
