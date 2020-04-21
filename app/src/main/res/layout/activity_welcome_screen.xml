@@ -20,23 +20,6 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-    <ImageView
-        android:id="@+id/imageView1_WelcomeScreen"
-        android:layout_width="42dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="355dp"
-        android:layout_marginLeft="355dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/getStarted_Welcome"
-        app:srcCompat="@drawable/forward_arrow_black"
-        tools:ignore="VectorDrawableCompat" />
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout1_WelcomeScreen"
         android:layout_width="wrap_content"
@@ -78,5 +61,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="347dp"
+        android:layout_marginLeft="347dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/welcome_start_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/forward_arrow_black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
