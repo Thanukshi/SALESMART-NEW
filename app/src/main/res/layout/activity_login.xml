@@ -5,10 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashBoard"
-    android:background="@drawable/login_design">
+    android:background="@drawable/login_design"
+    android:animateLayoutChanges="true">
 
 
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const1_Login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
         android:id="@+id/logoLogin1"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -166,4 +173,45 @@
         app:layout_constraintTop_toBottomOf="@+id/btn1Login" />
 
 
+    <TextView
+        android:id="@+id/Text4Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginRight="233dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/signUpText"
+        android:textColor="@color/colorAllBlack"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text3Login" />
+
+    <TextView
+        android:id="@+id/Text5Login"
+        android:layout_width="63dp"
+        android:layout_height="22dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginRight="168dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/signUpLogin"
+        android:textColor="@color/colorAllBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Text4Login"
+        app:layout_constraintTop_toBottomOf="@+id/Text3Login" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

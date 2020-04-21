@@ -2,6 +2,7 @@ package com.example.salesmartnew;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -22,14 +23,15 @@ public class LoginActivity extends AppCompatActivity {
     TextView textV5;
     Button btnLogin;
 
-    RelativeLayout relLay1, relLay2, relLay3;
+    //RelativeLayout relLay1, relLay2, relLay3;
+    ConstraintLayout clay1;
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            relLay1.setVisibility( View.VISIBLE );
-            relLay2.setVisibility( View.VISIBLE );
-            relLay3.setVisibility( View.VISIBLE );
+            clay1.setVisibility( View.VISIBLE );
+            //relLay2.setVisibility( View.VISIBLE );
+            //relLay3.setVisibility( View.VISIBLE );
         }
     };
 
@@ -38,9 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        relLay1 = (RelativeLayout)findViewById( R.id.rl1Login );
-        relLay2 = (RelativeLayout)findViewById( R.id.rl2Login );
-        relLay3 = (RelativeLayout)findViewById( R.id.rl3Login );
+        clay1 = (ConstraintLayout) findViewById( R.id.const1_Login );
+        //relLay2 = (RelativeLayout)findViewById( R.id.rl2Login );
+        //relLay3 = (RelativeLayout)findViewById( R.id.rl3Login );
 
         handler.postDelayed( runnable, 1000 );
 
@@ -56,18 +58,18 @@ public class LoginActivity extends AppCompatActivity {
        // String text = "Sign UP";
 
        // SpannableString sp = new SpannableString( text );
-        ClickableSpan clickableSpan1  = new ClickableSpan() {
-            @Override
-            public void onClick(@NonNull View view) {
+        //ClickableSpan clickableSpan1  = new ClickableSpan() {
+         //   @Override
+           // public void onClick(@NonNull View view) {
 
-            }
+           // }
 
-            @Override
-            public void updateDrawState(@NonNull TextPaint ds) {
-                super.updateDrawState( ds );
-                ds.setColor( Color.YELLOW);
-            }
-        };
+           // @Override
+           // public void updateDrawState(@NonNull TextPaint ds) {
+              // super.updateDrawState( ds );
+               // ds.setColor( Color.YELLOW);
+          // }
+       // };
         //sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
         //textV5.setText( sp );
         textV5.setMovementMethod( LinkMovementMethod.getInstance() );
