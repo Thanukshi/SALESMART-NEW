@@ -26,5 +26,6 @@ public class WelcomeScreen extends AppCompatActivity {
 
         screenPage = findViewById(R.id.viewPager_WelcomeScreen);
         welcomeViewPageAdaptor = new WelcomeViewPageAdaptor(this,myList);
+        screenPage.setAdapter(welcomeViewPageAdaptor);
     }
 }
