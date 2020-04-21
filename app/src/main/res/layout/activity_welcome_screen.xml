@@ -75,7 +75,7 @@
         android:fontFamily="@font/amarante"
         android:textSize="18dp"
         android:text="@string/start_btn"
-        android:textColor="#fff"
+        android:textColor="#0A0A0A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
