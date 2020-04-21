@@ -12,8 +12,8 @@
 
     <!-- colors for tab and text -->
     <color name="tab_indicator_gray">#c0c0c0</color>
-    <color name="tab_indicator_gray">#c0c0c0</color>
-    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="welcome_title_color">#000000</color>
+    <color name="welcome_description_color">#656565</color>
 
 
 </resources>
