@@ -37,6 +37,9 @@ public class WelcomeViewPageAdaptor extends PagerAdapter {
         title.setText(myListScreen.get(position).getTittle());
         description.setText(myListScreen.get(position).getDescription());
         imageSlide.setImageResource(myListScreen.get(position).getWelcomeImage());
+
+        container.addView(layoutScreen);
+        return layoutScreen;
     }
 
     @Override
