@@ -21,7 +21,7 @@ public class WelcomeScreen extends AppCompatActivity {
         //fill list screen
         List<ScreenItems> myList = new ArrayList<>();
         myList.add(new ScreenItems("Kitchen Equipments", "You can buy new types of kitchen equipments for your kitchen.",R.drawable.onboard_kitchen));
-        myList.add(new ScreenItems("Fast Delivery", "You can buy new types of kitchen equipments for your kitchen.",R.drawable.onboard_kitchen3));
+        myList.add(new ScreenItems("Fast Delivery", "You can buy new types of kitchen equipments for your kitchen.",R.drawable.onboard_kitchen6));
         myList.add(new ScreenItems("Easy Payments", "You can buy new types of kitchen equipments for your kitchen.",R.drawable.onboard_kitchen4));
 
         screenPage = findViewById(R.id.viewPager_WelcomeScreen);
