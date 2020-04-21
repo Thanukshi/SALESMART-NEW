@@ -20,7 +20,7 @@ public class WelcomeScreen extends AppCompatActivity {
     private ViewPager screenPage;
     WelcomeViewPageAdaptor welcomeViewPageAdaptor;
     TabLayout tabIndicator;
-    ImageView btnNxt;
+    Button btnNxt;
     int position;
     Button btnGetStarted;
 
