@@ -11,4 +11,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="btnNext_Welcome">NextButton</string>
     <string name="start_btn">Get Started</string>
+    <string name="tittle_login">Login</string>
 </resources>
