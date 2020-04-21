@@ -52,9 +52,9 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView1_WelcomeScreen"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager">
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
