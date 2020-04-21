@@ -32,6 +32,7 @@ public class WelcomeViewPageAdaptor extends PagerAdapter {
 
         ImageView imageSlide = welcomeScreen.findViewById(R.id.image1_WelcomeScreen);
         TextView title = welcomeScreen.findViewById(R.id.title_WelcomeScreen);
+        TextView Description = welcomeScreen.findViewById(R.id.description_WelcomeScreen);
     }
 
     @Override
