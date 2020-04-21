@@ -3,12 +3,12 @@ package com.example.salesmartnew;
 public class ScreenItems {
 
     String Tittle, Description;
-    int welcomeImage;
+    int WelcomeImage;
 
     public ScreenItems(String tittle, String description, int welcomeImage) {
         Tittle = tittle;
         Description = description;
-        this.welcomeImage = welcomeImage;
+        WelcomeImage = welcomeImage;
     }
 
     //generate setters
@@ -20,11 +20,10 @@ public class ScreenItems {
         Description = description;
     }
 
-
-    //generate getters
     public void setWelcomeImage(int welcomeImage) {
-        this.welcomeImage = welcomeImage;
+        WelcomeImage = welcomeImage;
     }
+
 
     public String getTittle() {
         return Tittle;
@@ -35,6 +34,7 @@ public class ScreenItems {
     }
 
     public int getWelcomeImage() {
-        return welcomeImage;
+        return WelcomeImage;
     }
 }
+
