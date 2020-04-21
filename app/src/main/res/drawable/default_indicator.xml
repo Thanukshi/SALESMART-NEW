@@ -6,7 +6,7 @@
         <shape android:shape="ring"
             android:innerRadius="0dp"
             android:thickness="4dp"
-            android:useLevel="true">
+            android:useLevel="false">
 
             <solid android:color="@color/tab_indicator_gray"/>
         </shape>
