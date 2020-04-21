@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -21,6 +22,7 @@ public class WelcomeScreen extends AppCompatActivity {
     TabLayout tabIndicator;
     ImageView btnNxt;
     int position;
+    Button btnGetStarted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class WelcomeScreen extends AppCompatActivity {
         //initialize the view
         btnNxt = findViewById(R.id.image1_WelcomeScreen);
         tabIndicator = findViewById(R.id.tabLayout1_WelcomeScreen);
+        btnGetStarted = findViewById(R.id.getStarted_Welcome);
 
         //fill list screen
         final List<ScreenItems> myList = new ArrayList<>();
@@ -54,23 +57,7 @@ public class WelcomeScreen extends AppCompatActivity {
 
 
 
-        //btnNext on click listner
-        btnNxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                position = screenPage.getCurrentItem();
-                    if(position < myList.size()){
-                        position++;
-                        screenPage.setCurrentItem(position);
-                    }
-
-                    if (position == myList.size()){
-                        loadLastScreen();
-                    }
-            }
-        });
+       
     }
 
-    private void loadLastScreen() {
-    }
 }

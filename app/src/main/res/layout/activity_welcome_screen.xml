@@ -10,16 +10,13 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager_WelcomeScreen"
-        android:layout_width="412dp"
-        android:layout_height="380dp"
+        android:layout_width="408dp"
+        android:layout_height="330dp"
         android:layout_marginTop="236dp"
-        android:layout_marginBottom="115dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
     </androidx.viewpager.widget.ViewPager>
 
@@ -29,41 +26,39 @@
         android:layout_height="46dp"
         android:layout_marginStart="355dp"
         android:layout_marginLeft="355dp"
-        android:layout_marginTop="35dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
+        app:layout_constraintTop_toBottomOf="@+id/getStarted_Welcome"
         app:srcCompat="@drawable/forward_arrow_black"
         tools:ignore="VectorDrawableCompat" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout1_WelcomeScreen"
-        android:background="@drawable/selector_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="128dp"
         android:layout_marginRight="128dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/selector_indicator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen">
+        app:layout_constraintTop_toBottomOf="@+id/getStarted_Welcome">
 
 
     </com.google.android.material.tabs.TabLayout>
 
     <Button
         android:id="@+id/getStarted_Welcome"
-        android:visibility="invisible"
         android:layout_width="153dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
@@ -74,12 +69,14 @@
         android:layout_marginBottom="65dp"
         android:background="@drawable/btn_gradient_welcome"
         android:fontFamily="@font/amarante"
-        android:textSize="18dp"
         android:text="@string/start_btn"
         android:textColor="#0A0A0A"
+        android:textSize="18dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
