@@ -34,6 +34,7 @@
 
     <ImageView
         android:id="@+id/image1_WelcomeScreen"
+        android:background="@drawable/selector_indicator"
         android:layout_width="298dp"
         android:layout_height="220dp"
         android:layout_marginStart="55dp"
