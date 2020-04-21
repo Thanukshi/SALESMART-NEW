@@ -9,7 +9,9 @@
     <!-- colors for buttons -->
     <color name="welcome_start_color">#4c84ff</color>
     <color name="welcome_end_color">#18a3fe</color>
-    <color name="colorAccent">#03DAC5</color>
+
+    <!-- colors for tab and text -->
+    <color name="tab_indicator_gray">#c0c0c0</color>
 
 
 </resources>
