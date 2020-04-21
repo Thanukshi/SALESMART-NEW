@@ -19,9 +19,9 @@
             android:id="@+id/logoLogin"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/logo1"
+            android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"/>
+            android:src="@drawable/logo1" />
 
         <RelativeLayout
             android:id="@+id/rl1Login"
