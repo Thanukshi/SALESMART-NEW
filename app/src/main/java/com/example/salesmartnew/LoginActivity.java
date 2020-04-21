@@ -1,11 +1,17 @@
 package com.example.salesmartnew;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -71,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iLogin = new Intent( Login.this, MyAccount.class );
+                Intent iLogin = new Intent( LoginActivity.this, DashBoard.class );
                 startActivity( iLogin );
             }
         } );
