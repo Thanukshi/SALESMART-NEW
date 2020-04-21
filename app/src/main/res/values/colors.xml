@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="colorAll">#ffffff</color>
+    <color name="colorAllWhite">#ffffff</color>
 
     <!-- colors for buttons -->
     <color name="welcome_start_color">#4c84ff</color>
@@ -15,5 +15,7 @@
     <color name="welcome_title_color">#000000</color>
     <color name="welcome_description_color">#656565</color>
 
+    <!-- colors for tab and text -->
+    <color name="colorAllBlack">#000000</color>
 
 </resources>
