@@ -11,12 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.69" />
+        app:layout_constraintGuide_percent="0.53" />
 
     <TextView
         android:id="@+id/title_WelcomeScreen"
-        android:layout_width="209dp"
-        android:layout_height="65dp"
+        android:layout_width="257dp"
+        android:layout_height="140dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginEnd="100dp"
@@ -29,21 +29,18 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline1_WelcomeScreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline1_WelcomeScreen"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline1_WelcomeScreen" />
 
     <TextView
         android:id="@+id/description_WelcomeScreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
-        android:layout_marginBottom="147dp"
+        android:layout_width="253dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginRight="78dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_WelcomeScreen" />
@@ -54,10 +51,10 @@
         android:layout_height="220dp"
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toTopOf="@+id/title_WelcomeScreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
