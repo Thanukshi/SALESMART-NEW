@@ -72,8 +72,8 @@ public class WelcomeScreen extends AppCompatActivity {
 
             private void loadLastScreen() {
                 btnNxt.setVisibility(View.INVISIBLE);
-                btnGetStarted.setVisibility(View.INVISIBLE);
-                tabIndicator.setVisibility(View.INVISIBLE);
+                btnGetStarted.setVisibility(View.VISIBLE);
+                tabIndicator.setVisibility(View.VISIBLE);
             }
         });
 
