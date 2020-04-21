@@ -22,22 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView1_WelcomeScreen"
-        android:layout_width="70dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tabLayout1_WelcomeScreen"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/forward_arrow_black"
-        tools:ignore="VectorDrawableCompat" />
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout1_WelcomeScreen"
         android:layout_width="wrap_content"
@@ -45,9 +29,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView1_WelcomeScreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen">
 
@@ -66,5 +49,22 @@
             android:layout_height="wrap_content"
             android:text="Wednesday" />
     </com.google.android.material.tabs.TabLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="63dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tabLayout1_WelcomeScreen"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
+        app:srcCompat="@drawable/forward_arrow_black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
