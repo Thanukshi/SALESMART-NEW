@@ -53,9 +53,9 @@ public class LoginActivity extends AppCompatActivity {
            }
         } );
 
-        String text = "Sign UP";
+       // String text = "Sign UP";
 
-        SpannableString sp = new SpannableString( text );
+       // SpannableString sp = new SpannableString( text );
         ClickableSpan clickableSpan1  = new ClickableSpan() {
             @Override
             public void onClick(@NonNull View view) {
@@ -68,8 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                 ds.setColor( Color.YELLOW);
             }
         };
-        sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
-        textV5.setText( sp );
+        //sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+        //textV5.setText( sp );
         textV5.setMovementMethod( LinkMovementMethod.getInstance() );
 
         btnLogin = findViewById( R.id.btn1Login );
