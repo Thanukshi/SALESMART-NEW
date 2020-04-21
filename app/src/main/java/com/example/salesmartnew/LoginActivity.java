@@ -2,7 +2,13 @@ package com.example.salesmartnew;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.SpannableString;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
@@ -36,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         textV5.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sign = new Intent( Login.this,Register.class );
+                Intent sign = new Intent( LoginActivity.this,DashBoard.class );
                 startActivity( sign );
             }
         } );
