@@ -13,7 +13,7 @@
     <string name="start_btn">Get Started</string>
     <string name="tittle_login">Login</string>
     <string name="signUpLogin">Register</string>
-    <string name="register">Register</string>
     <string name="signUpText">You Don\'t Have An Account?</string>
     <string name="rememberPass">Don\'t Remember Password?</string>
+    <string name="userName">User Name</string>
 </resources>
