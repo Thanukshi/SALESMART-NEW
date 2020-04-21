@@ -5,6 +5,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class WelcomeScreen extends AppCompatActivity {
 
     private ViewPager screenPage;
@@ -15,7 +18,11 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
 
+        //fill list screen
+        List<ScreenItems> myList = new ArrayList<>();
+        m
+
         screenPage = findViewById(R.id.viewPager_WelcomeScreen);
-        welcomeViewPageAdaptor = new 
+        welcomeViewPageAdaptor = new WelcomeViewPageAdaptor(this,myList);
     }
 }
