@@ -14,9 +14,14 @@ public class WelcomeViewPageAdaptor extends PagerAdapter {
     List<WelcomeScreen> myListScreen;
 
 
+    public WelcomeViewPageAdaptor(Context myContext, List<WelcomeScreen> myListScreen) {
+        this.myContext = myContext;
+        this.myListScreen = myListScreen;
+    }
+
     @Override
     public int getCount() {
-        return 0;
+        return myListScreen.size();
     }
 
     @Override
