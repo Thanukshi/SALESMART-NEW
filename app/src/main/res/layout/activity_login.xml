@@ -8,12 +8,13 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="110dp"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="40dp">
 
         <ImageView
             android:id="@+id/logoLogin"
@@ -27,27 +28,28 @@
             android:id="@+id/rl1Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:visibility="gone"
             android:layout_below="@+id/logoLogin"
+
+            android:layout_marginTop="35dp"
             tools:ignore="DuplicateIds">
 
             <TextView
                 android:id="@+id/Text1Login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textSize="30sp"
-                android:textColor="@color/colorAllBlack"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="13dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Login"/>
+                android:text="Login"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="30sp" />
 
             <LinearLayout
                 android:id="@+id/linear1Login"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/Text1Login"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Text1Login"
+                android:layout_marginTop="10dp">
 
                 <LinearLayout
                     android:id="@+id/linear2Login"
@@ -107,35 +109,31 @@
 
 
             <Button
-                android:layout_below="@id/linear1Login"
                 android:id="@+id/btn1Login"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_below="@id/linear1Login"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
                 android:text="Login Here"
                 android:textAllCaps="false"
-                android:background="@drawable/btn_bg"
                 android:textColor="@color/colorAllBlack"
-                android:fontFamily="sans-serif-medium"
-                android:paddingRight="70dp"
-                android:paddingLeft="70dp"
-                android:layout_centerHorizontal="true"
                 android:textSize="16sp" />
 
         </RelativeLayout>
 
-
-
-    </RelativeLayout>
         <RelativeLayout
             android:id="@+id/rl2Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
+
             android:layout_below="@id/rl1Login"
             android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            tools:ignore="NotSibling">
+            android:layout_centerHorizontal="true">
 
             <TextView
                 android:id="@id/Text3Login"
@@ -151,49 +149,33 @@
 
         </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rl3Login"
+        <RelativeLayout
+            android:id="@+id/rl3Login"
 
-        android:layout_width="match_parent"
-        android:layout_height="236dp"
-        android:layout_below="@id/rl2Login">
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_marginTop="120dp"
-            android:background="@color/colorAllBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_below="@id/rl2Login">
 
-        <TextView
-            android:id="@+id/Text4Login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="45dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="130dp"
-            android:layout_marginEnd="204dp"
-            android:layout_marginRight="204dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/signUpLogin"
-            android:textColor="@color/colorAllBlack"
-            android:textStyle="bold" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorAllBlack" />
 
-        <TextView
-            android:id="@+id/text4Login"
-            android:layout_width="wrap_content"
-            android:layout_height="31dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="130dp"
-            android:layout_marginEnd="140dp"
-            android:layout_marginRight="140dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/register"
-            android:textColor="@color/colorAllBlack"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/Text5Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="d"
+                android:textStyle="bold"
+                android:textColor="@color/colorAllBlack"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

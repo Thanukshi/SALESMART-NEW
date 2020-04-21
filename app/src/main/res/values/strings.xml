@@ -14,4 +14,5 @@
     <string name="tittle_login">Login</string>
     <string name="signUpLogin">You Don\'t Have An Account?</string>
     <string name="register">Register</string>
+    <string name="signUpText">You Don\'t Have An Account?</string>
 </resources>
