@@ -51,20 +51,19 @@
     </com.google.android.material.tabs.TabLayout>
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="48dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="36dp"
+        android:id="@+id/imageView5"
+        android:layout_width="42dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tabLayout1_WelcomeScreen"
         app:layout_constraintTop_toBottomOf="@+id/viewPager_WelcomeScreen"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/forward_arrow_black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
