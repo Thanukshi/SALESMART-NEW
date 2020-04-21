@@ -1,91 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_design"
+    android:animateLayoutChanges="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_design">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/logoLogin"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/logo1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/Text1Login"
+    <RelativeLayout
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="30sp"
-        android:textColor="@color/colorAllBlack"
-        android:fontFamily="sans-serif-medium"
-        android:text="Login"/>
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
 
-    <LinearLayout
-        android:id="@+id/linear1Login"
-        android:layout_below="@id/Text1Login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/logoLogin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
 
-        <LinearLayout
-            android:id="@+id/linear2Login"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/rl1Login"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:visibility="gone"
+            android:layout_below="@+id/logoLogin"
+            tools:ignore="DuplicateIds">
 
             <TextView
-                android:id="@+id/Text2Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="User Name"
-                android:textAllCaps="true"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/colorAllBlack"/>
-
-            <EditText
-                android:id="@+id/ET1Login"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/text_bg"
-                android:fontFamily="sans-serif-light"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textSize="15sp"
-                android:textColor="@color/colorAllBlack"/>
-
-            <TextView
-                android:id="@+id/Text3Login"
+                android:id="@+id/Text1Login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Password"
-                android:textAllCaps="true"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/colorAllBlack"/>
+                android:textSize="30sp"
+                android:textColor="@color/colorAllBlack"
+                android:fontFamily="sans-serif-medium"
+                android:text="Login"/>
 
-            <EditText
-                android:id="@+id/ET2Login"
+            <LinearLayout
+                android:id="@+id/linear1Login"
+                android:layout_below="@id/Text1Login"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linear2Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Text2Login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="User Name"
+                        android:textAllCaps="true"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textColor="@color/colorAllBlack"/>
+
+                    <EditText
+                        android:id="@+id/ET1Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAllBlack"/>
+
+                    <TextView
+                        android:id="@+id/Text3Login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Password"
+                        android:textAllCaps="true"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textColor="@color/colorAllBlack"/>
+
+                    <EditText
+                        android:id="@+id/ET2Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAllBlack"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_below="@id/linear1Login"
+                android:id="@+id/btn1Login"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/text_bg"
-                android:fontFamily="sans-serif-light"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
+                android:layout_marginTop="50dp"
+                android:text="Login Here"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/colorAllBlack"
+                android:fontFamily="sans-serif-medium"
+                android:paddingRight="70dp"
+                android:paddingLeft="70dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/rl1Login"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@id/Text3Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't Remember Password?"
+                android:textColor="@color/colorAllBlack"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
                 android:textSize="15sp"
-                android:textColor="@color/colorAllBlack"/>
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-    </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl3Login"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_below="@id/rl2Login">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorAllBlack" />
+
+            <TextView
+                android:id="@+id/Text4Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Or"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="false"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAllBlack" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="120dp"
+                android:background="@color/colorAllBlack" />
+
+            <TextView
+                android:id="@+id/Text5Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:text="Sign UP"
+                android:textStyle="bold"
+                android:textColor="@color/colorAllBlack"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
