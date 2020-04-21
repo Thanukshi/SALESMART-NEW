@@ -202,12 +202,11 @@
                 android:textStyle="bold"
                 tools:ignore="UnknownId" />
 
-
         </RelativeLayout>
-
     </RelativeLayout>
 
 </RelativeLayout>
+
 
 
 
