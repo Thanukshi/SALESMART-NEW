@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void updateDrawState(@NonNull TextPaint ds) {
                 super.updateDrawState( ds );
-                ds.setColor( Color.);
+                ds.setColor( Color.YELLOW);
             }
         };
         sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
