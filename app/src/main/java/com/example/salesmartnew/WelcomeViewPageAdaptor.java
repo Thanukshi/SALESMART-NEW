@@ -15,10 +15,10 @@ import java.util.List;
 public class WelcomeViewPageAdaptor extends PagerAdapter {
 
     Context myContext;
-    List<WelcomeScreen> myListScreen;
+    List<ScreenItems> myListScreen;
 
 
-    public WelcomeViewPageAdaptor(Context myContext, List<WelcomeScreen> myListScreen) {
+    public WelcomeViewPageAdaptor(Context myContext, List<ScreenItems> myListScreen) {
         this.myContext = myContext;
         this.myListScreen = myListScreen;
     }
@@ -34,9 +34,9 @@ public class WelcomeViewPageAdaptor extends PagerAdapter {
         TextView title = layoutScreen.findViewById(R.id.title_WelcomeScreen);
         TextView description = layoutScreen.findViewById(R.id.description_WelcomeScreen);
 
-        title.setText(myListScreen.get(position).getTitle());
-        description.setText(myListScreen.get(position).getDescription);
-        imageSlide.setImageResource(myListScreen.get(position).getWelcomeImage);
+        title.setText(myListScreen.get(position).getTittle());
+        description.setText(myListScreen.get(position).getDescription());
+        imageSlide.setImageResource(myListScreen.get(position).getWelcomeImage());
     }
 
     @Override
