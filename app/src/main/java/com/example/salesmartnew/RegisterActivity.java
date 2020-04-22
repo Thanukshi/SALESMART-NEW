@@ -1,6 +1,7 @@
 package com.example.salesmartnew;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -67,7 +68,8 @@ public class RegisterActivity extends AppCompatActivity {
         rAddPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //get the runtime permission from the phone 
+                //get the runtime permission from the phone
+                ActivityCompat.requestPermissions();
             }
         });
     }
