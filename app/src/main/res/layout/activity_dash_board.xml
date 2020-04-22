@@ -10,7 +10,7 @@
         android:id="@+id/LL1_Dash"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="52dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
