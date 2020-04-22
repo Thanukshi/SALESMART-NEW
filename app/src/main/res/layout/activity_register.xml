@@ -16,7 +16,7 @@
         android:layout_centerInParent="true">
 
         <ImageView
-            android:id="@+id/imageLogo_Register"
+            android:id="@+id/imageLogo1_Register"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="30sp"
@@ -25,7 +25,7 @@
             android:adjustViewBounds="true"/>
 
         <RelativeLayout
-            android:id="@+id/rl1Login_Register"
+            android:id="@+id/RL1_Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageLogo_Register"
