@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,209 +9,43 @@
     android:animateLayoutChanges="true">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/const1_Login"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-
-        <ImageView
-        android:id="@+id/logoLogin1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:layout_marginBottom="635dp"
-        android:adjustViewBounds="true"
+    <ImageView
+        android:id="@+id/imageLogo_Login"
+        android:layout_width="123dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginRight="270dp"
         android:contentDescription="@string/tittle_login"
-        android:scaleType="fitCenter"
-        android:src="@drawable/logo1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:srcCompat="@drawable/logo1" />
 
     <TextView
-        android:id="@+id/Text1Login"
+        android:id="@+id/text1_Login"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="305dp"
-        android:layout_marginRight="305dp"
-        android:layout_marginBottom="559dp"
+        android:layout_height="72dp"
+        android:layout_below="@+id/imageLogo_Login"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="238dp"
+        android:layout_marginRight="238dp"
+        android:layout_marginBottom="499dp"
         android:fontFamily="sans-serif-medium"
+        android:gravity="center"
         android:text="@string/tittle_login"
         android:textColor="@color/colorAllBlack"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoLogin1" />
-
-    <LinearLayout
-        android:id="@+id/linear1Login"
-        android:layout_width="363dp"
-        android:layout_height="182dp"
-        android:layout_below="@id/Text1Login"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="305dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text1Login">
-
-        <LinearLayout
-            android:id="@+id/linear2Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/Text2Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="@string/userName"
-                android:textAllCaps="true"
-                android:textColor="@color/colorAllBlack"
-                android:textSize="15sp" />
-
-            <EditText
-                android:id="@+id/ET1Login"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/text_bg"
-                android:fontFamily="sans-serif-light"
-                android:inputType="text"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textColor="@color/colorAllBlack"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/Text3Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="@string/prompt_password"
-                android:textAllCaps="true"
-                android:textColor="@color/colorAllBlack"
-                android:textSize="15sp" />
-
-            <EditText
-                android:id="@+id/ET2Login"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/text_bg"
-                android:fontFamily="sans-serif-light"
-                android:inputType="textWebPassword"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textColor="@color/colorAllBlack"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn1Login"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_below="@id/linear1Login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btn_bg"
-        android:fontFamily="sans-serif-medium"
-        android:paddingLeft="70dp"
-        android:paddingRight="70dp"
-        android:text="@string/btnLogin"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAllBlack"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear1Login"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@id/Text3Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="229dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="@string/signUpText"
-        android:textColor="@color/colorAllBlack"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1Login" />
-
-
-    <TextView
-        android:id="@+id/Text4Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="107dp"
-        android:layout_marginEnd="233dp"
-        android:layout_marginRight="233dp"
-        android:layout_marginBottom="101dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/signUpText"
-        android:textColor="@color/colorAllBlack"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text3Login" />
-
-    <TextView
-        android:id="@+id/Text5Login"
-        android:layout_width="63dp"
-        android:layout_height="22dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginRight="168dp"
-        android:layout_marginBottom="101dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/signUpLogin"
-        android:textColor="@color/colorAllBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Text4Login"
-        app:layout_constraintTop_toBottomOf="@+id/Text3Login" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="30sp" />
+</RelativeLayout>
