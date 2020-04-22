@@ -20,9 +20,27 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="30sp"
-            android:src="@drawable/logo1"
+            android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"/>
+            android:src="@drawable/logo1" />
+
+        <ImageView
+            android:id="@+id/image1_Register"
+            android:layout_width="44dp"
+            android:layout_height="41dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="285dp"
+            android:layout_marginLeft="285dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/chevron_left_black"
+            tools:ignore="VectorDrawableCompat" />
 
         <RelativeLayout
             android:id="@+id/RL1_Register"
@@ -57,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text1_Register"
-                android:layout_marginTop="45dp">
+                android:layout_marginTop="20dp">
 
                 <LinearLayout
                     android:id="@+id/linear3_Register"
@@ -222,7 +240,7 @@
 
 
 
-</RelativeLayout>
+    </RelativeLayout>
 
 
 

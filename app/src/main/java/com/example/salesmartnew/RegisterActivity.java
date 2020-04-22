@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         RL1 = findViewById(R.id.RL1_Register);
-        //bacKArrow = findViewById(R.id.image1_Register);
+        bacKArrow = findViewById(R.id.image1_Register);
 
         handler.postDelayed(runnable, 1000);
 
