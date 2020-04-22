@@ -16,4 +16,5 @@
     <string name="btnLogin">Login Here</string>
     <string name="fullName_Register">Full Name</string>
     <string name="userMail_Register">Email</string>
+    <string name="confirm_Register">Confirm Password</string>
 </resources>
