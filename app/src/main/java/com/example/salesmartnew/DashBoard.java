@@ -30,5 +30,10 @@ public class DashBoard extends AppCompatActivity {
 
         viewPager.setAdapter(dashBoardFragmentViewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_message);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_shopping_cart);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_person);
     }
 }
