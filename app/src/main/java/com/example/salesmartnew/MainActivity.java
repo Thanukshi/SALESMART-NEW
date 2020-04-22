@@ -3,6 +3,7 @@ package com.example.salesmartnew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -22,6 +23,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (restorePrefData()){
+            Intent welcomeIntent = new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(welcomeIntent);
+            finish();
+        }
+
         setContentView(R.layout.activity_main);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -44,5 +52,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         },SPLASH_SCREEN);
+    }
+
+    private boolean restorePrefData() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPref",MODE_PRIVATE);
+        boolean isWelcomeActivityBefore = pref.getBoolean("isStartUpOpened", false);
+        return isWelcomeActivityBefore;
     }
 }
