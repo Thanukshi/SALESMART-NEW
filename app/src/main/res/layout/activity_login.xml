@@ -35,17 +35,52 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="238dp"
         android:layout_marginRight="238dp"
-        android:layout_marginBottom="499dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="@string/tittle_login"
         android:textColor="@color/colorAllBlack"
-        android:textStyle="bold"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/RL1_Login"
+        android:layout_width="391dp"
+        android:layout_height="436dp"
+        android:layout_below="@+id/text1_Login"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="63dp"
+        tools:ignore="DuplicateIds">
+
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="376dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="62dp"
+            android:orientation="vertical"></LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
