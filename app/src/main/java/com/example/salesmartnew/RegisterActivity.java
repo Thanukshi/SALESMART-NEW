@@ -16,6 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button btnRegister;
 
     RelativeLayout relLay1;
+
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
