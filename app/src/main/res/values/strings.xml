@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">SaleSmartNew</string>
     <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome "</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
@@ -17,4 +14,6 @@
     <string name="rememberPass">Don\'t Remember Password?</string>
     <string name="userName">User Name</string>
     <string name="btnLogin">Login Here</string>
+    <string name="fullName_Register">Full Name</string>
+    <string name="userMail_Register">Email</string>
 </resources>

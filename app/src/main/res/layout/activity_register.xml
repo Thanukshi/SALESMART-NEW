@@ -71,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/adamina"
-                        android:text="@string/userName"
+                        android:text="@string/fullName_Register"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAllBlack"
                         android:textSize="15sp" />
@@ -97,7 +97,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15sp"
                         android:fontFamily="@font/adamina"
-                        android:text="@string/userName"
+                        android:text="@string/userMail_Register"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAllBlack"
                         android:textSize="15sp" />
