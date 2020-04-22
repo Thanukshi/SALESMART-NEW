@@ -28,7 +28,7 @@
             android:id="@+id/RL1_Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageLogo_Register"
+            android:layout_below="@+id/imageLogo1_Register"
             android:layout_marginTop="17dp"
             android:visibility="gone"
             tools:ignore="DuplicateIds">
