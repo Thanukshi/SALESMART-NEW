@@ -30,7 +30,7 @@
             android:layout_height="527dp"
             android:layout_below="@+id/imageLogo1_Register"
             android:layout_marginTop="17dp"
-            android:visibility="goe"
+            android:visibility="gone"
             tools:ignore="DuplicateIds">
 
             <TextView
