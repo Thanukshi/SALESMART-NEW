@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:background="@color/DashBoardPrimary"
             app:tabGravity="fill"
-            app:tabMode="fixed">
+            app:tabMode="fixed"
+            app:tabTextColor="#fff">
 
 
         </com.google.android.material.tabs.TabLayout>
