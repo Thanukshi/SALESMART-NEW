@@ -41,8 +41,7 @@
         android:layout_marginEnd="238dp"
         android:layout_marginRight="238dp"
         android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:text="@string/tittle_login"
+       android:text="@string/tittle_login"
         android:textColor="@color/colorAllBlack"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -57,12 +56,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="14dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="63dp"
+        android:layout_marginBottom="38dp"
         tools:ignore="DuplicateIds">
 
 
@@ -81,6 +80,17 @@
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginBottom="62dp"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="@string/userName"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
+        </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>
