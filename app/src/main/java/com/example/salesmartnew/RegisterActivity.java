@@ -8,6 +8,8 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,9 +22,13 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.salesmartnew.Databases.DBHandler;
+
 import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
+
+    public static DBHandler dbHandler;
 
     final int REQUEST_CODE_GALLERY = 999;
 
@@ -55,6 +61,9 @@ public class RegisterActivity extends AppCompatActivity {
         rPassword = findViewById(R.id.ET3_Register);
         rConfirmPass = findViewById(R.id.ET4_Register);
         rAddPhoto = findViewById(R.id.addImage_Register);
+
+        dbHandler = new DBHandler(this, "SALESMART", null, 1);
+        dbHandler.queryData("CREATE TABLE IF NOT EXIST SALESMART(id STRING PRIMARY KEY AUTOINCREMENT, image BLOB, fullName VARCHAR, )");
 
         handler.postDelayed(runnable, 1000);
 
