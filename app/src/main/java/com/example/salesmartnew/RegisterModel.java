@@ -39,7 +39,7 @@ public class RegisterModel {
         this.confirmPassword = confirmPassword;
     }
 
-    
+
 
     public Bitmap getImage() {
         return image;
