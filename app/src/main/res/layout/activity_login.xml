@@ -16,7 +16,7 @@
         android:layout_centerInParent="true">
 
         <ImageView
-            android:id="@+id/imageLogo_Register"
+            android:id="@+id/imageLogo_Login"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="30sp"
@@ -97,7 +97,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15sp"
                         android:fontFamily="@font/adamina"
-                        android:text="@string/userName"
+                        android:text="@string/prompt_password"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAllBlack"
                         android:textSize="15sp" />
