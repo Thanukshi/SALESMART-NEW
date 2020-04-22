@@ -30,7 +30,7 @@ import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    public static DBHandler dbHandler;
+
 
     final int REQUEST_CODE_GALLERY = 999;
 
@@ -64,8 +64,6 @@ public class RegisterActivity extends AppCompatActivity {
         rConfirmPass = findViewById(R.id.ET4_Register);
         rAddPhoto = findViewById(R.id.addImage_Register);
 
-        dbHandler = new DBHandler(this, "SALESMART", null, 1);
-        dbHandler.queryData("CREATE TABLE IF NOT EXIST SALESMART(id STRING PRIMARY KEY AUTOINCREMENT, image BLOB, fullName VARCHAR, userName VARCHAR, password VARCHAR, confirmPass VARCHAR)");
 
         handler.postDelayed(runnable, 1000);
 
@@ -82,26 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    dbHandler.insertData(
-                            imageViewToByte(rAddPhoto),
-                            rFullName.getText().toString().trim(),
-                            rUserName.getText().toString().trim(),
-                            rPassword.getText().toString().trim(),
-                            rConfirmPass.getText().toString().trim()
-                    );
-                    Toast.makeText(RegisterActivity.this,"Registration Successfull", Toast.LENGTH_SHORT).show();
 
-                    //reset the view
-                    rAddPhoto.setImageResource(R.drawable.ic_add_a_photo);
-                    rFullName.setText("");
-                    rUserName.setText("");
-                    rPassword.setText("");
-                    rConfirmPass.setText("");
-                } catch (Exception e){
-                    e.printStackTrace();
-                }
-                
                 Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intentRegister);
             }
@@ -118,13 +97,6 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    public static byte[] imageViewToByte(ImageView image) {
-        Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        byte [] byteArray = stream.toByteArray();
-        return byteArray;
-    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

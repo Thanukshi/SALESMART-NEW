@@ -8,10 +8,13 @@ public class SignUpProfile {
         private SignUpProfile() {}
 
         /* Inner class that defines the table contents */
-        public static class FeedEntry implements BaseColumns {
-            public static final String TABLE_NAME = "entry";
-            public static final String COLUMN_NAME_TITLE = "title";
-            public static final String COLUMN_NAME_SUBTITLE = "subtitle";
+        public static class Users implements BaseColumns {
+            public static final String TABLE_NAME = "SaleSmart";
+            public static final String COLUMN_1= "image";
+            public static final String COLUMN_2 = "fullName";
+            public static final String COLUMN_3 = "userName";
+            public static final String COLUMN_4 = "passWord";
+            public static final String COLUMN_5 = "confirmPassword";
 
     }
 }
