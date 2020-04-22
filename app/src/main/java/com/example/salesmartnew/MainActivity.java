@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean restorePrefData() {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("myPref",MODE_PRIVATE);
-        boolean isWelcomeActivityBefore = pref.getBoolean("isStartUpOpened", false);
-        return isWelcomeActivityBefore;
+        boolean isStartUpActivityBefore = pref.getBoolean("isStartUpOpened", false);
+        return isStartUpActivityBefore;
     }
 }
