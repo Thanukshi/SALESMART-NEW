@@ -20,4 +20,9 @@
     <color name="yellowWelcome">#FFEACA14</color>
 
 
+    <color name="DashBoardPrimary">#393939</color>
+    <color name="DashBoardPrimaryDark">#2f2f2f</color>
+    <color name="DashBoardAccent">#F7D707</color>
+    <color name="DashBoardFragment">#2b2b2b</color>
+
 </resources>
