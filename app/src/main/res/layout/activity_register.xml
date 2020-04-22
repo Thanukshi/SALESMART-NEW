@@ -211,7 +211,6 @@
                 android:fontFamily="@font/adamina"
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
-                android:paddingBottom="10dp"
                 android:text="@string/signUpLogin"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAllBlack"
