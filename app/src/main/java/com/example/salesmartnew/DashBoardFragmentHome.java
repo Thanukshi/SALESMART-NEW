@@ -19,6 +19,7 @@ public class DashBoardFragmentHome extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        homeView = inflater.inflate(R.layout.f);
+        homeView = inflater.inflate(R.layout.fragment_home,container,false);
+        return homeView;
     }
 }
