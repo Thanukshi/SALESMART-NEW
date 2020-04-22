@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashBoard"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".DashBoard" />
         <activity android:name=".WelcomeScreen" />
         <activity android:name=".LoginActivity" />
         <activity
