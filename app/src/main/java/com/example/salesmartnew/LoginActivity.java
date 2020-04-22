@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView register;
     Button btnLogin;
 
-    RelativeLayout relLay1, relLay2;
+    RelativeLayout relLay1, relLay2, relLay3;
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
             relLay1.setVisibility( View.VISIBLE );
             relLay2.setVisibility( View.VISIBLE );
+            relLay3.setVisibility(View.VISIBLE);
         }
     };
 
@@ -39,8 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        relLay1 = findViewById( R.id.RL1_Login );
-        relLay2 = (RelativeLayout)findViewById( R.id.RL2_Login );
+        relLay1 = findViewById( R.id.rl1Login );
+        relLay2 = findViewById( R.id.rl2Login );
+        relLay3 = findViewById(R.id.rl3Login);
 
         handler.postDelayed( runnable, 1000 );
 
