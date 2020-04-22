@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -102,7 +103,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
         if (requestCode == REQUEST_CODE_GALLERY &&  resultCode == RESULT_OK){
-            
+            Uri imageUri = data.getData();
+            CropI
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
