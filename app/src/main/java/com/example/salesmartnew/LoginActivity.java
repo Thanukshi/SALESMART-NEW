@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sign = new Intent( LoginActivity.this,DashBoard.class );
+                Intent sign = new Intent( LoginActivity.this,RegisterActivity.class );
                 startActivity( sign );
            }
         } );
