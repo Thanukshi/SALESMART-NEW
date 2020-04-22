@@ -1,5 +1,6 @@
 package com.example.salesmartnew;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -35,5 +36,7 @@ public class DashBoard extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_message);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_shopping_cart);
         tabLayout.getTabAt(3).setIcon(R.drawable.ic_person);
+
+        
     }
 }
