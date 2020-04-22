@@ -49,9 +49,17 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent( MainActivity.this, WelcomeScreen.class );
                 startActivity( intent );
+                saveData();
                 finish();
             }
         },SPLASH_SCREEN);
+    }
+
+    private void saveData() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putBoolean("isStartUpOpen", true);
+        editor.commit();
     }
 
     private boolean restorePrefData() {
