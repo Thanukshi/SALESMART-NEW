@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="635dp"
         android:layout_centerInParent="true"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
@@ -45,11 +45,11 @@
 
         <RelativeLayout
             android:id="@+id/RL1_Register"
-            android:layout_width="match_parent"
-            android:layout_height="514dp"
+            android:layout_width="317dp"
+            android:layout_height="555dp"
             android:layout_below="@+id/imageLogo1_Register"
             android:layout_marginTop="-6dp"
-            android:visibility=""
+            android:visibility="gone"
             tools:ignore="DuplicateIds">
 
             <TextView
@@ -74,58 +74,38 @@
             <LinearLayout
                 android:id="@+id/linear2_Register"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="370dp"
                 android:layout_below="@id/text1_Register"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="10dp">
 
                 <LinearLayout
                     android:id="@+id/linear3_Register"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="504dp"
                     android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="90dp" />
 
                     <TextView
                         android:id="@+id/text2_Register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="0dp"
                         android:fontFamily="@font/adamina"
                         android:text="@string/fullName_Register"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAllBlack"
                         android:textSize="15sp" />
 
-                    <EditText
-                        android:id="@+id/ET1_Register"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/text_bg"
-                        android:ems="10"
-                        android:fontFamily="@font/adamina"
-                        android:inputType="textPersonName"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
-                        android:textColor="@color/colorAllBlack"
-                        android:textSize="15sp" />
-
-                    <TextView
-
-                        android:id="@+id/text3_Register"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/adamina"
-                        android:text="@string/userMail_Register"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorAllBlack"
-                        android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/ET2_Register"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0dp"
                         android:background="@drawable/text_bg"
                         android:ems="10"
                         android:fontFamily="@font/adamina"
@@ -140,7 +120,7 @@
                         android:id="@+id/text4_Register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="0dp"
                         android:fontFamily="@font/adamina"
                         android:text="@string/userName"
                         android:textAllCaps="true"
@@ -150,8 +130,8 @@
                     <EditText
                         android:id="@+id/ET3_Register"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0dp"
                         android:background="@drawable/text_bg"
                         android:ems="10"
                         android:fontFamily="@font/adamina"
@@ -166,7 +146,7 @@
                         android:id="@+id/tex5_Register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="0dp"
                         android:fontFamily="@font/adamina"
                         android:text="@string/prompt_password"
                         android:textAllCaps="true"
@@ -176,8 +156,8 @@
                     <EditText
                         android:id="@+id/ET4_Register"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0dp"
                         android:background="@drawable/text_bg"
                         android:ems="10"
                         android:fontFamily="@font/adamina"
@@ -192,7 +172,7 @@
                         android:id="@+id/text6_Register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="0dp"
                         android:fontFamily="@font/adamina"
                         android:text="@string/confirm_Register"
                         android:textAllCaps="true"
@@ -202,8 +182,8 @@
                     <EditText
                         android:id="@+id/ET5_Register"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0dp"
                         android:background="@drawable/text_bg"
                         android:ems="10"
                         android:fontFamily="@font/adamina"
@@ -222,16 +202,14 @@
             <Button
                 android:id="@+id/button1_Register"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:layout_below="@+id/linear2_Register"
-                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="22dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/btn_bg"
                 android:fontFamily="@font/adamina"
-                android:paddingLeft="70dp"
-                android:paddingRight="70dp"
+                android:paddingLeft="55dp"
+                android:paddingRight="55dp"
                 android:text="@string/signUpLogin"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAllBlack"
