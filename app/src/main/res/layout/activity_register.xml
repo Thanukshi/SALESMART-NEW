@@ -85,10 +85,11 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/addImage_Register"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_marginLeft="90dp"
-                        android:src="@drawable/ic_add_a_photo"/>
+                        android:src="@drawable/ic_add_a_photo" />
 
                     <TextView
                         android:id="@+id/text2_Register"
@@ -101,6 +102,32 @@
                         android:textColor="@color/colorAllBlack"
                         android:textSize="15sp" />
 
+
+                    <EditText
+                        android:id="@+id/ET1_Register"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/text_bg"
+                        android:ems="10"
+                        android:fontFamily="@font/adamina"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+
+                        android:id="@+id/text3_Register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/adamina"
+                        android:text="@string/userName"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/ET2_Register"
@@ -118,12 +145,12 @@
 
                     <TextView
 
-                        android:id="@+id/text4_Register"
+                        android:id="@+id/tex4_Register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
                         android:fontFamily="@font/adamina"
-                        android:text="@string/userName"
+                        android:text="@string/prompt_password"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAllBlack"
                         android:textSize="15sp" />
@@ -144,33 +171,7 @@
 
                     <TextView
 
-                        android:id="@+id/tex5_Register"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:fontFamily="@font/adamina"
-                        android:text="@string/prompt_password"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorAllBlack"
-                        android:textSize="15sp" />
-
-                    <EditText
-                        android:id="@+id/ET4_Register"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="0dp"
-                        android:background="@drawable/text_bg"
-                        android:ems="10"
-                        android:fontFamily="@font/adamina"
-                        android:inputType="textPersonName"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
-                        android:textColor="@color/colorAllBlack"
-                        android:textSize="15sp" />
-
-                    <TextView
-
-                        android:id="@+id/text6_Register"
+                        android:id="@+id/text5_Register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
@@ -181,7 +182,7 @@
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/ET5_Register"
+                        android:id="@+id/ET4_Register"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:layout_marginTop="0dp"
