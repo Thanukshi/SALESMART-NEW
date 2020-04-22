@@ -37,6 +37,6 @@ public class DashBoard extends AppCompatActivity {
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_shopping_cart);
         tabLayout.getTabAt(3).setIcon(R.drawable.ic_person);
 
-        
+
     }
 }
