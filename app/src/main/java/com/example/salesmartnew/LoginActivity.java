@@ -20,18 +20,17 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView textV5;
+    TextView register;
     Button btnLogin;
 
-    //RelativeLayout relLay1, relLay2, relLay3;
-    ConstraintLayout clay1;
+    RelativeLayout relLay1, relLay2;
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            clay1.setVisibility( View.VISIBLE );
-            //relLay2.setVisibility( View.VISIBLE );
-            //relLay3.setVisibility( View.VISIBLE );
+
+            relLay1.setVisibility( View.VISIBLE );
+            relLay2.setVisibility( View.VISIBLE );
         }
     };
 
@@ -40,14 +39,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        clay1 = (ConstraintLayout) findViewById( R.id.const1_Login );
-        //relLay2 = (RelativeLayout)findViewById( R.id.rl2Login );
-        //relLay3 = (RelativeLayout)findViewById( R.id.rl3Login );
+        relLay1 = findViewById( R.id.RL1_Login );
+        relLay2 = (RelativeLayout)findViewById( R.id.RL2_Login );
 
         handler.postDelayed( runnable, 1000 );
 
-        textV5 = findViewById( R.id.Text5Login );
-        textV5.setOnClickListener( new View.OnClickListener() {
+        register = findViewById( R.id.text6_Login );
+        register.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent sign = new Intent( LoginActivity.this,DashBoard.class );
@@ -72,9 +70,9 @@ public class LoginActivity extends AppCompatActivity {
        // };
         //sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
         //textV5.setText( sp );
-        textV5.setMovementMethod( LinkMovementMethod.getInstance() );
+        register.setMovementMethod( LinkMovementMethod.getInstance() );
 
-        btnLogin = findViewById( R.id.btn1Login );
+        btnLogin = findViewById( R.id.button1_Login );
 
         btnLogin.setOnClickListener( new View.OnClickListener() {
             @Override
