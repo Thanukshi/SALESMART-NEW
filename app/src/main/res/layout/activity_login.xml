@@ -142,15 +142,17 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="64dp"
-            android:layout_marginRight="64dp"
+            android:layout_marginRight="62dp"
             android:background="@drawable/btn_bg"
+            android:textAllCaps="false"
             android:fontFamily="@font/adamina"
             android:paddingLeft="70dp"
             android:paddingRight="70dp"
             android:text="@string/btnLogin"
             android:textColor="@color/colorAllBlack"
+            android:textStyle="bold"
             android:textSize="16sp" />
     </RelativeLayout>
 </RelativeLayout>
