@@ -1,5 +1,3 @@
-import android.R
-
 apply plugin: 'com.android.application'
 
 android {
