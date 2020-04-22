@@ -8,18 +8,19 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp">
 
         <ImageView
             android:id="@+id/imageLogo1_Register"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/logo1" />
@@ -44,11 +45,11 @@
 
         <RelativeLayout
             android:id="@+id/RL1_Register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="514dp"
             android:layout_below="@+id/imageLogo1_Register"
-            android:layout_marginTop="17dp"
-            android:visibility="gone"
+            android:layout_marginTop="-6dp"
+            android:visibility=""
             tools:ignore="DuplicateIds">
 
             <TextView
@@ -223,8 +224,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_below="@+id/linear2_Register"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="22dp"
                 android:background="@drawable/btn_bg"
                 android:fontFamily="@font/adamina"
                 android:paddingLeft="70dp"
@@ -238,12 +241,7 @@
         </RelativeLayout>
 
 
-
-
     </RelativeLayout>
-
-
-
 
 
 </RelativeLayout>
