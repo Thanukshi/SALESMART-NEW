@@ -8,15 +8,19 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -104,7 +108,12 @@ public class RegisterActivity extends AppCompatActivity {
 
         if (requestCode == REQUEST_CODE_GALLERY &&  resultCode == RESULT_OK){
             Uri imageUri = data.getData();
-            CropI
+           try {
+               Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imageUri);
+               rAddPhoto.setImageBitmap(bitmap);
+           }catch (IOException e){
+               e.printStackTrace();
+           }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
