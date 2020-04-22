@@ -140,6 +140,32 @@
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+
+                        android:id="@+id/text2_Register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15sp"
+                        android:fontFamily="@font/adamina"
+                        android:text="@string/prompt_password"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorAllBlack"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/ET1_Register"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_bg"
+                        android:ems="10"
+                        android:fontFamily="@font/adamina"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/colorAllBlack"
                         android:textSize="15sp" />+
 
 
@@ -190,7 +216,7 @@
                 android:layout_marginBottom="55dp"
                 android:fontFamily="@font/adamina"
                 android:paddingLeft="10dp"
-                android:text="@string/signUpText"
+                android:text="@string/prompt_password"
                 android:textColor="@color/colorAllBlack"
                 android:textSize="15sp" />
 
