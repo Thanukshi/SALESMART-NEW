@@ -30,33 +30,34 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:layout_below="@+id/imageLogo_Login"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="0dp"
             tools:ignore="DuplicateIds">
 
             <TextView
                 android:id="@+id/text1_Login"
-                android:layout_width="wrap_content"
-                android:layout_height="72dp"
+                android:layout_width="106dp"
+                android:layout_height="53dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginStart="17dp"
-                android:layout_marginLeft="17dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="238dp"
-                android:layout_marginRight="238dp"
+                android:layout_marginEnd="219dp"
+                android:layout_marginRight="219dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/tittle_login"
                 android:textColor="@color/colorAllBlack"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/linear1Login"
                 android:layout_below="@id/text1_Login"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp">
 
                 <LinearLayout
                     android:id="@+id/linear2Login"
@@ -68,12 +69,12 @@
                         android:id="@+id/text2_Login"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/adamina"
                         android:text="@string/userName"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAllBlack"
-                        android:textSize="15sp"
-                        android:layout_marginTop="10dp"/>
+                        android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/ET1_Login"
@@ -87,19 +88,19 @@
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:textColor="@color/colorAllBlack"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                     <TextView
 
                         android:id="@+id/text2_Login"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="15sp"
                         android:fontFamily="@font/adamina"
                         android:text="@string/userName"
                         android:textAllCaps="true"
-                        android:layout_marginTop="15sp"
                         android:textColor="@color/colorAllBlack"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/ET1_Login"
@@ -183,8 +184,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="18dp"
-                android:layout_marginLeft="18dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
                 android:layout_marginTop="27dp"
                 android:layout_marginBottom="55dp"
                 android:fontFamily="@font/adamina"
