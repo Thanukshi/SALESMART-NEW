@@ -61,8 +61,9 @@ public class DBHandler extends SQLiteOpenHelper {
             contentValues.put("cConfirmPassword",registerModel.getConfirmPassword());
 
             long checkQuery = sqLiteDatabase.insert("SaleSmart", null,contentValues);
-            if(checkQuery != 0){
+            if(checkQuery != -1){
                 Toast.makeText(context,"Data Added",Toast.LENGTH_SHORT).show();
+                sqLiteDatabase.close();
             }
             else {
                 Toast.makeText(context,"Failed",Toast.LENGTH_SHORT).show();
