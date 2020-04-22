@@ -19,29 +19,33 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayOut_Dash"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/DashBoardPrimary"
-            app:tabMode="fixed"
-            app:tabGravity="fill">
+            app:tabGravity="fill"
+            app:tabMode="fixed">
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabItem1_Dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Monday" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabItem2_Dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tuesday" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabItem3_Dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wednesday" />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem"
+                android:id="@+id/tabItem4_Dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tab5" />
@@ -49,6 +53,7 @@
     </LinearLayout>
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_Dash"
         android:layout_width="409dp"
         android:layout_height="677dp"
         android:layout_marginStart="1dp"
