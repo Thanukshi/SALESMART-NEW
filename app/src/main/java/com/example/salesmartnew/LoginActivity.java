@@ -15,12 +15,16 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView register;
+    ImageView logo;
+    TextView tittle, userName, passWord, forgetPassword, account, register;
+    EditText eUserName, ePassword;
     Button btnLogin;
 
     RelativeLayout relLay1, relLay2;
@@ -31,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
 
             relLay1.setVisibility( View.VISIBLE );
             relLay2.setVisibility( View.VISIBLE );
+            tittle = findViewById(R.id.text1_Login);
+            userName =  findViewById(R.id.text2_Login);
 
         }
     };
@@ -41,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         relLay1 = findViewById( R.id.rl1Login );
-       relLay2 = findViewById(R.id.rl3Login);
+        relLay2 = findViewById(R.id.rl3Login);
 
         handler.postDelayed( runnable, 1000 );
 
