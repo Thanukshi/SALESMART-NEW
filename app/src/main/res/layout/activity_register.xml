@@ -228,7 +228,6 @@
             android:layout_marginBottom="1dp"
             android:background="@drawable/btn_bg"
             android:fontFamily="@font/adamina"
-            android:onClick="@string/reg_User"
             android:paddingLeft="55dp"
             android:paddingRight="55dp"
             android:text="@string/signUpLogin"
