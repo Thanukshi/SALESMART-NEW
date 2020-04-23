@@ -73,8 +73,8 @@
 
         <LinearLayout
             android:id="@+id/linear_Register"
-            android:layout_width="0dp"
-            android:layout_height="438dp"
+            android:layout_width="373dp"
+            android:layout_height="463dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
@@ -90,6 +90,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
+                android:contentDescription="@string/signUpLogin"
                 android:src="@drawable/ic_add_a_photo" />
 
             <TextView
@@ -106,7 +107,7 @@
             <EditText
                 android:id="@+id/ET1_Register"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_bg"
                 android:ems="10"
@@ -115,7 +116,8 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textColor="@color/colorAllBlack"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:autofillHints="" />
 
             <TextView
 
@@ -132,7 +134,7 @@
             <EditText
                 android:id="@+id/ET2_Register"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_bg"
                 android:ems="10"
@@ -158,7 +160,7 @@
             <EditText
                 android:id="@+id/ET3_Register"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_bg"
                 android:ems="10"
@@ -184,7 +186,7 @@
             <EditText
                 android:id="@+id/ET4_Register"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_bg"
                 android:ems="10"
@@ -196,6 +198,29 @@
                 android:textSize="15sp" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button1_Register"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="118dp"
+            android:layout_marginLeft="118dp"
+            android:layout_marginEnd="119dp"
+            android:layout_marginRight="119dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/adamina"
+            android:paddingLeft="55dp"
+            android:paddingRight="55dp"
+            android:text="@string/signUpLogin"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAllBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
