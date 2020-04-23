@@ -106,7 +106,7 @@ public class RegisterActivity extends AppCompatActivity {
                // startActivityForResult(galleryIntent,REQUEST_CODE_GALLERY);
             //}
             //else {
-                Toast.makeText(this,"Don't have to permition to access the file location", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this,"Don't have to permition to access the file location", Toast.LENGTH_SHORT).show();
             //}
             //return;
        // }
@@ -116,7 +116,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        if (requestCode == REQUEST_CODE_GALLERY &&  resultCode == RESULT_OK){
+        if (requestCode == PICK_IMAGE &&  resultCode == RESULT_OK){
             Uri imageUri = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imageUri);
