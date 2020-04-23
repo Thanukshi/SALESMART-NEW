@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
             relLay1.setVisibility( View.VISIBLE );
             relLay2.setVisibility( View.VISIBLE );
-            
+
         }
     };
 
