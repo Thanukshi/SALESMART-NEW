@@ -8,8 +8,8 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="371dp"
-        android:layout_height="711dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
