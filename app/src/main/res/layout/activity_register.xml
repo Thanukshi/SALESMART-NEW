@@ -46,39 +46,22 @@
 
         <RelativeLayout
             android:id="@+id/RL1_Register"
-            android:layout_width="317dp"
-            android:layout_height="590dp"
+            android:layout_width="wrap_content"
+            android:layout_height="573dp"
             android:layout_below="@+id/imageLogo1_Register"
-            android:layout_marginTop="-6dp"
-            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:visibility=""
             tools:ignore="DuplicateIds">
-
-            <TextView
-                android:id="@+id/text1_Register"
-                android:layout_width="142dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="6dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="183dp"
-                android:layout_marginRight="183dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/signUpLogin"
-                android:textColor="@color/colorAllBlack"
-                android:textSize="30sp"
-                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:id="@+id/linear3_Register"
                 android:layout_width="match_parent"
-                android:layout_height="429dp"
+                android:layout_height="418dp"
                 android:layout_above="@+id/button1_Register"
-                android:layout_marginBottom="4dp"
+                android:layout_below="@+id/text1_Register"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="18dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -219,6 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="3dp"
                 android:background="@drawable/btn_bg"
                 android:fontFamily="@font/adamina"
@@ -228,8 +212,23 @@
                 android:textAllCaps="false"
                 android:textColor="@color/colorAllBlack"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_centerHorizontal="true" />
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text1_Register"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="189dp"
+                android:layout_marginRight="189dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/signUpLogin"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
