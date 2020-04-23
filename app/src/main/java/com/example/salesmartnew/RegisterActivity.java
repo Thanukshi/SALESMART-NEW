@@ -68,7 +68,18 @@ public class RegisterActivity extends AppCompatActivity {
 
         handler.postDelayed(runnable, 1000);
 
+        btRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                String cName = rFullName.getEditableText().toString();
+                String cEmail = rEmail.getEditableText().toString();
+                String cUserName = rUserName.getEditableText().toString();
+                String cPass = rPassword.getEditableText().toString();
+                String cConfirm = rConfirmPass.getEditableText().toString();
+
+            }
+        });
 
 
         bacKArrow.setOnClickListener(new View.OnClickListener() {
