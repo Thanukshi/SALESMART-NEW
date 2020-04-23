@@ -24,7 +24,7 @@ import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
 
-
+    DBHandler dbHandler;
 
     final int REQUEST_CODE_GALLERY = 999;
 
@@ -58,6 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
         rConfirmPass = findViewById(R.id.ET4_Register);
         rAddPhoto = findViewById(R.id.addImage_Register);
 
+        dbHandler = new DBHandler(this);
 
         handler.postDelayed(runnable, 1000);
 
@@ -122,4 +123,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+
+
 }
