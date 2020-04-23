@@ -1,12 +1,9 @@
 package com.example.salesmartnew;
 
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
-import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
 import android.content.Intent;
@@ -20,22 +17,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
-
-import com.google.android.material.tabs.TabLayout;
 
 import java.io.IOException;
 
-
 public class RegisterActivity extends AppCompatActivity {
 
-    ConstraintLayout cl1;
+
 
     final int REQUEST_CODE_GALLERY = 999;
 
     EditText rFullName, rUserName, rPassword, rConfirmPass;
     ImageView rAddPhoto;
     Button btRegister;
+    RelativeLayout RL1;
     ImageView bacKArrow;
 
     Handler handler = new Handler();
@@ -43,8 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         public void run() {
 
-            cl1.setVisibility(View.VISIBLE);
-
+            RL1.setVisibility(View.VISIBLE);
+            bacKArrow.setVisibility(View.VISIBLE);
         }
     };
 
@@ -53,12 +49,16 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        bacKArrow = findViewById(R.id.logo_Register);
-        rFullName = findViewById(R.id.ET1_Login);
+        //Initialize the view
+        RL1 = findViewById(R.id.RL1_Register);
+        bacKArrow = findViewById(R.id.image1_Register);
+        rFullName = findViewById(R.id.ET1_Register);
         rUserName = findViewById(R.id.ET2_Register);
         rPassword = findViewById(R.id.ET3_Register);
         rConfirmPass = findViewById(R.id.ET4_Register);
         rAddPhoto = findViewById(R.id.addImage_Register);
+
+
 
         handler.postDelayed(runnable, 1000);
 
@@ -80,6 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(intentRegister);
             }
         });
+
 
         rAddPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +123,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 
 
 }
