@@ -19,4 +19,5 @@
     <string name="confirm_Register">Confirm Password</string>
     <string name="back_Reg">backArrow</string>
     <string name="logo_Reg">Logo</string>
+    <string name="reg_User">registerUser</string>
 </resources>
