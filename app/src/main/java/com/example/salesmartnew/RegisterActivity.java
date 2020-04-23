@@ -71,15 +71,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         btRegister = findViewById(R.id.button1_Register);
 
-        reg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(intentRegister);
-            }
-        });
+        public void registerUser(View Object view;
+        view){
+            
+        }
 
 
     }
