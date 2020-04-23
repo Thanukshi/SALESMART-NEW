@@ -89,7 +89,7 @@
 
                 <TextView
 
-                    android:id="@+id/text2_Login"
+                    android:id="@+id/text3_Login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -100,7 +100,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/ET1_Login"
+                    android:id="@+id/ET2_Login"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"

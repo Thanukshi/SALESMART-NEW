@@ -22,8 +22,8 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    ImageView logo;
-    TextView tittle, userName, passWord, forgetPassword, account, register;
+
+    TextView register, forgetPassword;
     EditText eUserName, ePassword;
     Button btnLogin;
 
@@ -35,8 +35,8 @@ public class LoginActivity extends AppCompatActivity {
 
             relLay1.setVisibility( View.VISIBLE );
             relLay2.setVisibility( View.VISIBLE );
-            tittle = findViewById(R.id.text1_Login);
-            userName =  findViewById(R.id.text2_Login);
+
+
 
         }
     };
@@ -48,10 +48,14 @@ public class LoginActivity extends AppCompatActivity {
 
         relLay1 = findViewById( R.id.rl1Login );
         relLay2 = findViewById(R.id.rl3Login);
+        eUserName = findViewById(R.id.ET1_Login);
+        ePassword =  findViewById(R.id.ET2_Login);
+        forgetPassword = findViewById(R.id.text5_Login);
+        register = findViewById( R.id.text6_Login );
 
         handler.postDelayed( runnable, 1000 );
 
-        register = findViewById( R.id.text6_Login );
+
         register.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,23 +64,7 @@ public class LoginActivity extends AppCompatActivity {
            }
         } );
 
-       // String text = "Sign UP";
 
-       // SpannableString sp = new SpannableString( text );
-        //ClickableSpan clickableSpan1  = new ClickableSpan() {
-         //   @Override
-           // public void onClick(@NonNull View view) {
-
-           // }
-
-           // @Override
-           // public void updateDrawState(@NonNull TextPaint ds) {
-              // super.updateDrawState( ds );
-               // ds.setColor( Color.YELLOW);
-          // }
-       // };
-        //sp.setSpan( clickableSpan1, 0, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
-        //textV5.setText( sp );
         register.setMovementMethod( LinkMovementMethod.getInstance() );
 
         btnLogin = findViewById( R.id.button1_Login );
