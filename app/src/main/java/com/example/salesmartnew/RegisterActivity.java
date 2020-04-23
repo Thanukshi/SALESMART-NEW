@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private static final int PICK_IMAGE = 1;
 
-    EditText rFullName, rUserName, rPassword, rConfirmPass;
+    EditText rFullName, rEmail, rUserName, rPassword, rConfirmPass;
     ImageView rAddPhoto;
     Button btRegister;
     RelativeLayout RL1;
@@ -53,11 +53,10 @@ public class RegisterActivity extends AppCompatActivity {
         RL1 = findViewById(R.id.RL1_Register);
         bacKArrow = findViewById(R.id.image1_Register);
         rFullName = findViewById(R.id.ET1_Register);
-        rUserName = findViewById(R.id.ET2_Register);
-        rPassword = findViewById(R.id.ET3_Register);
-        rConfirmPass = findViewById(R.id.ET4_Register);
-        rAddPhoto = findViewById(R.id.addImage_Register);
-
+        rEmail = findViewById(R.id.ET2_Register);
+        rUserName = findViewById(R.id.ET3_Register);
+        rPassword = findViewById(R.id.ET4_Register);
+        rConfirmPass = findViewById(R.id.ET5_Register);
 
 
         handler.postDelayed(runnable, 1000);
@@ -77,59 +76,12 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-
                 Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intentRegister);
             }
         });
 
 
-        rAddPhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent addPhoto = new Intent();
-                addPhoto.setType("image/*");
-                addPhoto.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(addPhoto,"Select the picture"),PICK_IMAGE);
-                //get the runtime permission from the phone
-                //ActivityCompat.requestPermissions(
-                        //RegisterActivity.this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE_GALLERY);
-            }
-        });
     }
-
-
-    //@Override
-    //public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-       // if (requestCode == REQUEST_CODE_GALLERY){
-           // if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-             //   Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-               // galleryIntent.setType("image/*");
-               // startActivityForResult(galleryIntent,REQUEST_CODE_GALLERY);
-            //}
-            //else {
-                //Toast.makeText(this,"Don't have to permition to access the file location", Toast.LENGTH_SHORT).show();
-            //}
-            //return;
-       // }
-      //  super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-   // }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
-        if (requestCode == PICK_IMAGE &&  resultCode == RESULT_OK){
-            Uri imageUri = data.getData();
-            try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imageUri);
-                rAddPhoto.setImageBitmap(bitmap);
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-
 
 }
