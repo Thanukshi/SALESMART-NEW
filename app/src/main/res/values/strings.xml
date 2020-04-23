@@ -17,4 +17,6 @@
     <string name="fullName_Register">Full Name</string>
     <string name="userMail_Register">Email</string>
     <string name="confirm_Register">Confirm Password</string>
+    <string name="back_Reg">backArrow</string>
+    <string name="logo_Reg">Logo</string>
 </resources>
