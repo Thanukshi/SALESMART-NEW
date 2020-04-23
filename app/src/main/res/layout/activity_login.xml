@@ -26,11 +26,13 @@
 
         <RelativeLayout
             android:id="@+id/rl1Login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="377dp"
+            android:layout_above="@+id/rl3Login"
             android:layout_below="@+id/imageLogo_Login"
             android:layout_marginTop="0dp"
+            android:layout_marginBottom="71dp"
+            android:visibility=""
             tools:ignore="DuplicateIds">
 
             <TextView
@@ -54,9 +56,9 @@
 
             <LinearLayout
                 android:id="@+id/linear1Login"
-                android:layout_below="@id/text1_Login"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="207dp"
+                android:layout_below="@id/text1_Login"
                 android:layout_marginTop="45dp">
 
                 <LinearLayout
@@ -80,7 +82,7 @@
                         android:id="@+id/ET1_Login"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/text_bg"
                         android:ems="10"
                         android:fontFamily="@font/adamina"
@@ -106,7 +108,7 @@
                         android:id="@+id/ET1_Login"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/text_bg"
                         android:ems="10"
                         android:fontFamily="@font/adamina"
@@ -124,19 +126,19 @@
             <Button
                 android:id="@+id/button1_Login"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/linear1Login"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_bg"
                 android:fontFamily="@font/adamina"
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
-                android:layout_centerHorizontal="true"
                 android:text="@string/btnLogin"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAllBlack"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -171,9 +173,9 @@
             android:id="@+id/rl3Login"
             android:layout_width="match_parent"
             android:layout_height="104dp"
-            android:layout_below="@id/rl2Login"
-            android:layout_marginTop="22dp"
-            android:visibility="gone">
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="29dp"
+            android:visibility="">
 
 
             <TextView
@@ -182,12 +184,10 @@
                 android:layout_height="23dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="1dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="27dp"
-                android:layout_marginBottom="55dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginBottom="27dp"
                 android:fontFamily="@font/adamina"
                 android:paddingLeft="10dp"
                 android:text="@string/signUpText"
@@ -198,16 +198,14 @@
                 android:id="@+id/text6_Login"
                 android:layout_width="81dp"
                 android:layout_height="41dp"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="13dp"
                 android:layout_toEndOf="@+id/text5_Login"
                 android:layout_toRightOf="@+id/text5_Login"
                 android:fontFamily="@font/adamina"
