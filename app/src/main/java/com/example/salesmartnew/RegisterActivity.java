@@ -20,9 +20,15 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
 
 
@@ -50,20 +56,19 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //Initialize the view
-        RL1 = findViewById(R.id.RL1_Register);
-        bacKArrow = findViewById(R.id.image1_Register);
-        rFullName = findViewById(R.id.ET1_Register);
-        rEmail = findViewById(R.id.ET2_Register);
-        rUserName = findViewById(R.id.ET3_Register);
-        rPassword = findViewById(R.id.ET4_Register);
-        rConfirmPass = findViewById(R.id.ET5_Register);
+        //RL1 = findViewById(R.id.RL1_Register);
+        //bacKArrow = findViewById(R.id.image1_Register);
+        //rFullName = findViewById(R.id.ET1_Register);
+       // rEmail = findViewById(R.id.ET2_Register);
+        //rUserName = findViewById(R.id.ET3_Register);
+        //rPassword = findViewById(R.id.ET4_Register);
+        //rConfirmPass = findViewById(R.id.ET5_Register);
+
 
 
         handler.postDelayed(runnable, 1000);
 
-        {
 
-        }
 
 
         bacKArrow.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        btRegister = findViewById(R.id.button1_Register);
+       //btRegister = findViewById(R.id.button1_Register);
 
 
 
