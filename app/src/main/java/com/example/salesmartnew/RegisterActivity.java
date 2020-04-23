@@ -29,7 +29,6 @@ public class RegisterActivity extends AppCompatActivity {
     private static final int PICK_IMAGE = 1;
 
     EditText rFullName, rEmail, rUserName, rPassword, rConfirmPass;
-    ImageView rAddPhoto;
     Button btRegister;
     RelativeLayout RL1;
     ImageView bacKArrow;
@@ -41,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             RL1.setVisibility(View.VISIBLE);
             bacKArrow.setVisibility(View.VISIBLE);
+            btRegister.setVisibility(View.VISIBLE);
         }
     };
 
