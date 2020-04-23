@@ -122,6 +122,6 @@ public class RegisterActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-    
+
 
 }
