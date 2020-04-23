@@ -11,9 +11,6 @@ import com.google.android.material.tabs.TabLayout;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private ViewPager regScreenPage;
-    TabLayout tabLayout;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -12,8 +12,8 @@
         <activity android:name=".WelcomeScreen"></activity>
         <activity android:name=".DashBoard" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
