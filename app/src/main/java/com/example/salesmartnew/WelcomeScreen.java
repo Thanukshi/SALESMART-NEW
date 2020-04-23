@@ -38,7 +38,7 @@ public class WelcomeScreen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         if (restorePrefData()){
-            Intent welcomeIntent = new Intent(getApplicationContext(),LoginActivity.class);
+            Intent welcomeIntent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(welcomeIntent);
             finish();   
         }
