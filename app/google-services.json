@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "595678279443",
+    "firebase_url": "https://salesmartnew.firebaseio.com",
+    "project_id": "salesmartnew",
+    "storage_bucket": "salesmartnew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595678279443:android:200a3cd33dfe9d6c958ce6",
+        "android_client_info": {
+          "package_name": "com.example.salesmartnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595678279443-64mugab6ka7u38v36d37o2ndaarmugjq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCEYK1GX0Zal4ykITRwQde_jaXGZDVZlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595678279443-64mugab6ka7u38v36d37o2ndaarmugjq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
