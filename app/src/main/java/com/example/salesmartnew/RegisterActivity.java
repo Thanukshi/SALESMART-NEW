@@ -24,9 +24,9 @@ import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
 
- 
 
-    final int REQUEST_CODE_GALLERY = 999;
+
+    private static final int PICK_IMAGE = 1;
 
     EditText rFullName, rUserName, rPassword, rConfirmPass;
     ImageView rAddPhoto;
@@ -85,29 +85,33 @@ public class RegisterActivity extends AppCompatActivity {
         rAddPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent addPhoto = new Intent();
+                addPhoto.setType("image/*");
+                addPhoto.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(addPhoto,"Select the picture"),PICK_IMAGE);
                 //get the runtime permission from the phone
-                ActivityCompat.requestPermissions(
-                        RegisterActivity.this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE_GALLERY);
+                //ActivityCompat.requestPermissions(
+                        //RegisterActivity.this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE_GALLERY);
             }
         });
     }
 
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_CODE_GALLERY){
-            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-                galleryIntent.setType("image/*");
-                startActivityForResult(galleryIntent,REQUEST_CODE_GALLERY);
-            }
-            else {
+    //@Override
+    //public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+       // if (requestCode == REQUEST_CODE_GALLERY){
+           // if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+             //   Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
+               // galleryIntent.setType("image/*");
+               // startActivityForResult(galleryIntent,REQUEST_CODE_GALLERY);
+            //}
+            //else {
                 Toast.makeText(this,"Don't have to permition to access the file location", Toast.LENGTH_SHORT).show();
-            }
-            return;
-        }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
+            //}
+            //return;
+       // }
+      //  super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+   // }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
