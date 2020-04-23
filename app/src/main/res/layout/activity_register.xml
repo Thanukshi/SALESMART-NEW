@@ -71,55 +71,131 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo_Register" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_Register"
-            android:layout_width="409dp"
-            android:layout_height="375dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="65dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
+        <LinearLayout
+            android:id="@+id/linear_Register"
+            android:layout_width="0dp"
+            android:layout_height="438dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text1_Register" />
+            app:layout_constraintTop_toBottomOf="@+id/text1_Register">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout2"
-            android:layout_width="274dp"
-            android:layout_height="52dp"
-            android:layout_marginBottom="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/addImage_Register"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_a_photo" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/text2_Register"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Monday" />
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/adamina"
+                android:text="@string/fullName_Register"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/ET1_Register"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_bg"
+                android:ems="10"
+                android:fontFamily="@font/adamina"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/text3_Register"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tuesday" />
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/adamina"
+                android:text="@string/userName"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/ET2_Register"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_bg"
+                android:ems="10"
+                android:fontFamily="@font/adamina"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/tex4_Register"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Wednesday" />
-        </com.google.android.material.tabs.TabLayout>
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/adamina"
+                android:text="@string/prompt_password"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/arrowForward_Regster"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="1dp"
-            android:contentDescription="@string/signUpLogin"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/forward_arrow_black"
-            tools:ignore="VectorDrawableCompat" />
+            <EditText
+                android:id="@+id/ET3_Register"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_bg"
+                android:ems="10"
+                android:fontFamily="@font/adamina"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/text5_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/adamina"
+                android:text="@string/confirm_Register"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ET4_Register"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_bg"
+                android:ems="10"
+                android:fontFamily="@font/adamina"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorAllBlack"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
