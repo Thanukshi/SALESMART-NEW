@@ -61,6 +61,11 @@ public class RegisterActivity extends AppCompatActivity {
 
         handler.postDelayed(runnable, 1000);
 
+        {
+
+        }
+
+
         bacKArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,12 +76,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         btRegister = findViewById(R.id.button1_Register);
 
-        public void registerUser(View Object view;
-        view){
-            
-        }
 
 
     }
+
 
 }
