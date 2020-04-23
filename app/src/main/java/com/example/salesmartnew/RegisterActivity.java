@@ -12,6 +12,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
@@ -72,11 +73,13 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String cName = rFullName.getEditableText().toString();
-                String cEmail = rEmail.getEditableText().toString();
-                String cUserName = rUserName.getEditableText().toString();
-                String cPass = rPassword.getEditableText().toString();
-                String cConfirm = rConfirmPass.getEditableText().toString();
+                String cName = rFullName.getText().toString();
+                String cEmail = rEmail.getText().toString();
+                String cUserName = rUserName.getText().toString();
+                String cPass = rPassword.getText().toString();
+                String cConfirm = rConfirmPass.getText().toString();
+
+
 
             }
         });
