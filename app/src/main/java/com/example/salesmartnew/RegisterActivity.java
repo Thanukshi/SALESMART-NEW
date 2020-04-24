@@ -26,6 +26,9 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.IOException;
@@ -58,6 +61,15 @@ public class RegisterActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar_Reg);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+
+        //check the user is already signUp
+        if(firebaseAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+            finish();
+        }else {
+            Toast.makeText(getApplicationContext(),"You are already registered...",Toast.LENGTH_SHORT).show();
+        }
 
         //Initialize Validation Style
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
@@ -99,10 +111,10 @@ public class RegisterActivity extends AppCompatActivity {
                 //check the validation
                 if(awesomeValidation.validate()){
                     //validate success
-                    Toast.makeText(getApplicationContext(),"Register Successfully...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Details is correct...",Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(getApplicationContext(),"Register Failed...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Details do not match in order...",Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -135,8 +147,24 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(intentRegister);
+                progressBar.setVisibility(View.VISIBLE);
+
+                firebaseAuth.createUserWithEmailAndPassword(cUserName,cPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if(task.isSuccessful()){
+                            Toast.makeText(RegisterActivity.this,"Register Successfully...",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+
+                        }else{
+                            Toast.makeText(RegisterActivity.this,"Error!.." + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+
+
 
 
             }
