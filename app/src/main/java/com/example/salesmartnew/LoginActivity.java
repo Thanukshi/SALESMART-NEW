@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 
 public class LoginActivity extends AppCompatActivity {
@@ -59,11 +60,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //add validation for userName
-        awesomeValidation.addValidation(this,R.id.ET3_Register, RegexTemplate.NOT_EMPTY,R.string.invalid_username);
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        awesomeValidation.addValidation(this,R.id.ET1_Login, RegexTemplate.NOT_EMPTY,R.string.invalid_username);
 
         String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
         //add validation for password
-        awesomeValidation.addValidation(this,R.id.ET4_Register,errorPassword,R.string.invalid_password);
+        awesomeValidation.addValidation(this,R.id.ET2_Login,errorPassword,R.string.invalid_password);
 
         handler.postDelayed( runnable, 1000 );
 
@@ -87,13 +90,13 @@ public class LoginActivity extends AppCompatActivity {
                 //check the validation
                 if(awesomeValidation.validate()){
                     //validate success
-                    Toast.makeText(getApplicationContext(),"Details is correct...",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(),"Details is correct...",Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Enter valid user name and password..",Toast.LENGTH_SHORT).show();
 
                 }
-                
+
                 String un = eUserName.getText().toString();
                 String pw = ePassword.getText().toString();
 
