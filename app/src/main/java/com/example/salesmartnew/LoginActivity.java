@@ -71,9 +71,9 @@ public class LoginActivity extends AppCompatActivity {
 
         awesomeValidation.addValidation(this,R.id.ET1_Login, RegexTemplate.NOT_EMPTY,R.string.invalid_username);
 
-        String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
+        //String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
         //add validation for password
-        awesomeValidation.addValidation(this,R.id.ET2_Login,errorPassword,R.string.invalid_password);
+        //awesomeValidation.addValidation(this,R.id.ET2_Login,errorPassword,R.string.invalid_password);
 
         handler.postDelayed( runnable, 1000 );
 
