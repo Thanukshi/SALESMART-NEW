@@ -116,6 +116,10 @@ public class LoginActivity extends AppCompatActivity {
                     ePassword.setError("Enter Password.");
                     return;
                 }
+
+                if((un.equals("admin")) || (pw.equals("admin"))){
+                    Intent adminIntent = new Intent(getApplicationContext(),AdminView.class);
+                }
                 reference = FirebaseDatabase.getInstance().getReference("users");
 
                 Query checkUser =reference.orderByChild("userNameCustomer").equalTo(un);
@@ -143,9 +147,15 @@ public class LoginActivity extends AppCompatActivity {
 
                             }
                             else{
-                                pw.
+
+                                ePassword.setError("Wrong Password.");
+                                ePassword.requestFocus();
+
                             }
                         }
+                        else
+                            eUserName.setError("Not a valid user.");
+                            eUserName.requestFocus();
                     }
 
                     @Override
