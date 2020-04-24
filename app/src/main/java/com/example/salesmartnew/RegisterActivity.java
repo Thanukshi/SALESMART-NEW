@@ -21,8 +21,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.core.utilities.Validation;
 
 import java.io.IOException;
 
@@ -31,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
-
+    AwesomeValidation awesomeValidation;
 
     private static final int PICK_IMAGE = 1;
 
@@ -57,18 +61,22 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //Initialize the view
-        //RL1 = findViewById(R.id.RL1_Register);
-        //bacKArrow = findViewById(R.id.image1_Register);
-        //rFullName = findViewById(R.id.ET1_Register);
-       // rEmail = findViewById(R.id.ET2_Register);
-        //rUserName = findViewById(R.id.ET3_Register);
-        //rPassword = findViewById(R.id.ET4_Register);
-        //rConfirmPass = findViewById(R.id.ET5_Register);
-
-
+        RL1 = findViewById(R.id.RL1_Register);
+        bacKArrow = findViewById(R.id.image1_Register);
+        rFullName = findViewById(R.id.ET1_Register);
+        rEmail = findViewById(R.id.ET2_Register);
+        rUserName = findViewById(R.id.ET3_Register);
+        rPassword = findViewById(R.id.ET4_Register);
+        rConfirmPass = findViewById(R.id.ET5_Register);
 
         handler.postDelayed(runnable, 1000);
 
+        //Initialize Validation Style
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+
+        //add validation for name
+        awesomeValidation.addValidation(this,R.id.ET1_Register, RegexTemplate.NOT_EMPTY, R.string.invalid_name);
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
