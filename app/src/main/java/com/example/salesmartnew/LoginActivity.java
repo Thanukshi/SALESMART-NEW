@@ -117,9 +117,6 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                if((un.equals("admin")) || (pw.equals("admin"))){
-                    Intent adminIntent = new Intent(getApplicationContext(),AdminView.class);
-                }
                 reference = FirebaseDatabase.getInstance().getReference("users");
 
                 Query checkUser =reference.orderByChild("userNameCustomer").equalTo(un);
@@ -128,8 +125,8 @@ public class LoginActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
 
-                            String pwInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
-                           if(pwInDB.equals(un)){
+                            String pwInDB =dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
+                           if(pwInDB.equals(pw)){
                                 String fNInDB =dataSnapshot.child(un).child("fullName").getValue(String.class);
                                 String EInDB =dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
                                 String unInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
