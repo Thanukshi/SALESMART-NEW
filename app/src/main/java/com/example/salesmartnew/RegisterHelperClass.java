@@ -12,6 +12,9 @@ public class RegisterHelperClass {
 
     String confirmPasswordCustomer;
 
+    public RegisterHelperClass() {
+    }
+
     public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer) {
         this.fullName = fullName;
         this.emailCustomer = emailCustomer;
@@ -40,7 +43,7 @@ public class RegisterHelperClass {
         this.confirmPasswordCustomer = confirmPasswordCustomer;
     }
 
-    
+
     public String getFullName() {
         return fullName;
     }
