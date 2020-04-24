@@ -109,6 +109,8 @@ public class LoginActivity extends AppCompatActivity {
                     ePassword.setError("Enter Password.");
                     return;
                 }
+
+
                 Intent iLogin = new Intent( LoginActivity.this, DashBoard.class );
                 startActivity( iLogin );
             }
