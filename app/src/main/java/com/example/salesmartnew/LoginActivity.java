@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
@@ -53,13 +54,6 @@ public class LoginActivity extends AppCompatActivity {
 
         handler.postDelayed( runnable, 1000 );
 
-        //validate field
-
-        private Boolean ValidateUserName{
-            String un = eUserName.getText().toString();
-
-
-        }
         register.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,6 +70,19 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String un = eUserName.getText().toString();
+                String pw = ePassword.getText().toString();
+                
+                if(TextUtils.isEmpty(un)){
+                    eUserName.setError("Enter User Name.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(pw)){
+                    ePassword.setError("Enter Password.");
+                    return;
+                }
                 Intent iLogin = new Intent( LoginActivity.this, DashBoard.class );
                 startActivity( iLogin );
             }
