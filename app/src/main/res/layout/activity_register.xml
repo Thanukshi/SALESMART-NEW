@@ -41,7 +41,6 @@
             android:layout_marginTop="7dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
-            android:visibility="gone"
             app:srcCompat="@drawable/chevron_left_black"
             tools:ignore="VectorDrawableCompat" />
 
@@ -52,7 +51,6 @@
             android:layout_below="@+id/imageLogo1_Register"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="15dp"
-            android:visibility="gone"
             tools:ignore="DuplicateIds">
 
             <TextView
@@ -235,8 +233,7 @@
             android:textAllCaps="false"
             android:textColor="@color/colorAllBlack"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:visibility="gone" />
+            android:textStyle="bold" />
     </RelativeLayout>
 
 

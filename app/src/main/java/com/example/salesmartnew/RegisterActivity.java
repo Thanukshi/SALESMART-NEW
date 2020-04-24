@@ -12,9 +12,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.UserHandle;
 import android.provider.MediaStore;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,39 +21,17 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
-import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.basgeekball.awesomevalidation.utility.RegexTemplate;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.core.utilities.Validation;
 
 import java.io.IOException;
-import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
-
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
-
-    AwesomeValidation awesomeValidation;
-
-    private static final int PICK_IMAGE = 1;
 
     EditText rFullName, rEmail, rUserName, rPassword, rConfirmPass;
     Button btRegister;
     RelativeLayout RL1;
     ImageView bacKArrow;
 
-    Handler handler = new Handler();
-    Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-
-            RL1.setVisibility(View.VISIBLE);
-            bacKArrow.setVisibility(View.VISIBLE);
-            btRegister.setVisibility(View.VISIBLE);
-        }
-    };
+    AwesomeValidation awesomeValidation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,51 +47,6 @@ public class RegisterActivity extends AppCompatActivity {
         rPassword = findViewById(R.id.ET4_Register);
         rConfirmPass = findViewById(R.id.ET5_Register);
 
-        handler.postDelayed(runnable, 1000);
-
-        //Initialize Validation Style
-        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
-
-
-        //add validation for name
-        awesomeValidation.addValidation(this,R.id.ET1_Register, RegexTemplate.NOT_EMPTY, R.string.invalid_name);
-
-        //add validation for email
-        awesomeValidation.addValidation(this,R.id.ET2_Register, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
-
-        //add validation for userName
-        awesomeValidation.addValidation(this,R.id.ET3_Register,RegexTemplate.NOT_EMPTY,R.string.invalid_username);
-
-        //add validation for password
-        awesomeValidation.addValidation(this,R.id.ET4_Register,".{6,12}",R.string.invalid_password);
-
-        //add validation for confirmPassword
-        awesomeValidation.addValidation(this,R.id.ET5_Register,R.id.ET4_Register,R.string.invalid_confirm_password);
-
-
-        btRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //check the validation
-                if(awesomeValidation.validate()){
-                    //validate success
-                    Toast.makeText(getApplicationContext(),"Register Successfully...",Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(getApplicationContext(),"Register Failed...",Toast.LENGTH_SHORT).show();
-                }
-
-                //String cName = rFullName.getText().toString();
-                //String cEmail = rEmail.getText().toString();
-                //String cUserName = rUserName.getText().toString();
-                //String cPass = rPassword.getText().toString();
-                // cConfirm = rConfirmPass.getText().toString();
-
-
-
-            }
-        });
-
 
         bacKArrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,11 +56,16 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-       //btRegister = findViewById(R.id.button1_Register);
+        btRegister = findViewById(R.id.button1_Register);
 
+        btRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intentRegister);
+            }
+        });
 
     }
-
-
 }
