@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.MediaStore;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.core.utilities.Validation;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -77,6 +79,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         //add validation for name
         awesomeValidation.addValidation(this,R.id.ET1_Register, RegexTemplate.NOT_EMPTY, R.string.invalid_name);
+
+        //add validation for email
+        awesomeValidation.addValidation(this,R.id.ET2_Register, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
+
+        //add validation for userName
+        awesomeValidation.addValidation(this,R.id.ET3_Register,RegexTemplate.NOT_EMPTY,R.string.invalid_username);
+
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -21,4 +21,5 @@
     <string name="logo_Reg">Logo</string>
     <string name="reg_User" translatable="false">registerUser</string>
     <string name="invalid_name">Please Enter Valid Name</string>
+    <string name="invalid_email">Please Enter Valid Email</string>
 </resources>
