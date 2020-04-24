@@ -127,19 +127,8 @@ public class LoginActivity extends AppCompatActivity {
 
                             String pwInDB =dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
                            if(pwInDB.equals(pw)){
-                                String fNInDB =dataSnapshot.child(un).child("fullName").getValue(String.class);
-                                String EInDB =dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
-                                String unInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
-                                String cpInDB =dataSnapshot.child(un).child("confirmPasswordCustomer").getValue(String.class);
 
                                 Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
-
-                                logIntent.putExtra("fullName",fNInDB);
-                                logIntent.putExtra("emailC",EInDB);
-                                logIntent.putExtra("userName",unInDB);
-                                logIntent.putExtra("passWord",pwInDB);
-                                logIntent.putExtra("confirmPassWord",cpInDB);
-
                                 startActivity(logIntent);
 
                             }
