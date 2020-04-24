@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
@@ -63,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
         //add validation for password
         awesomeValidation.addValidation(this,R.id.ET4_Register,errorPassword,R.string.invalid_password);
-        
+
         handler.postDelayed( runnable, 1000 );
 
         register.setOnClickListener( new View.OnClickListener() {
@@ -83,6 +84,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //check the validation
+                if(awesomeValidation.validate()){
+                    //validate success
+                    Toast.makeText(getApplicationContext(),"Details is correct...",Toast.LENGTH_SHORT).show();
+
+                }else {
+                    Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
+
+                }
+                
                 String un = eUserName.getText().toString();
                 String pw = ePassword.getText().toString();
 
