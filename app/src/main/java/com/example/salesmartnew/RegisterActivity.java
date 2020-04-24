@@ -65,6 +65,8 @@ public class RegisterActivity extends AppCompatActivity {
         btRegister = findViewById(R.id.button1_Register);
         progressBar = findViewById(R.id.progressBar_Reg);
 
+
+
         //firebaseAuth = FirebaseAuth.getInstance();
 
 
