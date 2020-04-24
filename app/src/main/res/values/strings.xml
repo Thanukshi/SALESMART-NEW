@@ -3,7 +3,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_password">Password</string>
     <string name="welcome">"Welcome "</string>
-    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_username">Please Enter Valid User Name</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="btnNext_Welcome">NextButton</string>
