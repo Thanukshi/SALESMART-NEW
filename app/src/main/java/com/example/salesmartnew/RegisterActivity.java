@@ -126,24 +126,29 @@ public class RegisterActivity extends AppCompatActivity {
                 String cPassword = rPassword.getText().toString().trim();
                 String cConfirmPass = rConfirmPass.getText().toString().trim();
 
-                if(TextUtils.isEmpty(cFullName)){
-                    rFullName.setError("Full Name is Required.");
+                //if(TextUtils.isEmpty(cFullName)){
+                   // rFullName.setError("Full Name is Required.");
+                   // return;
+               // }
+
+                if(TextUtils.isEmpty(cEmail)){
+                rEmail.setError("Full Name is Required.");
                     return;
                 }
-                if(TextUtils.isEmpty(cUserName)){
-                    rUserName.setError("User Name is Required.");
-                    return;
-                }
+                //if(TextUtils.isEmpty(cUserName)){
+                  //  rUserName.setError("User Name is Required.");
+                  //  return;
+                //}
 
                 if(TextUtils.isEmpty(cPassword)){
                     rPassword.setError("Password is Required.");
                     return;
                 }
 
-                if(TextUtils.isEmpty(cConfirmPass)){
-                    rConfirmPass.setError("User Name is Required.");
-                    return;
-                }
+                //if(TextUtils.isEmpty(cConfirmPass)){
+                    //rConfirmPass.setError("User Name is Required.");
+                    //return;
+                //}
 
                 progressBar.setVisibility(View.VISIBLE);
 
@@ -156,7 +161,7 @@ public class RegisterActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
 
                         }else{
-                            Toast.makeText(RegisterActivity.this,"Error!.." + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this,"Register Failed.." + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                         }
 
                     }
