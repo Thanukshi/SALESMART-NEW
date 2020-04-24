@@ -71,6 +71,8 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"You are already registered...",Toast.LENGTH_SHORT).show();
         }
 
+
+        
         //Initialize Validation Style
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
@@ -114,7 +116,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Details is correct...",Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(getApplicationContext(),"Details do not match in order...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
 
                 }
 
