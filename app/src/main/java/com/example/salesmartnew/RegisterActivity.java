@@ -64,8 +64,6 @@ public class RegisterActivity extends AppCompatActivity {
         rConfirmPass = findViewById(R.id.ET5_Register);
         btRegister = findViewById(R.id.button1_Register);
         progressBar = findViewById(R.id.progressBar_Reg);
-        
-
 
         //Initialize Validation Style
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
@@ -151,7 +149,8 @@ public class RegisterActivity extends AppCompatActivity {
                 RegisterHelperClass registerHelperClass = new RegisterHelperClass(cFullName, cEmail, cUserName, cPassword, cConfirmPass);
                 reference.child(cUserName).setValue(registerHelperClass);
 
-
+                Intent signUP = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(signUP);
 
 
 
