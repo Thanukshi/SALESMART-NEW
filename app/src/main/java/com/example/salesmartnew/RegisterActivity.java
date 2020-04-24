@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -102,6 +103,23 @@ public class RegisterActivity extends AppCompatActivity {
                     startActivity(intentRegister);
                 }else {
                     Toast.makeText(getApplicationContext(),"Register Failed...",Toast.LENGTH_SHORT).show();
+
+                }
+
+                String cFullName = rFullName.getText().toString().trim();
+                String cEmail = rFullName.getText().toString().trim();
+                String cUserName = rUserName.getText().toString().trim();
+                String cPassword = rPassword.getText().toString().trim();
+                String cConfirmPass = rConfirmPass.getText().toString().trim();
+
+                if(TextUtils.isEmpty(cFullName)){
+                    rFullName.setError("Full Name is Required.");
+                }
+                if(TextUtils.isEmpty(cEmail)){
+                    rEmail.setError("Email is Required.");
+                }
+                if(TextUtils.isEmpty(cUserName)){
+                    rUserName.setError("User Name is Required.");
                 }
 
 
