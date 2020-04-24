@@ -105,11 +105,11 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Register Failed...",Toast.LENGTH_SHORT).show();
                 }
 
-                String cName = rFullName.getText().toString();
-                String cEmail = rEmail.getText().toString();
-                String cUserName = rUserName.getText().toString();
-                String cPass = rPassword.getText().toString();
-                String cConfirm = rConfirmPass.getText().toString();
+                //String cName = rFullName.getText().toString();
+                //String cEmail = rEmail.getText().toString();
+                //String cUserName = rUserName.getText().toString();
+                //String cPass = rPassword.getText().toString();
+                // cConfirm = rConfirmPass.getText().toString();
 
 
 
