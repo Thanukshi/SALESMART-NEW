@@ -68,11 +68,11 @@ public class RegisterActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             finish();
         }else {
-            Toast.makeText(getApplicationContext(),"You are already registered...",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"You are already registered...",Toast.LENGTH_SHORT).show();
         }
 
 
-        
+
         //Initialize Validation Style
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
@@ -85,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
         //add validation for userName
         awesomeValidation.addValidation(this,R.id.ET3_Register,RegexTemplate.NOT_EMPTY,R.string.invalid_username);
 
-        String errorPassword = "^(?=.*[A-Za-z])(?=.*\\\\d)(?=.*[$@$!%*#?&])[A-Za-z\\\\d$@$!%*#?&]{8,12}$";
+        String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
         //add validation for password
         awesomeValidation.addValidation(this,R.id.ET4_Register,errorPassword,R.string.invalid_password);
 
@@ -130,10 +130,6 @@ public class RegisterActivity extends AppCompatActivity {
                     rFullName.setError("Full Name is Required.");
                     return;
                 }
-                if(TextUtils.isEmpty(cEmail)){
-                    rEmail.setError("Email is Required.");
-                    return;
-                }
                 if(TextUtils.isEmpty(cUserName)){
                     rUserName.setError("User Name is Required.");
                     return;
@@ -151,7 +147,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
-                firebaseAuth.createUserWithEmailAndPassword(cUserName,cPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                firebaseAuth.createUserWithEmailAndPassword(cEmail,cPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
