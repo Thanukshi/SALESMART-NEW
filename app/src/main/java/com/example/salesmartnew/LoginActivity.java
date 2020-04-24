@@ -25,10 +25,17 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
     AwesomeValidation awesomeValidation;
+    DatabaseReference reference;
 
     TextView register, forgetPassword;
     EditText eUserName, ePassword;
@@ -97,8 +104,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
 
-                String un = eUserName.getText().toString();
-                String pw = ePassword.getText().toString();
+                final String un = eUserName.getText().toString().trim();
+                final String pw = ePassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(un)){
                     eUserName.setError("Enter User Name.");
@@ -109,10 +116,35 @@ public class LoginActivity extends AppCompatActivity {
                     ePassword.setError("Enter Password.");
                     return;
                 }
+                reference = FirebaseDatabase.getInstance().getReference("users");
+
+                Query checkUser =reference.orderByChild("userNameCustomer").equalTo(pw);
+                checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+
+                            String pwInDB =dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
+                            if(un.equals("admin") || pw.equals("admin")){
+                                Intent adminIntent = new Intent(getApplicationContext(),AdminView.class)
+                            }
+                            if(pwInDB.equals(un)){
+                                String fNInDB =dataSnapshot.child(un).child("fullName").getValue(String.class);
+                                String EInDB =dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
+                                String unInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
 
 
-                Intent iLogin = new Intent( LoginActivity.this, DashBoard.class );
-                startActivity( iLogin );
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+
             }
         } );
     }
