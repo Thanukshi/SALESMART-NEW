@@ -64,20 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
         rConfirmPass = findViewById(R.id.ET5_Register);
         btRegister = findViewById(R.id.button1_Register);
         progressBar = findViewById(R.id.progressBar_Reg);
-
-
-
-        //firebaseAuth = FirebaseAuth.getInstance();
-
-
-        //check the user is already signUp
-        //if(firebaseAuth.getCurrentUser() != null){
-            //startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-            //finish();
-       // }else {
-            //Toast.makeText(getApplicationContext(),"You are already registered...",Toast.LENGTH_SHORT).show();
-       // }
-
+        
 
 
         //Initialize Validation Style
@@ -128,12 +115,10 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 String cFullName = rFullName.getText().toString().trim();
-                String cEmail = rFullName.getText().toString().trim();
+                String cEmail = rEmail.getText().toString().trim();
                 String cUserName = rUserName.getText().toString().trim();
                 String cPassword = rPassword.getText().toString().trim();
                 String cConfirmPass = rConfirmPass.getText().toString().trim();
-
-                RegisterHelperClass registerHelperClass = new RegisterHelperClass(())
 
                 //if(TextUtils.isEmpty(cFullName)){
                    // rFullName.setError("Full Name is Required.");
@@ -141,13 +126,13 @@ public class RegisterActivity extends AppCompatActivity {
                // }
 
                 if(TextUtils.isEmpty(cEmail)){
-                rEmail.setError("Full Name is Required.");
+                rEmail.setError("Email is Required.");
                     return;
                 }
-                //if(TextUtils.isEmpty(cUserName)){
-                  //  rUserName.setError("User Name is Required.");
-                  //  return;
-                //}
+                if(TextUtils.isEmpty(cUserName)){
+                   rUserName.setError("User Name is Required.");
+                  return;
+                }
 
                 if(TextUtils.isEmpty(cPassword)){
                     rPassword.setError("Password is Required.");
@@ -163,7 +148,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
-                reference.setValue("Successfully Stored..");
+                RegisterHelperClass registerHelperClass = new RegisterHelperClass(cFullName, cEmail, cUserName, cPassword, cConfirmPass);
+                reference.child(cUserName).setValue(registerHelperClass);
 
 
 
