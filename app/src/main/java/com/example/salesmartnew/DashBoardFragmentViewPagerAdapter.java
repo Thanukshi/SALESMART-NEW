@@ -18,7 +18,8 @@ public class DashBoardFragmentViewPagerAdapter extends FragmentPagerAdapter {
     private final List<String>lstTittle = new ArrayList<>();
 
     public DashBoardFragmentViewPagerAdapter(FragmentManager fm) {
-       super(fm);
+        super(fm);
+
     }
 
     @NonNull
