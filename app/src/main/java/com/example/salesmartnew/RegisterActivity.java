@@ -1,18 +1,9 @@
 package com.example.salesmartnew;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import android.Manifest;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -22,18 +13,12 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -137,10 +122,6 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                //if(TextUtils.isEmpty(cConfirmPass)){
-                    //rConfirmPass.setError("User Name is Required.");
-                    //return;
-                //}
 
                 progressBar.setVisibility(View.VISIBLE);
 
@@ -151,10 +132,6 @@ public class RegisterActivity extends AppCompatActivity {
 
                 Intent signUP = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(signUP);
-
-
-
-
             }
         });
 
