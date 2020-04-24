@@ -125,12 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(dataSnapshot.exists()){
 
                             String pwInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
-                            if(un.equals("admin") || pw.equals("admin")){
-                                Intent adminIntent = new Intent(getApplicationContext(),AdminView.class);
-                                Toast.makeText(getApplicationContext(),"You are login to admin panel.",Toast.LENGTH_SHORT).show();
-
-                            }
-                            else if(pwInDB.equals(un)){
+                           if(pwInDB.equals(un)){
                                 String fNInDB =dataSnapshot.child(un).child("fullName").getValue(String.class);
                                 String EInDB =dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
                                 String unInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
@@ -146,6 +141,9 @@ public class LoginActivity extends AppCompatActivity {
 
                                 startActivity(logIntent);
 
+                            }
+                            else{
+                                pw.
                             }
                         }
                     }
