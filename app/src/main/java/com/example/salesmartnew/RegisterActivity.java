@@ -125,8 +125,13 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                if(TextUtils.isEmpty(cUserName)){
-                    rUserName.setError("User Name is Required.");
+                if(TextUtils.isEmpty(cPassword)){
+                    rPassword.setError("Password is Required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(cConfirmPass)){
+                    rConfirmPass.setError("User Name is Required.");
                     return;
                 }
 
