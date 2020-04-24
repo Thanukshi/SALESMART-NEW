@@ -133,6 +133,8 @@ public class RegisterActivity extends AppCompatActivity {
                 String cPassword = rPassword.getText().toString().trim();
                 String cConfirmPass = rConfirmPass.getText().toString().trim();
 
+                RegisterHelperClass registerHelperClass = new RegisterHelperClass(())
+
                 //if(TextUtils.isEmpty(cFullName)){
                    // rFullName.setError("Full Name is Required.");
                    // return;
@@ -161,7 +163,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
-                reference.setValue("1st");
+                reference.setValue("Successfully Stored..");
+
+
 
 
 
