@@ -21,8 +21,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+
 public class LoginActivity extends AppCompatActivity {
 
+    AwesomeValidation awesomeValidation;
 
     TextView register, forgetPassword;
     EditText eUserName, ePassword;
@@ -73,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 String un = eUserName.getText().toString();
                 String pw = ePassword.getText().toString();
-                
+
                 if(TextUtils.isEmpty(un)){
                     eUserName.setError("Enter User Name.");
                     return;
