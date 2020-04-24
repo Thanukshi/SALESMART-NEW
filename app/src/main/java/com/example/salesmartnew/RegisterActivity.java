@@ -89,10 +89,21 @@ public class RegisterActivity extends AppCompatActivity {
         //add validation for password
         awesomeValidation.addValidation(this,R.id.ET4_Register,".{6,12}",R.string.invalid_password);
 
+        //add validation for confirmPassword
+        awesomeValidation.addValidation(this,R.id.ET5_Register,R.id.ET4_Register,R.string.invalid_confirm_password);
+
 
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //check the validation
+                if(awesomeValidation.validate()){
+                    //validate success
+                    Toast.makeText(getApplicationContext(),"Register Successfully...",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(getApplicationContext(),"Register Failed...",Toast.LENGTH_SHORT).show();
+                }
 
                 String cName = rFullName.getText().toString();
                 String cEmail = rEmail.getText().toString();
