@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button btRegister;
     RelativeLayout RL1;
     ImageView bacKArrow;
+    ProgressBar progressBar;
 
     AwesomeValidation awesomeValidation;
 
@@ -52,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
         rPassword = findViewById(R.id.ET4_Register);
         rConfirmPass = findViewById(R.id.ET5_Register);
         btRegister = findViewById(R.id.button1_Register);
+        progressBar = findViewById(R.id.progressBar_Reg);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
