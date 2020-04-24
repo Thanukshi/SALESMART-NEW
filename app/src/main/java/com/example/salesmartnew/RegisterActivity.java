@@ -100,8 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(awesomeValidation.validate()){
                     //validate success
                     Toast.makeText(getApplicationContext(),"Register Successfully...",Toast.LENGTH_SHORT).show();
-                    Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
-                    startActivity(intentRegister);
+
                 }else {
                     Toast.makeText(getApplicationContext(),"Register Failed...",Toast.LENGTH_SHORT).show();
 
@@ -126,6 +125,8 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
+                Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intentRegister);
 
 
             }
