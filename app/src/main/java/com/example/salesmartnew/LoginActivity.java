@@ -22,6 +22,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -55,6 +56,14 @@ public class LoginActivity extends AppCompatActivity {
         forgetPassword = findViewById(R.id.text5_Login);
         register = findViewById( R.id.text6_Login );
 
+
+        //add validation for userName
+        awesomeValidation.addValidation(this,R.id.ET3_Register, RegexTemplate.NOT_EMPTY,R.string.invalid_username);
+
+        String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
+        //add validation for password
+        awesomeValidation.addValidation(this,R.id.ET4_Register,errorPassword,R.string.invalid_password);
+        
         handler.postDelayed( runnable, 1000 );
 
         register.setOnClickListener( new View.OnClickListener() {
