@@ -71,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
         //add validation for userName
         awesomeValidation.addValidation(this,R.id.ET3_Register,RegexTemplate.NOT_EMPTY,R.string.invalid_username);
 
-        String errorPassword = "^(?=.*[A-Za-z])(?=.*\\\\d)(?=.*[$@$!%*#?&])[A-Za-z\\\\d$@$!%*#?&]{8,}$";
+        String errorPassword = "^(?=.*[A-Za-z])(?=.*\\\\d)(?=.*[$@$!%*#?&])[A-Za-z\\\\d$@$!%*#?&]{8,12}$";
         //add validation for password
         awesomeValidation.addValidation(this,R.id.ET4_Register,errorPassword,R.string.invalid_password);
 
