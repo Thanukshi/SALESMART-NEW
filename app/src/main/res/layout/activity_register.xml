@@ -60,20 +60,21 @@
         <RelativeLayout
             android:id="@+id/RL1_Register"
             android:layout_width="match_parent"
-            android:layout_height="518dp"
+            android:layout_height="494dp"
             android:layout_below="@+id/imageLogo1_Register"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="15dp"
             tools:ignore="DuplicateIds">
 
             <TextView
                 android:id="@+id/text1_Register"
                 android:layout_width="142dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="189dp"
                 android:layout_marginRight="189dp"
                 android:fontFamily="sans-serif-medium"
@@ -89,7 +90,7 @@
                 android:layout_below="@+id/text1_Register"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="26dp"
+                android:layout_marginBottom="23dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -233,10 +234,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="7dp"
             android:background="@drawable/btn_bg"
             android:fontFamily="@font/adamina"
             android:onClick="registerUser"
@@ -246,7 +246,18 @@
             android:textAllCaps="false"
             android:textColor="@color/colorAllBlack"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-3dp"
+            android:layout_centerHorizontal="true"
+            />
     </RelativeLayout>
 
 
