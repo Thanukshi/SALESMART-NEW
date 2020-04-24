@@ -118,22 +118,33 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 reference = FirebaseDatabase.getInstance().getReference("users");
 
-                Query checkUser =reference.orderByChild("userNameCustomer").equalTo(pw);
+                Query checkUser =reference.orderByChild("userNameCustomer").equalTo(un);
                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
 
-                            String pwInDB =dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
+                            String pwInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
                             if(un.equals("admin") || pw.equals("admin")){
                                 Intent adminIntent = new Intent(getApplicationContext(),AdminView.class);
-                                
+                                Toast.makeText(getApplicationContext(),"You are login to admin panel.",Toast.LENGTH_SHORT).show();
+
                             }
-                            if(pwInDB.equals(un)){
+                            else if(pwInDB.equals(un)){
                                 String fNInDB =dataSnapshot.child(un).child("fullName").getValue(String.class);
                                 String EInDB =dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
                                 String unInDB =dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
+                                String cpInDB =dataSnapshot.child(un).child("confirmPasswordCustomer").getValue(String.class);
 
+                                Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
+
+                                logIntent.putExtra("fullName",fNInDB);
+                                logIntent.putExtra("emailC",EInDB);
+                                logIntent.putExtra("userName",unInDB);
+                                logIntent.putExtra("passWord",pwInDB);
+                                logIntent.putExtra("confirmPassWord",cpInDB);
+
+                                startActivity(logIntent);
 
                             }
                         }
