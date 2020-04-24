@@ -125,6 +125,11 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
+                if(TextUtils.isEmpty(cUserName)){
+                    rUserName.setError("User Name is Required.");
+                    return;
+                }
+
                 Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intentRegister);
 
