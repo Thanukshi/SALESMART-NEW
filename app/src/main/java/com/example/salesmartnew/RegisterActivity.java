@@ -86,6 +86,8 @@ public class RegisterActivity extends AppCompatActivity {
         //add validation for userName
         awesomeValidation.addValidation(this,R.id.ET3_Register,RegexTemplate.NOT_EMPTY,R.string.invalid_username);
 
+        //add validation for userName
+        awesomeValidation.addValidation(this,R.id.ET4_Register,".{6,}",R.string.invalid_password);
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
