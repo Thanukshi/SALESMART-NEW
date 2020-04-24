@@ -159,6 +159,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
+                rootNode = FirebaseDatabase.getInstance();
+                reference = rootNode.
+
 
 
 
