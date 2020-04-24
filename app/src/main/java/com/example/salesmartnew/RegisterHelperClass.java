@@ -2,37 +2,22 @@ package com.example.salesmartnew;
 
 public class RegisterHelperClass {
 
-    private String fullName;
+    String fullName;
 
-    private String emailCustomer;
+    String emailCustomer;
 
-    private String userNameCustomer;
+    String userNameCustomer;
 
-    private String passwordCustomer;
+    String passwordCustomer;
 
-    private String confirmPasswordCustomer;
+    String confirmPasswordCustomer;
 
-    public RegisterHelperClass() {
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getEmailCustomer() {
-        return emailCustomer;
-    }
-
-    public String getUserNameCustomer() {
-        return userNameCustomer;
-    }
-
-    public String getPasswordCustomer() {
-        return passwordCustomer;
-    }
-
-    public String getConfirmPasswordCustomer() {
-        return confirmPasswordCustomer;
+    public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer) {
+        this.fullName = fullName;
+        this.emailCustomer = emailCustomer;
+        this.userNameCustomer = userNameCustomer;
+        this.passwordCustomer = passwordCustomer;
+        this.confirmPasswordCustomer = confirmPasswordCustomer;
     }
 
     public void setFullName(String fullName) {
@@ -53,5 +38,26 @@ public class RegisterHelperClass {
 
     public void setConfirmPasswordCustomer(String confirmPasswordCustomer) {
         this.confirmPasswordCustomer = confirmPasswordCustomer;
+    }
+
+    
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getEmailCustomer() {
+        return emailCustomer;
+    }
+
+    public String getUserNameCustomer() {
+        return userNameCustomer;
+    }
+
+    public String getPasswordCustomer() {
+        return passwordCustomer;
+    }
+
+    public String getConfirmPasswordCustomer() {
+        return confirmPasswordCustomer;
     }
 }

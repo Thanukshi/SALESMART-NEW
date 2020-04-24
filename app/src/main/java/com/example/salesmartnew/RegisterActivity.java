@@ -30,12 +30,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    FirebaseAuth firebaseAuth;
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
+    //FirebaseAuth firebaseAuth;
     EditText rFullName, rEmail, rUserName, rPassword, rConfirmPass;
     Button btRegister;
     RelativeLayout RL1;
@@ -60,16 +65,16 @@ public class RegisterActivity extends AppCompatActivity {
         btRegister = findViewById(R.id.button1_Register);
         progressBar = findViewById(R.id.progressBar_Reg);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        //firebaseAuth = FirebaseAuth.getInstance();
 
 
         //check the user is already signUp
-        if(firebaseAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-            finish();
-        }else {
+        //if(firebaseAuth.getCurrentUser() != null){
+            //startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+            //finish();
+       // }else {
             //Toast.makeText(getApplicationContext(),"You are already registered...",Toast.LENGTH_SHORT).show();
-        }
+       // }
 
 
 
@@ -151,21 +156,6 @@ public class RegisterActivity extends AppCompatActivity {
                 //}
 
                 progressBar.setVisibility(View.VISIBLE);
-
-                firebaseAuth.createUserWithEmailAndPassword(cEmail,cPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        if(task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this,"Register Successfully...",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-
-                        }else{
-                            Toast.makeText(RegisterActivity.this,"Register Failed.." + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });
 
 
 
