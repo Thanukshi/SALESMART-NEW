@@ -71,8 +71,9 @@ public class RegisterActivity extends AppCompatActivity {
         //add validation for userName
         awesomeValidation.addValidation(this,R.id.ET3_Register,RegexTemplate.NOT_EMPTY,R.string.invalid_username);
 
+        String errorPassword = "^(?=.*[A-Za-z])(?=.*\\\\d)(?=.*[$@$!%*#?&])[A-Za-z\\\\d$@$!%*#?&]{8,}$";
         //add validation for password
-        awesomeValidation.addValidation(this,R.id.ET4_Register,".{6,12}",R.string.invalid_password);
+        awesomeValidation.addValidation(this,R.id.ET4_Register,errorPassword,R.string.invalid_password);
 
         //add validation for confirmPassword
         awesomeValidation.addValidation(this,R.id.ET5_Register,R.id.ET4_Register,R.string.invalid_confirm_password);
@@ -114,12 +115,15 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(cFullName)){
                     rFullName.setError("Full Name is Required.");
+                    return;
                 }
                 if(TextUtils.isEmpty(cEmail)){
                     rEmail.setError("Email is Required.");
+                    return;
                 }
                 if(TextUtils.isEmpty(cUserName)){
                     rUserName.setError("User Name is Required.");
+                    return;
                 }
 
 
