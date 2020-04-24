@@ -26,8 +26,9 @@ public class LoginActivity extends AppCompatActivity {
     TextView register, forgetPassword;
     EditText eUserName, ePassword;
     Button btnLogin;
-
     RelativeLayout relLay1, relLay2;
+
+    //splash screen
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
@@ -35,9 +36,6 @@ public class LoginActivity extends AppCompatActivity {
 
             relLay1.setVisibility( View.VISIBLE );
             relLay2.setVisibility( View.VISIBLE );
-
-
-
         }
     };
 
@@ -55,7 +53,13 @@ public class LoginActivity extends AppCompatActivity {
 
         handler.postDelayed( runnable, 1000 );
 
+        //validate field
 
+        private Boolean ValidateUserName{
+            String un = eUserName.getText().toString();
+
+
+        }
         register.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
