@@ -25,4 +25,5 @@
     <string name="invalid_confirm_password">Password does not match</string>
     <string name="cDescript">image</string>
     <string name="navItem1">Dashboard</string>
+    <string name="navItem2">Search</string>
 </resources>
