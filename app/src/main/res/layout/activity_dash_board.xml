@@ -14,7 +14,7 @@
         app:itemTextColor="@color/NavGray"
         app:itemIconTint="@color/NavGray"
         app:menu="@menu/drawermenu"
-        />
+        android:layout_gravity="start"        />
 
 
 </RelativeLayout>
