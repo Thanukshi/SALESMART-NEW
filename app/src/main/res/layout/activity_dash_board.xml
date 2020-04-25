@@ -28,6 +28,8 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:itemTextColor=""/>
+        android:background="@color/colorAllWhite"
+        app:itemTextColor="@color/NavGray"
+        app:itemIconTint="@color/NavGray"/>
 
 </RelativeLayout>
