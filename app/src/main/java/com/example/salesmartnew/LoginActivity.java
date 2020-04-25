@@ -116,12 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                     ePassword.setError("Enter Password.");
                     return;
                 }
-
-                if(eUserName.equals("admin") && ePassword.equals("Admin@1234")){
-                    Intent adminIntent = new Intent(getApplicationContext(),AdminView.class);
-                    startActivity(adminIntent);
-                }
-
+                
                 reference = FirebaseDatabase.getInstance().getReference("users");
 
                 Query checkUser =reference.orderByChild("userNameCustomer").equalTo(un);
