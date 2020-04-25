@@ -117,6 +117,11 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
+                if(eUserName.equals("admin") && ePassword.equals("Admin@1234")){
+                    Intent adminIntent = new Intent(getApplicationContext(),AdminView.class);
+                    startActivity(adminIntent);
+                }
+
                 reference = FirebaseDatabase.getInstance().getReference("users");
 
                 Query checkUser =reference.orderByChild("userNameCustomer").equalTo(un);
@@ -126,7 +131,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(dataSnapshot.exists()){
 
                             String pwInDB =dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
-                            String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
+                            //String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
                             if(pwInDB.equals(pw)){
 
                                 Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
