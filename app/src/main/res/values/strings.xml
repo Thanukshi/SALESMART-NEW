@@ -26,4 +26,6 @@
     <string name="cDescript">image</string>
     <string name="navItem1">Dashboard</string>
     <string name="navItem2">Search</string>
+    <string name="navItem3">Settings</string>
+    <string name="navItem4">Cart</string>
 </resources>
