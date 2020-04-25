@@ -28,4 +28,6 @@
     <string name="navItem2">Search</string>
     <string name="navItem3">Settings</string>
     <string name="navItem4">Cart</string>
+    <string name="navItem5">Payments</string>
+    <string name="navItem6">Contct Us</string>
 </resources>
