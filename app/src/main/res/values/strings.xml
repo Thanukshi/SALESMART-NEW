@@ -30,4 +30,5 @@
     <string name="navItem4">Cart</string>
     <string name="navItem5">Payments</string>
     <string name="navItem6">Contct Us</string>
+    <string name="navItem7">Log Out</string>
 </resources>
