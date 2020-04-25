@@ -27,6 +27,7 @@
 
 
         <LinearLayout
+            android:id="@+id/lin_Dash"
             android:layout_width="0dp"
             android:layout_height="61dp"
             android:layout_marginStart="2dp"
