@@ -7,8 +7,9 @@
         android:id="@+id/db1"
         android:title="@string/navItem1" />
 
-    <item android:id="@+id/db2"
-        android:title="Search"/>
+    <item
+        android:id="@+id/db2"
+        android:title="@string/navItem2" />
 
 
 
