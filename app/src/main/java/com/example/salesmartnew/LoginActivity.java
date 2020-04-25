@@ -109,6 +109,8 @@ public class LoginActivity extends AppCompatActivity {
 
         register.setMovementMethod( LinkMovementMethod.getInstance() );
 
+        createRequest();
+        mAuth = FirebaseAuth.getInstance();
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,9 +118,6 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-
-        createRequest();
-        mAuth = FirebaseAuth.getInstance();
 
         btnLogin.setOnClickListener( new View.OnClickListener() {
             @Override
