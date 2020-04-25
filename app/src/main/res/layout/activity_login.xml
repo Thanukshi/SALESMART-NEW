@@ -151,17 +151,6 @@
 
         </RelativeLayout>
 
-        <Button
-            android:id="@+id/googleButton_Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/rl3Login"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/btn_bg"
-            android:text="Button"
-            android:layout_centerHorizontal="true"/>
-
-
 
         <RelativeLayout
             android:id="@+id/rl3Login"
@@ -213,6 +202,14 @@
 
 
         </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl3Login"
+            android:layout_marginBottom="-8dp"
+            app:srcCompat="@drawable/google_sign" />
 
 
     </RelativeLayout>
