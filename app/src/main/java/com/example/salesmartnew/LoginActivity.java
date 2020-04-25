@@ -63,15 +63,15 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
-
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user != null){
-            Intent googleIntent = new Intent(getApplicationContext(),DashBoard.class);
-            startActivity(googleIntent);
-        }
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        Intent googleIntent = new Intent(getApplicationContext(),DashBoard.class);
+        startActivity(googleIntent);
     }
+
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -228,10 +228,10 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            if(user != null){
+
                                 Intent googleIntent = new Intent(getApplicationContext(),DashBoard.class);
                                 startActivity(googleIntent);
-                            }
+                            
 
                         } else {
                             // If sign in fails, display a message to the user.
