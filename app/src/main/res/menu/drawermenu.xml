@@ -14,15 +14,23 @@
 
     <item
         android:id="@+id/db3"
-        android:title="@string/navItem3" />
+        android:title="@string/navItem4" />
 
 
     <item
         android:id="@+id/db4"
-        android:title="@string/navItem4" />
+        android:title="@string/navItem5" />
 
     <item
         android:id="@+id/db5"
+        android:title="@string/navItem6" />
+
+    <item
+        android:id="@+id/db6"
+        android:title="@string/navItem3" />
+
+    <item
+        android:id="@+id/db7"
         android:title="@string/navItem3" />
 
 
