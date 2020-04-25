@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         forgetPassword = findViewById(R.id.text5_Login);
         register = findViewById( R.id.text6_Login );
         googleButton = findViewById(R.id.google_Login);
+        btnLogin = findViewById( R.id.button1_Login );
 
 
         //add validation for userName
@@ -80,10 +81,7 @@ public class LoginActivity extends AppCompatActivity {
            }
         } );
 
-
         register.setMovementMethod( LinkMovementMethod.getInstance() );
-
-        btnLogin = findViewById( R.id.button1_Login );
 
         btnLogin.setOnClickListener( new View.OnClickListener() {
             @Override
