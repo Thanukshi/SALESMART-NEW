@@ -116,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                     ePassword.setError("Enter Password.");
                     return;
                 }
-                
+
                 reference = FirebaseDatabase.getInstance().getReference("users");
 
                 Query checkUser =reference.orderByChild("userNameCustomer").equalTo(un);
