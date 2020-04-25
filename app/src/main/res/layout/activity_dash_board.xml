@@ -25,4 +25,8 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp"/>
 
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width=""
+        android:layout_height=""
+
 </RelativeLayout>
