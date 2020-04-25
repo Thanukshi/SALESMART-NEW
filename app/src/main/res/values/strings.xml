@@ -24,4 +24,5 @@
     <string name="invalid_email">Please Enter Valid Email</string>
     <string name="invalid_confirm_password">Password does not match</string>
     <string name="cDescript">image</string>
+    <string name="navItem1">Dashboard</string>
 </resources>
