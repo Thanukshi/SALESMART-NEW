@@ -12,5 +12,20 @@
         android:title="@string/navItem2" />
 
 
+    <item
+        android:id="@+id/db3"
+        android:title="@string/navItem3" />
+
+
+    <item
+        android:id="@+id/db4"
+        android:title="@string/navItem4" />
+
+    <item
+        android:id="@+id/db5"
+        android:title="@string/navItem3" />
+
+
+
 
 </menu>
