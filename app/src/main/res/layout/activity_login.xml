@@ -202,6 +202,14 @@
 
         </RelativeLayout>
 
+        <Button
+            android:id="@+id/googleButton_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl3Login"
+            android:layout_marginBottom="4dp"
+            android:text="Button" />
+
     </RelativeLayout>
 
 </RelativeLayout>
