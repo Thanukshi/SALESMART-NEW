@@ -10,6 +10,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText eUserName, ePassword;
     Button btnLogin;
     RelativeLayout relLay1, relLay2;
+    ImageView googleButton;
 
     //splash screen
     Handler handler = new Handler();
@@ -41,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
             relLay1.setVisibility( View.VISIBLE );
             relLay2.setVisibility( View.VISIBLE );
+            googleButton.setVisibility(View.VISIBLE);
         }
     };
 
@@ -55,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         ePassword =  findViewById(R.id.ET2_Login);
         forgetPassword = findViewById(R.id.text5_Login);
         register = findViewById( R.id.text6_Login );
+        googleButton = findViewById(R.id.google_Login);
 
 
         //add validation for userName
