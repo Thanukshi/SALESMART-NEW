@@ -25,4 +25,8 @@
     <color name="DashBoardAccent">#F7D707</color>
     <color name="DashBoardFragment">#2b2b2b</color>
 
+    <color name="NavGray">#6c6c6c6c</color>
+    <color name="NavPrimary">#795548</color>
+    <color name="NavPrimaryDark">#5D4037</color>
+
 </resources>
