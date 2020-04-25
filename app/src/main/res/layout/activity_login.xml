@@ -206,10 +206,10 @@
             android:id="@+id/google_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/rl3Login"
-            android:layout_marginBottom="-8dp"
-            app:srcCompat="@drawable/google_sign"
-            android:visibility="gone"/>
+            android:layout_below="@+id/rl1Login"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/google_sign" />
 
 
     </RelativeLayout>
