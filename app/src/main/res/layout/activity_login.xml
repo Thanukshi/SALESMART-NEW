@@ -31,7 +31,7 @@
             android:layout_height="393dp"
             android:layout_below="@+id/imageLogo_Login"
             android:layout_marginTop="0dp"
-            android:visibility=""
+            android:visibility="gone"
             tools:ignore="DuplicateIds">
 
             <TextView
@@ -156,11 +156,10 @@
             android:id="@+id/rl3Login"
             android:layout_width="318dp"
             android:layout_height="62dp"
-
             android:layout_alignParentBottom="true"
             android:layout_marginTop="22dp"
             android:layout_marginBottom="20dp"
-            android:visibility="">
+            android:visibility="gone">
 
 
             <TextView
@@ -204,12 +203,13 @@
         </RelativeLayout>
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/google_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/rl3Login"
             android:layout_marginBottom="-8dp"
-            app:srcCompat="@drawable/google_sign" />
+            app:srcCompat="@drawable/google_sign"
+            android:visibility="gone"/>
 
 
     </RelativeLayout>
