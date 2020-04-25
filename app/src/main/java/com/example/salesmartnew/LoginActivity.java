@@ -129,9 +129,15 @@ public class LoginActivity extends AppCompatActivity {
                             String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
                             if(pwInDB.equals(pw)){
 
-                                Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
-                                startActivity(logIntent);
+                                if(unIDb.equals("admin") || pwInDB.equals("Admin@1234")){
+                                    Intent adminIntent = new Intent(getApplicationContext(),AdminView.class);
+                                    startActivity(adminIntent);
+                                }else{
+                                    Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
+                                    startActivity(logIntent);
+                                }
 
+                                
                             }
                             else{
 
