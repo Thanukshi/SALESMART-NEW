@@ -82,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         } );
 
         register.setMovementMethod( LinkMovementMethod.getInstance() );
+        createRequest();
 
         btnLogin.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -147,5 +148,8 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         } );
+    }
+
+    private void createRequest() {
     }
 }
