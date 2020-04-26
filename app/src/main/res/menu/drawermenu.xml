@@ -46,20 +46,31 @@
                     android:id="@+id/db7"
                     android:title="@string/navItem5"
                     android:icon="@drawable/ic_payment"/>
+                <item
+                    android:id="@+id/db9"
+                    android:title="@string/navItem3"
+                    android:icon="@drawable/ic_settings"/>
 
             </group>
         </menu>
     </item>
 
-    <item
-        android:id="@+id/db8"
-        android:title="@string/navItem6"
-        android:icon="@drawable/ic_contacts"/>
+    <item android:title="Share">
+        <menu>
+            <group
+                android:checkableBehavior="none">
+                <item
+                    android:id="@+id/db8"
+                    android:title="@string/navItem6"
+                    android:icon="@drawable/ic_contacts"/>
 
-    <item
-        android:id="@+id/db9"
-        android:title="@string/navItem3"
-        android:icon="@drawable/ic_settings"/>
+            </group>
+        </menu>
+    </item>
+
+
+
+
 
 
 
