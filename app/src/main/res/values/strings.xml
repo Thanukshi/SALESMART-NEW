@@ -44,4 +44,6 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="navItem8">Log In</string>
+    <string name="navItem9">Profile</string>
 </resources>
