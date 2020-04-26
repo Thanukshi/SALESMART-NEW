@@ -26,6 +26,10 @@ public class DashBoard extends AppCompatActivity {
         drawerLayout = findViewById(R.id.RL1_Dash);
         navigationView = findViewById(R.id.nav);
 
+        //navigation drawer
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
+
 
     }
 }
