@@ -31,12 +31,13 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         //navigation drawer
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
+        navigationView.setCheckedItem(R.id.db1);
 
 
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
+        return true;
     }
 }
