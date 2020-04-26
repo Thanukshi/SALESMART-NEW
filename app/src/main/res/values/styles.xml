@@ -16,8 +16,8 @@
 
     <style name="navigationTheme">
         
-        <item name="colorPrimary">#0E0EF9</item>
-        <item name="colorControlHighlight">@color/NavGray</item>
+        <item name="colorPrimary">#FFC107</item>
+        <item name="colorControlHighlight">@color/colorAllBlack</item>
         
     </style>
 </resources>

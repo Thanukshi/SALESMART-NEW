@@ -15,7 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@color/colorAllWhite"
-        app:itemIconTint="@color/colorAllBlack"
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
         app:headerLayout="@layout/menu_header">
@@ -55,6 +54,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/colorAllWhite">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding = "20dp">
+            
+            <ImageView
+                android:id="@+id/menuIcon_Dash"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_menu"/>
+            
+        </RelativeLayout>
 
     </LinearLayout>
 
