@@ -49,4 +49,7 @@
     <string name="navItem10">Rating Us</string>
     <string name="vavTitle">Share</string>
     <string name="navTittle">Share</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
