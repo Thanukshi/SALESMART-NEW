@@ -36,16 +36,6 @@
                     android:id="@+id/db5"
                     android:title="@string/navItem7"
                     android:icon="@drawable/ic_logout"/>
-
-                <item
-                    android:id="@+id/db6"
-                    android:title="@string/navItem4"
-                    android:icon="@drawable/ic_add_shopping"/>
-
-                <item
-                    android:id="@+id/db7"
-                    android:title="@string/navItem5"
-                    android:icon="@drawable/ic_payment"/>
                 <item
                     android:id="@+id/db9"
                     android:title="@string/navItem3"
