@@ -40,7 +40,7 @@
                 <item
                     android:id="@+id/db6"
                     android:title="@string/navItem4"
-                    android:icon="@drawable/ic_shopping"/>
+                    android:icon="@drawable/ic_add_shopping"/>
 
                 <item
                     android:id="@+id/db7"
