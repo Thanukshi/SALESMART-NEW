@@ -47,4 +47,6 @@
     <string name="navItem8">Log In</string>
     <string name="navItem9">Profile</string>
     <string name="navItem10">Rating Us</string>
+    <string name="vavTitle">Share</string>
+    <string name="navTittle">Share</string>
 </resources>

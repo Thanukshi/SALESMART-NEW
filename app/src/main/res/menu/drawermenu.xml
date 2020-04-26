@@ -19,45 +19,43 @@
     </group>
 
 
-    <item android:title="Profile">
+    <item android:title="@string/navItem9">
         <menu>
-            <group
-                android:checkableBehavior="single">
+            <group android:checkableBehavior="single">
 
                 <item
                     android:id="@+id/db3"
-                    android:title="@string/navItem8"
-                    android:icon="@drawable/ic_login"/>
+                    android:icon="@drawable/ic_login"
+                    android:title="@string/navItem8" />
                 <item
                     android:id="@+id/db4"
-                    android:title="@string/navItem9"
-                    android:icon="@drawable/ic_person"/>
+                    android:icon="@drawable/ic_person"
+                    android:title="@string/navItem9" />
                 <item
                     android:id="@+id/db5"
-                    android:title="@string/navItem7"
-                    android:icon="@drawable/ic_logout"/>
+                    android:icon="@drawable/ic_logout"
+                    android:title="@string/navItem7" />
                 <item
                     android:id="@+id/db9"
-                    android:title="@string/navItem3"
-                    android:icon="@drawable/ic_settings"/>
+                    android:icon="@drawable/ic_settings"
+                    android:title="@string/navItem3" />
 
             </group>
         </menu>
     </item>
 
-    <item android:title="Share">
+    <item android:title="@string/navTittle">
         <menu>
-            <group
-                android:checkableBehavior="none">
+            <group android:checkableBehavior="none">
                 <item
                     android:id="@+id/db8"
-                    android:title="@string/navItem6"
-                    android:icon="@drawable/ic_contacts"/>
+                    android:icon="@drawable/ic_contacts"
+                    android:title="@string/navItem6" />
 
                 <item
                     android:id="@+id/db10"
-                    android:title="@string/navItem10"
-                    android:icon="@drawable/ic_star"/>
+                    android:icon="@drawable/ic_star"
+                    android:title="@string/navItem10" />
 
             </group>
         </menu>
