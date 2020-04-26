@@ -11,19 +11,21 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 public class DashBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    static final float END_SCALE = 0.7f;
 
     ImageView drawerMenu;
 
     //Drawer Menu Bar
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-
+    LinearLayout contentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         setContentView(R.layout.activity_dash_board);
 
         drawerMenu = findViewById(R.id.menuIcon_Dash);
+        contentView = findViewById(R.id.contentL);
+
 
         //Hooks for the navigation
         drawerLayout = findViewById(R.id.RL1_Dash);
@@ -60,7 +64,35 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
                 }
             }
         });
+        onCreateAnimationOnNavigation();
     }
+
+    private void onCreateAnimationOnNavigation() {
+
+        drawerLayout.setScrimColor(getResources().getColor(R.color.colorPrimary));
+
+        //Add any color or remove it to use the default one!
+        //To make it transparent use Color.Transparent in side setScrimColor();
+        //drawerLayout.setScrimColor(Color.TRANSPARENT);
+        drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+
+                // Scale the View based on current slide offset
+                final float diffScaledOffset = slideOffset * (1 - END_SCALE);
+                final float offsetScale = 1 - diffScaledOffset;
+                contentView.setScaleX(offsetScale);
+                contentView.setScaleY(offsetScale);
+
+                // Translate the View, accounting for the scaled width
+                final float xOffset = drawerView.getWidth() * slideOffset;
+                final float xOffsetDiff = contentView.getWidth() * diffScaledOffset / 2;
+                final float xTranslation = xOffset - xOffsetDiff;
+                contentView.setTranslationX(xTranslation);
+            }
+        });
+    }
+
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerVisible(GravityCompat.START)){
@@ -70,7 +102,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         }
     }
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
         return true;
     }
 }
