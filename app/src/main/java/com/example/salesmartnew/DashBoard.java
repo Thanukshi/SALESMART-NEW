@@ -1,16 +1,18 @@
 package com.example.salesmartnew;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class DashBoard extends AppCompatActivity {
+public class DashBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     //Drawer Menu Bar
@@ -31,5 +33,10 @@ public class DashBoard extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
 
 
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
     }
 }
