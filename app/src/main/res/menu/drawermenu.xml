@@ -11,23 +11,32 @@
             android:title="@string/navItem1"
             android:icon="@drawable/ic_menu"/>
 
+        <item
+            android:id="@+id/db2"
+            android:title="@string/navItem2"
+            android:icon="@drawable/ic_searched"/>
+
     </group>
 
-        android:id="@+id/db2"
-        android:title="@string/navItem2"
-        android:icon="@drawable/ic_searched"/>
 
+    <item android:title="Profile">
+        <menu>
+            <group
+                android:checkableBehavior="single">
 
-    <item
-        android:id="@+id/db3"
-        android:title="@string/navItem4"
-        android:icon="@drawable/ic_shopping"/>
+                <item
+                    android:id="@+id/db3"
+                    android:title="@string/navItem4"
+                    android:icon="@drawable/ic_shopping"/>
 
+                <item
+                    android:id="@+id/db4"
+                    android:title="@string/navItem5"
+                    android:icon="@drawable/ic_payment"/>
 
-    <item
-        android:id="@+id/db4"
-        android:title="@string/navItem5"
-        android:icon="@drawable/ic_payment"/>
+            </group>
+        </menu>
+    </item>
 
     <item
         android:id="@+id/db5"
