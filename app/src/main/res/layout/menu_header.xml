@@ -2,7 +2,38 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="250dp"
+    android:background="@drawable/menu_header_back">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/headerImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="237dp"
+        android:layout_marginRight="237dp"
+        android:src="@drawable/person_add" />
+
+    <TextView
+        android:id="@+id/headerText_menu"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/headerImage"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/amarante"
+        android:gravity="start"
+        android:textColor="@color/colorAllBlack"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp" />
 
 
 </RelativeLayout>
