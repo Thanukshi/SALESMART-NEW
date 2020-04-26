@@ -11,10 +11,10 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav"
+        android:theme="@style/navigationTheme"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@color/colorAllWhite"
-        app:itemTextColor="@color/colorAllBlack"
         app:itemIconTint="@color/colorAllBlack"
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"

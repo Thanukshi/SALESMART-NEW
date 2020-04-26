@@ -14,4 +14,10 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="navigationTheme">
+        
+        <item name="colorPrimary">#0E0EF9</item>
+        <item name="colorControlHighlight">@color/NavGray</item>
+        
+    </style>
 </resources>
