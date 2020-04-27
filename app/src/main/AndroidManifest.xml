@@ -16,10 +16,10 @@
 
         <activity android:name=".AdminView" />
         <activity android:name=".WelcomeScreen" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".DashBoard" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".DashBoard" >
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
