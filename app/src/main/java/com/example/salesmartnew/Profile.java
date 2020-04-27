@@ -53,7 +53,20 @@ public class Profile extends AppCompatActivity {
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent intent = getIntent();
+                //set values as String
+
+                String userNameEdit= intent.getStringExtra("userNameCustomer");
+                String fullNameEdit = intent.getStringExtra("fullName");
+                String fullName = intent.getStringExtra("emailCustomer");
+                String passwordEdit = intent.getStringExtra("passwordCustomer");
+
+                Intent profIntent = new Intent(Profile.this, EditProfile.class);
+                intent.putExtra("userNameCustomer", userNameEdit);
+                intent.putExtra("fullName", fullNameEdit);
+                intent.putExtra("emailCustomer", fullName);
+                intent.putExtra("passwordCustomer", passwordEdit);
+                startActivity(profIntent);
             }
         });
 
