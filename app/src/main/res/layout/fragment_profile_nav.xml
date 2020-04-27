@@ -5,7 +5,8 @@
     android:id="@+id/fragProfile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileNav">
+    tools:context=".ProfileNav"
+    android:background="@drawable/profile_design">
 
 
     <RelativeLayout
@@ -19,13 +20,13 @@
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="187dp"
             android:src="@drawable/person_add"
             app:civ_border_width="1dp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="130dp"
-            tools:layout_editor_absoluteY="232dp" />
+            tools:layout_editor_absoluteY="232dp"
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -36,16 +37,18 @@
             android:textColor="@color/colorAllBlack"
             android:textSize="20sp" />
 
+
         <Button
             android:id="@+id/button"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginTop="400dp"
+            android:layout_marginBottom="3dp"
             android:background="@drawable/btn_gradient_welcome"
             android:fontFamily="@font/bevan"
             android:text="@string/profButton"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
 
     </RelativeLayout>
