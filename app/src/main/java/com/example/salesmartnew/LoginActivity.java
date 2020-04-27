@@ -128,7 +128,10 @@ public class LoginActivity extends AppCompatActivity {
                             //String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
                             if(pwInDB.equals(pw)){
 
+                                String fnInDB = dataSnapshot.child(un).child("fullName").getValue(String.class);
+
                                 Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
+                                logIntent.putExtra("fullName",fnInDB);
                                 startActivity(logIntent);
 
                             }
