@@ -68,15 +68,66 @@
                 <ImageView
                     android:id="@+id/image1_ProfLL"
                     android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_person_fill" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/text1__ProfLL"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inLL2_Prof"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image2_ProfLL"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_email" />
+
+                <TextView
+                    android:id="@+id/text2__ProfLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inLL3_Prof"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image3_ProfLL"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_email" />
+
+                <TextView
+                    android:id="@+id/text3__ProfLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
             </LinearLayout>
         </LinearLayout>
 
