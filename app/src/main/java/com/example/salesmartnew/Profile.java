@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class Profile extends AppCompatActivity {
     TextView passwordText;
     TextView contactText;
     ImageView profImage;
+    Button editProfileButton;
 
     //FirebaseDatabase profDb;
     //DatabaseReference profReference;
@@ -64,5 +66,7 @@ public class Profile extends AppCompatActivity {
         fullNameText.setText(fullNameEdit);
         emailText.setText(emailEdit);
         passwordText.setText(passwordEdit);
+
+
     }
 }
