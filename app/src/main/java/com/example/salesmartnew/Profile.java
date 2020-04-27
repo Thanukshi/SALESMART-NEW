@@ -25,8 +25,8 @@ public class Profile extends AppCompatActivity {
     TextView contactText;
     ImageView profImage;
 
-    FirebaseDatabase profDb;
-    DatabaseReference profReference;
+    //FirebaseDatabase profDb;
+    //DatabaseReference profReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,20 +40,12 @@ public class Profile extends AppCompatActivity {
         contactText = findViewById(R.id.text4__ProfLL);
         profImage = findViewById(R.id.profImage);
 
-        profDb = FirebaseDatabase.getInstance();
-        profReference = profDb.getReference("users");
+        //profDb = FirebaseDatabase.getInstance();
+        //profReference = profDb.getReference("users");
 
-        profReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+        
 
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        })
 
     }
 }
