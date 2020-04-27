@@ -122,8 +122,9 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
         int id = item.getItemId();
 
-        if(id == R.id.db3){
-
+        if(id == R.id.db4){
+            Intent profIntent = new Intent(DashBoard.this, Profile.class);
+            startActivity(profIntent);
         }
 
         return true;
