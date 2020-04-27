@@ -123,6 +123,12 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         int id = item.getItemId();
 
         if(id == R.id.db4){
+            Intent intent = getIntent();
+            String userNameEdit= intent.getStringExtra("fullName");
+            String fullNameEdit = intent.getStringExtra("fullName");
+            String emailEdit = intent.getStringExtra("emailCustomer");
+            String passwordEdit = intent.getStringExtra("passwordCustomer");
+
             Intent profIntent = new Intent(DashBoard.this, Profile.class);
             startActivity(profIntent);
         }
