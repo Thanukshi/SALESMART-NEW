@@ -59,6 +59,18 @@
             android:layout_centerHorizontal="true">
 
 
+            <LinearLayout
+                android:id="@+id/inLL1_Prof"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image1_ProfLL"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_person_fill" />
+            </LinearLayout>
         </LinearLayout>
 
         <Button
