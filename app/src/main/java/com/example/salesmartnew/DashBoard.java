@@ -120,6 +120,11 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
+        int id = item.getItemId();
+
+        if(id == R.id.db3){
+
+        }
 
         return true;
     }
