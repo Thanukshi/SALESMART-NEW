@@ -3,6 +3,7 @@ package com.example.salesmartnew;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,9 +44,14 @@ public class Profile extends AppCompatActivity {
         //profDb = FirebaseDatabase.getInstance();
         //profReference = profDb.getReference("users");
 
+        showFullDetails();
+
+
+
+    }
+
+    private void showFullDetails() {
+        Intent intent = getIntent();
         
-
-
-
     }
 }
