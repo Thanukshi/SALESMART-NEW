@@ -47,8 +47,13 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         //Hooks for the navigation
         drawerLayout = findViewById(R.id.RL1_Dash);
         navigationView = findViewById(R.id.nav);
-        navigationView.setNavigationItemSelectedListener(this);
 
+
+
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction =fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.fragProfile, new DashBoard());
+        fragmentTransaction.commit();
 
 
 
@@ -126,6 +131,14 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction =fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.fragProfile, new ProfileNav());
+            fragmentTransaction.commit();
+        }
+
+        if(item.getItemId() == R.id.db4){
+            //load default fragment
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction =fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragProfile, new ProfileNav());
             fragmentTransaction.commit();
         }
         return true;
