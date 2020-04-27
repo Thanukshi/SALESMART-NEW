@@ -5,6 +5,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -29,6 +31,8 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     NavigationView navigationView;
     LinearLayout contentView;
     TextView viewName;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,8 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         //Hooks for the navigation
         drawerLayout = findViewById(R.id.RL1_Dash);
         navigationView = findViewById(R.id.nav);
+        navigationView.setNavigationItemSelectedListener(this);
+
 
 
 
@@ -115,6 +121,13 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
+        if(item.getItemId() == R.id.db1){
+            //load default fragment
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction =fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.fragProfile, new ProfileNav());
+            fragmentTransaction.commit();
+        }
         return true;
     }
 }
