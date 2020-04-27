@@ -43,7 +43,7 @@ public class Profile extends AppCompatActivity {
         passwordText = findViewById(R.id.text3__ProfLL);
         contactText = findViewById(R.id.text4__ProfLL);
         profImage = findViewById(R.id.profImage);
-        editProfileButton = findViewById(R.id.buttonProfile);
+        editProfileButton = findViewById(R.id.button);
 
         //profDb = FirebaseDatabase.getInstance();
         //profReference = profDb.getReference("users");
@@ -69,6 +69,7 @@ public class Profile extends AppCompatActivity {
                 startActivity(profIntent);
             }
         });
+
 
 
 
