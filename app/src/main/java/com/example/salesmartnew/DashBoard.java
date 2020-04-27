@@ -7,11 +7,13 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -26,6 +28,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     LinearLayout contentView;
+    TextView viewName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
 
         drawerMenu = findViewById(R.id.menuIcon_Dash);
         contentView = findViewById(R.id.contentL);
+        viewName = findViewById(R.id.navText_menu);
 
 
         //Hooks for the navigation
@@ -43,7 +47,15 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
 
 
         navigationDrawer();
+        showFullName();
 
+    }
+    //display name in the nav bar
+    private void showFullName() {
+        Intent intent = getIntent();
+        String userNameNav = intent.getStringExtra("fullName");
+
+        viewName.setText(userNameNav);
     }
 
     //Navigation Drawer Functions
