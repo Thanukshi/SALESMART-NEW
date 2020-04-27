@@ -31,8 +31,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     NavigationView navigationView;
     LinearLayout contentView;
     TextView viewName;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +48,6 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         navigationView = findViewById(R.id.nav);
 
 
-
-        fragmentManager = getSupportFragmentManager();
-        fragmentTransaction =fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragProfile, new DashBoard());
-        fragmentTransaction.commit();
 
 
 
@@ -126,21 +120,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
-        if(item.getItemId() == R.id.db1){
-            //load default fragment
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction =fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.fragProfile, new ProfileNav());
-            fragmentTransaction.commit();
-        }
 
-        if(item.getItemId() == R.id.db4){
-            //load default fragment
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction =fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.fragProfile, new ProfileNav());
-            fragmentTransaction.commit();
-        }
         return true;
     }
 }
