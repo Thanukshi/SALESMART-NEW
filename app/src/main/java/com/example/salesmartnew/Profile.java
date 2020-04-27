@@ -52,6 +52,17 @@ public class Profile extends AppCompatActivity {
 
     private void showFullDetails() {
         Intent intent = getIntent();
-        
+
+        //set values as String
+
+        String userNameEdit= intent.getStringExtra("userNameCustomer");
+        String fullNameEdit = intent.getStringExtra("fullName");
+        String emailEdit = intent.getStringExtra("emailCustomer");
+        String passwordEdit = intent.getStringExtra("passwordCustomer");
+
+        userNameText.setText(userNameEdit);
+        fullNameText.setText(fullNameEdit);
+        emailText.setText(emailEdit);
+        passwordText.setText(passwordEdit);
     }
 }
