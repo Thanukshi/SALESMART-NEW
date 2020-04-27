@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,11 +43,19 @@ public class Profile extends AppCompatActivity {
         passwordText = findViewById(R.id.text3__ProfLL);
         contactText = findViewById(R.id.text4__ProfLL);
         profImage = findViewById(R.id.profImage);
+        editProfileButton = findViewById(R.id.buttonProfile);
 
         //profDb = FirebaseDatabase.getInstance();
         //profReference = profDb.getReference("users");
 
         showFullDetails();
+
+        editProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
 
 
 
