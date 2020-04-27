@@ -26,9 +26,9 @@
     <LinearLayout
         android:id="@+id/LL1_EProf"
         android:layout_width="355dp"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_below="@+id/EProfImage"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:layout_centerHorizontal="true">
 
@@ -147,11 +147,38 @@
                 android:id="@+id/image5_EProfLL"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:src="@drawable/ic_lock_prof"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/text5_EProfLL"
+                android:layout_width="wrap_content"
+                android:background="@drawable/text_bg"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inLL6_EProf"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image6_EProfLL"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_local_phone"
                 android:layout_marginLeft="10dp"/>
 
             <TextView
-                android:id="@+id/text5_EProfLL"
+                android:id="@+id/text6_EProfLL"
                 android:background="@drawable/text_bg"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
