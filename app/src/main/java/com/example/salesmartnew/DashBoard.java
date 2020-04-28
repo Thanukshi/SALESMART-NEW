@@ -164,7 +164,6 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         else if (id == R.id.db9){
 
             Intent intent = new Intent(DashBoard.this, SettingsActivity.class);
-
             intent.putExtra("contactNo",userNameEdit);
             startActivity(intent);
         }
