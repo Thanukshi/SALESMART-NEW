@@ -167,7 +167,6 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/text_bg"
-                        android:text="TextView"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -196,7 +195,6 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/text_bg"
-                        android:text="TextView"
                         android:textColor="@color/colorAllBlack"
                         android:textSize="20sp" />
 
