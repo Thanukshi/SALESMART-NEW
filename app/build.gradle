@@ -6,11 +6,13 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
+
         applicationId "com.example.salesmartnew"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,4 +48,8 @@ dependencies {
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+
 }
+
+
+

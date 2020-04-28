@@ -1,5 +1,6 @@
 package com.example.salesmartnew;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,6 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -118,33 +122,90 @@ public class EditProfileActivity extends AppCompatActivity {
 
         if(awesomeValidation.validate()){
             //validate success
-            Toast.makeText(getApplicationContext(),"Use your phone number as a user name..",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"Use your phone number as a user name..",Toast.LENGTH_SHORT).show();
 
         }else {
             Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
 
         }
-        
+
         if(TextUtils.isEmpty((contactUp.getText().toString()))){
             Toast.makeText(this,"Contact Number is required", Toast.LENGTH_SHORT).show();
         }
-        if(TextUtils.isEmpty((fullNameUp.getText().toString()))){
+        else if(TextUtils.isEmpty((fullNameUp.getText().toString()))){
             Toast.makeText(this,"Full name is required", Toast.LENGTH_SHORT).show();
         }
-        if(TextUtils.isEmpty((emailUp.getText().toString()))){
+        else if(TextUtils.isEmpty((emailUp.getText().toString()))){
             Toast.makeText(this,"Email is required", Toast.LENGTH_SHORT).show();
         }
-        if(TextUtils.isEmpty((passwordUp.getText().toString()))){
+        else if(TextUtils.isEmpty((passwordUp.getText().toString()))){
             Toast.makeText(this,"Password is required", Toast.LENGTH_SHORT).show();
         }
-        if(TextUtils.isEmpty((confirmPassUp.getText().toString()))){
+        else if(TextUtils.isEmpty((confirmPassUp.getText().toString()))){
             Toast.makeText(this,"Confirm Password is required", Toast.LENGTH_SHORT).show();
+        }
+        else if(checker.equals("clicked")){
+            uploadImage();
+        }
+
+    }
+
+    private void uploadImage() {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Update Profile");
+        progressDialog.setMessage("Please wait a few minutes, your profile is updating...");
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.show();
+
+
+        if(imageUri != null){
+            final StorageReference fileReference = storeProfImage.child(PrevelantUser.currentUser.getContactNo()+".jpg");
+            uploadTask = fileReference.putFile(imageUri);
+
+            uploadTask.continueWithTask(new Continuation() {
+                @Override
+                public Object then(@NonNull Task task) throws Exception {
+                    if(!task.isSuccessful()){
+                        throw  task.getException();
+                    }
+                    return fileReference.getDownloadUrl();
+                }
+            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                @Override
+                public void onComplete(@NonNull Task<Uri> task) {
+                    if(task.isSuccessful()){
+                        Uri downloardUrl = task.getResult();
+                        myUrl = downloardUrl.toString();
+
+                        DatabaseReference imgReference = FirebaseDatabase.getInstance().getReference().child("users");
+
+                        HashMap<String, Object> userMap = new HashMap<>();
+                        userMap.put("fullName", fullNameUp.getText().toString());
+                        userMap.put("contactNo", contactUp.getText().toString());
+                        userMap.put("emailCustomer", emailUp.getText().toString() );
+                        userMap.put("passwordCustomer", passwordUp.getText().toString());
+                        userMap.put("confirmPasswordCustomer", confirmPassUp.getText().toString());
+                        userMap.put("image",myUrl);
+                        imgReference.child(PrevelantUser.currentUser.getContactNo()).updateChildren(userMap);
+
+                        progressDialog.dismiss();
+
+                        startActivity(new Intent(EditProfileActivity.this, DashBoard.class));
+                        Toast.makeText(EditProfileActivity.this, "Profile Details update Successfully", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                    else {
+                        progressDialog.dismiss();
+                        Toast.makeText(EditProfileActivity.this, "Error..", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
 
     }
 
     private void userDetailsDisplay(final CircleImageView profImage, final EditText fullNameUp, final EditText contactUp, final EditText emailUp, final EditText passwordUp, final EditText confirmPassUp) {
-        DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference().child(PrevelantUser.currentUser.getContactNo());
+        DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference("user").child(PrevelantUser.currentUser.getContactNo());
 
         userDBRef.addValueEventListener(new ValueEventListener() {
             @Override
