@@ -12,7 +12,7 @@
     <string name="signUpLogin">Register</string>
     <string name="signUpText">You Don\'t Have An Account?</string>
     <string name="rememberPass" translatable="false">Don\'t Remember Password?</string>
-    <string name="userName">User Name</string>
+    <string name="userName">Phone Number</string>
     <string name="btnLogin">Login Here</string>
     <string name="fullName_Register">Full Name</string>
     <string name="userMail_Register">Email</string>
