@@ -49,9 +49,16 @@ public class EditProfileActivity extends AppCompatActivity {
 
         dbReference = FirebaseDatabase.getInstance().getReference("users");
 
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                update();
+            }
+        });
+
     }
 
-    public void update(View view){
+    public void update( ){
         if(isUserNameChanged() || isFullNameChanged() || isEmailChanged() || isPasswordChanged() || isConfirmPassChanged() || isContactNoChange() ){
             Toast.makeText(this, "Data has been updated.", Toast.LENGTH_LONG).show();
         }
@@ -62,11 +69,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-
 
     private boolean isUserNameChanged() {
         if(!un.equals(uUserName.getText().toString())){
