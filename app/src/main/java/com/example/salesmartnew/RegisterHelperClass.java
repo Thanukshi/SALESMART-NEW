@@ -17,6 +17,14 @@ public class RegisterHelperClass {
     public RegisterHelperClass() {
     }
 
+    public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer) {
+        this.fullName = fullName;
+        this.emailCustomer = emailCustomer;
+        this.userNameCustomer = userNameCustomer;
+        this.passwordCustomer = passwordCustomer;
+        this.confirmPasswordCustomer = confirmPasswordCustomer;
+
+    }
     public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer,  String contactNo) {
         this.fullName = fullName;
         this.emailCustomer = emailCustomer;
