@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class EditProfileActivity extends AppCompatActivity {
 
-    EditText uUserName, uFullName, uEmail, uPassword, uConPass, uContact;
+    EditText uContact, uFullName, uEmail, uPassword, uConPass;
     ImageView uProfImage;
     Button update, delete;
     DatabaseReference dbReference;
@@ -26,23 +26,22 @@ public class EditProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
-        uUserName = findViewById(R.id.text1_EP);
+        uContact = findViewById(R.id.text1_EP);
         uFullName = findViewById(R.id.text2_EP);
         uEmail = findViewById(R.id.text3_EP);
         uPassword = findViewById(R.id.text4_EP);
         uConPass = findViewById(R.id.text5_EP);
-        uContact = findViewById(R.id.text6_EP);
         uProfImage = findViewById(R.id.EPImage);
         update =findViewById(R.id.buttonUp);
         delete = findViewById(R.id.buttonDel);
 
         Intent intent = getIntent();
-        String userNameEdit= intent.getStringExtra("userNameCustomer");
+        String userNameEdit= intent.getStringExtra("contactNo");
         String fullNameEdit = intent.getStringExtra("fullName");
         String emailEdit = intent.getStringExtra("emailCustomer");
         String passwordEdit = intent.getStringExtra("passwordCustomer");
 
-        uUserName.setText(userNameEdit);
+        uContact.setText(userNameEdit);
         uFullName.setText(fullNameEdit);
         uEmail.setText(emailEdit);
         uPassword.setText(passwordEdit);
@@ -59,7 +58,7 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     public void update( ){
-        if(isUserNameChanged() || isFullNameChanged() || isEmailChanged() || isPasswordChanged() || isConfirmPassChanged() || isContactNoChange() ){
+        if(isUserNameChanged() || isFullNameChanged() || isEmailChanged() || isPasswordChanged() || isConfirmPassChanged() ){
             Toast.makeText(this, "Data has been updated.", Toast.LENGTH_LONG).show();
         }
         else {
@@ -71,8 +70,8 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private boolean isUserNameChanged() {
-        if(!un.equals(uUserName.getText().toString())){
-            dbReference.child(un).child("userNameCustomer").setValue(uUserName.getText().toString());
+        if(!un.equals(uContact.getText().toString())){
+            dbReference.child(un).child("contactNo").setValue(uContact.getText().toString());
             return true;
         }else{
             return false;
@@ -81,7 +80,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private boolean isFullNameChanged() {
         if(!fn.equals(uFullName.getText().toString())){
-            dbReference.child(un).child("userNameCustomer").setValue(uFullName.getText().toString());
+            dbReference.child(un).child("contactNo").setValue(uFullName.getText().toString());
             return true;
         }else{
             return false;
@@ -90,7 +89,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private boolean isEmailChanged() {
         if(!em.equals(uEmail.getText().toString())){
-            dbReference.child(un).child("userNameCustomer").setValue(uEmail.getText().toString());
+            dbReference.child(un).child("contactNo").setValue(uEmail.getText().toString());
             return true;
         }else{
             return false;
@@ -99,7 +98,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private boolean isPasswordChanged() {
         if(!upw.equals(uPassword.getText().toString())){
-            dbReference.child(un).child("userNameCustomer").setValue(uPassword.getText().toString());
+            dbReference.child(un).child("contactNo").setValue(uPassword.getText().toString());
             return true;
         }else{
             return false;
@@ -109,21 +108,11 @@ public class EditProfileActivity extends AppCompatActivity {
     private boolean isConfirmPassChanged() {
 
         if(!ucpw.equals(uConPass.getText().toString())){
-            dbReference.child(un).child("userNameCustomer").setValue(uConPass.getText().toString());
+            dbReference.child(un).child("contactNo").setValue(uConPass.getText().toString());
             return true;
         }else{
             return false;
         }
     }
-
-    private boolean isContactNoChange() {
-        if(!ucon.equals(uContact.getText().toString())){
-            dbReference.child(un).child("userNameCustomer").setValue(uContact.getText().toString());
-            return true;
-        }else{
-            return false;
-        }
-    }
-
 
 }
