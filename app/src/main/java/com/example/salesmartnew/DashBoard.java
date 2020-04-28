@@ -19,6 +19,12 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class DashBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -31,6 +37,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     NavigationView navigationView;
     LinearLayout contentView;
     TextView viewName;
+    String userNameEdit;
 
 
     @Override
@@ -47,7 +54,8 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.RL1_Dash);
         navigationView = findViewById(R.id.nav);
 
-
+        Intent intent = getIntent();
+        userNameEdit= intent.getStringExtra("contactNo");
 
 
 
@@ -70,6 +78,23 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
         navigationView.setCheckedItem(R.id.db1);
+        final ImageView navImage = findViewById(R.id.navImage);
+
+        DatabaseReference dbf = FirebaseDatabase.getInstance().getReference().child("users").child(userNameEdit);
+        dbf.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                RegisterHelperClass rh = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
+                Picasso.get().load(rh.getImage()).into(navImage);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
 
         drawerMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,11 +149,11 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
 
         if(id == R.id.db4){
             Intent intent = getIntent();
-            String userNameEdit= intent.getStringExtra("contactNo");
+             userNameEdit= intent.getStringExtra("contactNo");
             String fullNameEdit = intent.getStringExtra("fullName");
             String emailEdit = intent.getStringExtra("emailCustomer");
             String passwordEdit = intent.getStringExtra("passwordCustomer");
-
+            String url = intent.getStringExtra("url");
             Intent profIntent = new Intent(DashBoard.this, Profile.class);
             profIntent.putExtra("contactNo",userNameEdit);
             profIntent.putExtra("fullName",fullNameEdit);

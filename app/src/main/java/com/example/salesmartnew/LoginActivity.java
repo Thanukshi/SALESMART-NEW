@@ -148,6 +148,9 @@ public class LoginActivity extends AppCompatActivity {
                                     logIntent.putExtra("fullName", fnInDB);
                                     logIntent.putExtra("emailCustomer", emailDB);
                                     logIntent.putExtra("passwordCustomer", pwInDB);
+                                    RegisterHelperClass rf = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
+                                    String url = rf.getImage();
+                                    logIntent.putExtra("url", url);
                                     startActivity(logIntent);
 
                                 } else {
