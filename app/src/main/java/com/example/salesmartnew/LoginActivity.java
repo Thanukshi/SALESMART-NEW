@@ -139,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if (pwInDB.equals(pw)) {
 
                                     loadingDialog.dismiss();
-                                    String userNameDB = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
+                                    String userNameDB = dataSnapshot.child(un).child("contactNo").getValue(String.class);
                                     String fnInDB = dataSnapshot.child(un).child("fullName").getValue(String.class);
                                     String emailDB = dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
 
