@@ -17,12 +17,13 @@ public class RegisterHelperClass {
     public RegisterHelperClass() {
     }
 
-    public RegisterHelperClass(String fullName, String emailCustomer, String passwordCustomer, String confirmPasswordCustomer,  String contactNo) {
+    public RegisterHelperClass(String fullName, String emailCustomer, String contactNo, String passwordCustomer, String confirmPasswordCustomer ) {
         this.fullName = fullName;
         this.emailCustomer = emailCustomer;
+        this.contactNo = contactNo;
         this.passwordCustomer = passwordCustomer;
         this.confirmPasswordCustomer = confirmPasswordCustomer;
-        this.contactNo = contactNo;
+
     }
 
     public void setFullName(String fullName) {
@@ -42,6 +43,7 @@ public class RegisterHelperClass {
     }
 
     public void setContactNo(String contactNo) {
+
         this.contactNo = contactNo;
     }
 
