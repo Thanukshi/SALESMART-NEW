@@ -41,7 +41,6 @@ public class Profile extends AppCompatActivity {
         fullNameText = findViewById(R.id.text1__ProfLL);
         emailText = findViewById(R.id.text2__ProfLL);
         passwordText = findViewById(R.id.text3__ProfLL);
-        contactText = findViewById(R.id.text4__ProfLL);
         profImage = findViewById(R.id.profImage);
         editProfileButton = findViewById(R.id.button);
 
