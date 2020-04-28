@@ -2,6 +2,8 @@ package com.example.salesmartnew;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,10 +32,11 @@ public class LoginActivity extends AppCompatActivity {
     DatabaseReference reference;
 
     TextView register, forgetPassword;
-    EditText eContact, ePassword;
+    EditText eUserName, ePassword;
     Button btnLogin;
     RelativeLayout relLay1, relLay2;
     ImageView googleButton;
+    private ProgressDialog loadingDialog;
 
     //splash screen
     Handler handler = new Handler();
@@ -57,20 +60,20 @@ public class LoginActivity extends AppCompatActivity {
 
         relLay1 = findViewById( R.id.rl1Login );
         relLay2 = findViewById(R.id.rl3Login);
-        eContact = findViewById(R.id.ET1_Login);
+        eUserName = findViewById(R.id.ET1_Login);
         ePassword =  findViewById(R.id.ET2_Login);
         forgetPassword = findViewById(R.id.text5_Login);
         register = findViewById( R.id.text6_Login );
         googleButton = findViewById(R.id.google_Login);
         btnLogin = findViewById( R.id.button1_Login );
+        loadingDialog = new ProgressDialog(this);
+
 
 
         //add validation for userName
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
-        //add validation for phoneNumber
-        String PhoneVal ="[0-9]+";
-        awesomeValidation.addValidation(this,R.id.ET1_Login,PhoneVal,R.string.phoneReg);
+        awesomeValidation.addValidation(this,R.id.ET1_Login, RegexTemplate.NOT_EMPTY, R.string.invalid_username);
 
         //String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
         //add validation for password
@@ -81,9 +84,9 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sign = new Intent( LoginActivity.this,RegisterActivity.class );
+                Intent sign = new Intent( LoginActivity.this, RegisterActivity.class );
                 startActivity( sign );
-           }
+            }
         } );
 
         register.setMovementMethod( LinkMovementMethod.getInstance() );
@@ -96,79 +99,77 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //check the validation
-                if(awesomeValidation.validate()){
+                if (awesomeValidation.validate()) {
                     //validate success
                     //Toast.makeText(getApplicationContext(),"Details is correct...",Toast.LENGTH_SHORT).show();
 
-                }else {
-                    Toast.makeText(getApplicationContext(),"Enter valid user name and password..",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Enter valid user name and password..", Toast.LENGTH_SHORT).show();
 
                 }
 
-                final String un = eContact.getText().toString().trim();
+                final String un = eUserName.getText().toString().trim();
                 final String pw = ePassword.getText().toString().trim();
 
-                if(TextUtils.isEmpty(un)){
-                    eContact.setError("Enter Phone Number.");
+                if (TextUtils.isEmpty(un)) {
+                    eUserName.setError("Enter User Name.");
                     return;
                 }
 
-                if(TextUtils.isEmpty(pw)){
+                if (TextUtils.isEmpty(pw)) {
                     ePassword.setError("Enter Password.");
                     return;
-                }
+                } else {
 
-                reference = FirebaseDatabase.getInstance().getReference("users");
+                    loadingDialog.setTitle("Login Account");
+                    loadingDialog.setMessage("Please wait until checking your details...");
+                    loadingDialog.setCanceledOnTouchOutside(false);
+                    loadingDialog.show();
 
-                Query checkUser =reference.orderByChild("contactNo").equalTo(un);
-                checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists()){
+                    reference = FirebaseDatabase.getInstance().getReference("users");
 
-                            String pwInDB =dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
-                            //String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
-                            if(pwInDB.equals(pw)){
+                    Query checkUser = reference.orderByChild("contactNo").equalTo(un);
+                    checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
 
-                                String userNameDB = dataSnapshot.child(un).child("contactNo").getValue(String.class);
-                                String fnInDB = dataSnapshot.child(un).child("fullName").getValue(String.class);
-                                String emailDB = dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
+                                String pwInDB = dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
+                                //String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
+                                if (pwInDB.equals(pw)) {
 
-                                Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
-                                logIntent.putExtra("contactNo",userNameDB);
-                                logIntent.putExtra("fullName",fnInDB);
-                                logIntent.putExtra("emailCustomer",emailDB);
-                                logIntent.putExtra("passwordCustomer",pwInDB);
-                                startActivity(logIntent);
+                                    loadingDialog.dismiss();
+                                    String userNameDB = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
+                                    String fnInDB = dataSnapshot.child(un).child("fullName").getValue(String.class);
+                                    String emailDB = dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
 
-                            }
-                            else{
+                                    Intent logIntent = new Intent(getApplicationContext(), DashBoard.class);
+                                    logIntent.putExtra("contactNo", userNameDB);
+                                    logIntent.putExtra("fullName", fnInDB);
+                                    logIntent.putExtra("emailCustomer", emailDB);
+                                    logIntent.putExtra("passwordCustomer", pwInDB);
+                                    startActivity(logIntent);
 
-                                ePassword.setError("Wrong Password.");
-                                ePassword.requestFocus();
+                                } else {
+                                    loadingDialog.dismiss();
+                                    ePassword.setError("Wrong Password.");
+                                    ePassword.requestFocus();
 
+                                }
+                            } else {
+                                loadingDialog.dismiss();
+                                eUserName.setError("Not a valid user.");
+                                eUserName.requestFocus();
                             }
                         }
-                        else
-                            eContact.setError("Not a valid user.");
-                            eContact.requestFocus();
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    }
-                });
-
-
+                        }
+                    });
+                }
             }
-        } );
+        });
     }
-
-
-
-
-
-
-
 }
