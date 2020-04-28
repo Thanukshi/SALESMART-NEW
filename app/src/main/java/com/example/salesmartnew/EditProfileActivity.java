@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -18,6 +19,7 @@ public class EditProfileActivity extends AppCompatActivity {
     ImageView uProfImage;
     Button update, delete;
     DatabaseReference dbReference;
+    String un, fn, em, upw, ucpw, ucon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,76 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     public void update(View view){
-        
+        if(isUserNameChanged() || isFullNameChanged() || isEmailChanged() || isPasswordChanged() || isConfirmPassChanged() || isContactNoChange() ){
+            Toast.makeText(this, "Data has been updated.", Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(this, "Data is same and can not be updated.", Toast.LENGTH_LONG).show();
+        }
+
+
 
     }
+
+
+
+
+
+
+    private boolean isUserNameChanged() {
+        if(!un.equals(uUserName.getText().toString())){
+            dbReference.child(un).child("userNameCustomer").setValue(uUserName.getText().toString());
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private boolean isFullNameChanged() {
+        if(!fn.equals(uFullName.getText().toString())){
+            dbReference.child(un).child("userNameCustomer").setValue(uFullName.getText().toString());
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private boolean isEmailChanged() {
+        if(!em.equals(uEmail.getText().toString())){
+            dbReference.child(un).child("userNameCustomer").setValue(uEmail.getText().toString());
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private boolean isPasswordChanged() {
+        if(!upw.equals(uPassword.getText().toString())){
+            dbReference.child(un).child("userNameCustomer").setValue(uPassword.getText().toString());
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private boolean isConfirmPassChanged() {
+
+        if(!ucpw.equals(uConPass.getText().toString())){
+            dbReference.child(un).child("userNameCustomer").setValue(uConPass.getText().toString());
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private boolean isContactNoChange() {
+        if(!ucon.equals(uContact.getText().toString())){
+            dbReference.child(un).child("userNameCustomer").setValue(uContact.getText().toString());
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
 }
