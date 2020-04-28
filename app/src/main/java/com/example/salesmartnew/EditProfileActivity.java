@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -95,6 +98,33 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void userDetailsSave() {
+
+        AwesomeValidation awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        //add validation for email
+        awesomeValidation.addValidation(this,R.id.text1_EP, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
+
+        //add validation for phoneNumber
+        String PhoneVal ="[0-9]+";
+        awesomeValidation.addValidation(this,R.id.text3_EP,PhoneVal,R.string.phoneReg);
+
+
+        String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
+        //add validation for password
+        awesomeValidation.addValidation(this,R.id.text4_EP,errorPassword,R.string.invalid_password);
+
+        //add validation for confirmPassword
+        awesomeValidation.addValidation(this,R.id.text4_EP,R.id.ET4_Register,R.string.invalid_confirm_password);
+
+        if(awesomeValidation.validate()){
+            //validate success
+            Toast.makeText(getApplicationContext(),"Use your phone number as a user name..",Toast.LENGTH_SHORT).show();
+
+        }else {
+            Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
+
+        }
+        
         if(TextUtils.isEmpty((contactUp.getText().toString()))){
             Toast.makeText(this,"Contact Number is required", Toast.LENGTH_SHORT).show();
         }
