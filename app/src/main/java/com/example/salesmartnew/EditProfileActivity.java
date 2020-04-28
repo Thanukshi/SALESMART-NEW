@@ -18,6 +18,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class EditProfileActivity extends AppCompatActivity {
 
    private CircleImageView profImage;
+   private EditText fullNameUp, contactUp, emailUp, passwordUp, confirmPassUp;
+   
 
 
     @Override
