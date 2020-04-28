@@ -91,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity {
                 //check the validation
                 if(awesomeValidation.validate()){
                     //validate success
-                    Toast.makeText(getApplicationContext(),"Details is correct...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Use your phone number as a user name..",Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
