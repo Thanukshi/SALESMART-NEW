@@ -61,7 +61,7 @@ public class Profile extends AppCompatActivity {
                 String fullName = intent.getStringExtra("emailCustomer");
                 String passwordEdit = intent.getStringExtra("passwordCustomer");
 
-                Intent profIntent = new Intent(Profile.this, EditProfile.class);
+                Intent profIntent = new Intent(Profile.this, EditProfileActivity.class);
                 intent.putExtra("userNameCustomer", userNameEdit);
                 intent.putExtra("fullName", fullNameEdit);
                 intent.putExtra("emailCustomer", fullName);
