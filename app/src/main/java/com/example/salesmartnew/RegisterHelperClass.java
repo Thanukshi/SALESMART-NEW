@@ -6,29 +6,20 @@ public class RegisterHelperClass {
 
     String emailCustomer;
 
-    String userNameCustomer;
+    String contactNo;
 
     String passwordCustomer;
 
     String confirmPasswordCustomer;
 
-    String contactNo;
+
 
     public RegisterHelperClass() {
     }
 
-    public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer) {
+    public RegisterHelperClass(String fullName, String emailCustomer, String passwordCustomer, String confirmPasswordCustomer,  String contactNo) {
         this.fullName = fullName;
         this.emailCustomer = emailCustomer;
-        this.userNameCustomer = userNameCustomer;
-        this.passwordCustomer = passwordCustomer;
-        this.confirmPasswordCustomer = confirmPasswordCustomer;
-
-    }
-    public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer,  String contactNo) {
-        this.fullName = fullName;
-        this.emailCustomer = emailCustomer;
-        this.userNameCustomer = userNameCustomer;
         this.passwordCustomer = passwordCustomer;
         this.confirmPasswordCustomer = confirmPasswordCustomer;
         this.contactNo = contactNo;
@@ -40,10 +31,6 @@ public class RegisterHelperClass {
 
     public void setEmailCustomer(String emailCustomer) {
         this.emailCustomer = emailCustomer;
-    }
-
-    public void setUserNameCustomer(String userNameCustomer) {
-        this.userNameCustomer = userNameCustomer;
     }
 
     public void setPasswordCustomer(String passwordCustomer) {
@@ -66,10 +53,6 @@ public class RegisterHelperClass {
 
     public String getEmailCustomer() {
         return emailCustomer;
-    }
-
-    public String getUserNameCustomer() {
-        return userNameCustomer;
     }
 
     public String getPasswordCustomer() {
