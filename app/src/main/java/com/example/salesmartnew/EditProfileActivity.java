@@ -3,6 +3,7 @@ package com.example.salesmartnew;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
+import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.util.HashMap;
@@ -93,9 +95,25 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void userDetailsSave() {
+        if(TextUtils.isEmpty((contactUp.getText().toString()))){
+            Toast.makeText(this,"Contact Number is required", Toast.LENGTH_SHORT).show();
+        }
+        if(TextUtils.isEmpty((fullNameUp.getText().toString()))){
+            Toast.makeText(this,"Full name is required", Toast.LENGTH_SHORT).show();
+        }
+        if(TextUtils.isEmpty((emailUp.getText().toString()))){
+            Toast.makeText(this,"Email is required", Toast.LENGTH_SHORT).show();
+        }
+        if(TextUtils.isEmpty((passwordUp.getText().toString()))){
+            Toast.makeText(this,"Password is required", Toast.LENGTH_SHORT).show();
+        }
+        if(TextUtils.isEmpty((confirmPassUp.getText().toString()))){
+            Toast.makeText(this,"Confirm Password is required", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
-    private void userDetailsDisplay(CircleImageView profImage, EditText fullNameUp, EditText contactUp, EditText emailUp, EditText passwordUp, EditText confirmPassUp) {
+    private void userDetailsDisplay(final CircleImageView profImage, final EditText fullNameUp, final EditText contactUp, final EditText emailUp, final EditText passwordUp, final EditText confirmPassUp) {
         DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference().child(PrevelantUser.currentUser.getContactNo());
 
         userDBRef.addValueEventListener(new ValueEventListener() {
@@ -110,7 +128,13 @@ public class EditProfileActivity extends AppCompatActivity {
                         String uPassword = dataSnapshot.child("passwordCustomer").getValue().toString();
                         String uConfirmPassword = dataSnapshot.child("confirmPasswordCustomer").getValue().toString();
 
-                        Piccas
+
+                        Picasso.get().load(image).into(profImage);
+                        fullNameUp.setText(uFullName);
+                        contactUp.setText(uContactNu);
+                        emailUp.setText(uEmail);
+                        passwordUp.setText(uPassword);
+                        confirmPassUp.setText(uConfirmPassword);
                     }
                 }
             }
