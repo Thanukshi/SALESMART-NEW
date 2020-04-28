@@ -12,15 +12,18 @@ public class RegisterHelperClass {
 
     String confirmPasswordCustomer;
 
+    String contactNo;
+
     public RegisterHelperClass() {
     }
 
-    public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer) {
+    public RegisterHelperClass(String fullName, String emailCustomer, String userNameCustomer, String passwordCustomer, String confirmPasswordCustomer,  String contactNo) {
         this.fullName = fullName;
         this.emailCustomer = emailCustomer;
         this.userNameCustomer = userNameCustomer;
         this.passwordCustomer = passwordCustomer;
         this.confirmPasswordCustomer = confirmPasswordCustomer;
+        this.contactNo = contactNo;
     }
 
     public void setFullName(String fullName) {
@@ -43,6 +46,11 @@ public class RegisterHelperClass {
         this.confirmPasswordCustomer = confirmPasswordCustomer;
     }
 
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
+    }
+
+
 
     public String getFullName() {
         return fullName;
@@ -62,5 +70,9 @@ public class RegisterHelperClass {
 
     public String getConfirmPasswordCustomer() {
         return confirmPasswordCustomer;
+    }
+
+    public String getContactNo() {
+        return contactNo;
     }
 }
