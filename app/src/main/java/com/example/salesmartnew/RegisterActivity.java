@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     DatabaseReference reference;
 
     //FirebaseAuth firebaseAuth;
-    EditText rFullName, rEmail, rUserName, rPassword, rConfirmPass;
+    EditText rFullName, rEmail, rPhone, rPassword, rConfirmPass;
     Button btRegister;
     RelativeLayout RL1;
     ImageView bacKArrow;
@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         bacKArrow = findViewById(R.id.image1_Register);
         rFullName = findViewById(R.id.ET1_Register);
         rEmail = findViewById(R.id.ET2_Register);
-        rUserName = findViewById(R.id.ET3_Register);
+        rPhone = findViewById(R.id.ET3_Register);
         rPassword = findViewById(R.id.ET4_Register);
         rConfirmPass = findViewById(R.id.ET5_Register);
         btRegister = findViewById(R.id.button1_Register);
@@ -99,7 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 String cFullName = rFullName.getText().toString().trim();
                 String cEmail = rEmail.getText().toString().trim();
-                String cUserName = rUserName.getText().toString().trim();
+                String cPhone = rPhone.getText().toString().trim();
                 String cPassword = rPassword.getText().toString().trim();
                 String cConfirmPass = rConfirmPass.getText().toString().trim();
 
@@ -112,8 +112,8 @@ public class RegisterActivity extends AppCompatActivity {
                 rEmail.setError("Email is Required.");
                     return;
                 }
-                if(TextUtils.isEmpty(cUserName)){
-                   rUserName.setError("User Name is Required.");
+                if(TextUtils.isEmpty(cPhone)){
+                   rPhone.setError("Phone Number is Required.");
                   return;
                 }
 
@@ -126,8 +126,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
-                RegisterHelperClass registerHelperClass = new RegisterHelperClass(cFullName, cEmail, cUserName, cPassword, cConfirmPass);
-                reference.child(cUserName).setValue(registerHelperClass);
+                RegisterHelperClass registerHelperClass = new RegisterHelperClass(cFullName, cEmail, cPhone, cPassword, cConfirmPass);
+                reference.child(cPhone).setValue(registerHelperClass);
 
                 Intent signUP = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(signUP);
