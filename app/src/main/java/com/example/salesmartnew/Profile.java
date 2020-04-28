@@ -21,7 +21,6 @@ import java.awt.font.TextAttribute;
 
 public class Profile extends AppCompatActivity {
 
-    TextView userNameText;
     TextView fullNameText;
     TextView emailText;
     TextView passwordText;
@@ -37,8 +36,8 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        userNameText = findViewById(R.id.profText1);
-        fullNameText = findViewById(R.id.text1__ProfLL);
+        fullNameText = findViewById(R.id.profText1);
+        contactText = findViewById(R.id.text1__ProfLL);
         emailText = findViewById(R.id.text2__ProfLL);
         passwordText = findViewById(R.id.text3__ProfLL);
         profImage = findViewById(R.id.profImage);
@@ -79,7 +78,7 @@ public class Profile extends AppCompatActivity {
         String emailEdit = intent.getStringExtra("emailCustomer");
         String passwordEdit = intent.getStringExtra("passwordCustomer");
 
-        userNameText.setText(userNameEdit);
+        contactText.setText(userNameEdit);
         fullNameText.setText(fullNameEdit);
         emailText.setText(emailEdit);
         passwordText.setText(passwordEdit);
