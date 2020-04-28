@@ -2,6 +2,8 @@ package com.example.salesmartnew;
 
 public class RegisterHelperClass {
 
+    String image;
+
     String fullName;
 
     String emailCustomer;
@@ -12,20 +14,21 @@ public class RegisterHelperClass {
 
     String confirmPasswordCustomer;
 
-    String image;
+
 
 
 
     public RegisterHelperClass() {
     }
 
-    public RegisterHelperClass(String fullName, String emailCustomer, String contactNo, String passwordCustomer, String confirmPasswordCustomer, String image) {
+    public RegisterHelperClass( String image,String fullName, String emailCustomer, String contactNo, String passwordCustomer, String confirmPasswordCustomer){
+        this.image = image;
         this.fullName = fullName;
         this.emailCustomer = emailCustomer;
         this.contactNo = contactNo;
         this.passwordCustomer = passwordCustomer;
         this.confirmPasswordCustomer = confirmPasswordCustomer;
-        this.image = image;
+
     }
 
     public RegisterHelperClass(String fullName, String emailCustomer, String contactNo, String passwordCustomer, String confirmPasswordCustomer ) {

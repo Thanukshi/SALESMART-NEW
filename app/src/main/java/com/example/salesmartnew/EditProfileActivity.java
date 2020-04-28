@@ -43,7 +43,10 @@ public class EditProfileActivity extends AppCompatActivity {
         emailUp =  (EditText)findViewById(R.id.text3_EP);
         passwordUp = (EditText)findViewById(R.id.text4_EP);
         confirmPassUp = (EditText)findViewById(R.id.text5_EP);
+        updateProf = (Button)findViewById(R.id.buttonUp);
+        closeProf = (Button)findViewById(R.id.buttonDel);
         
+        userDetailsDisplay(profImage, fullNameUp, contactUp, emailUp, passwordUp, confirmPassUp);
 
 
 
@@ -52,6 +55,12 @@ public class EditProfileActivity extends AppCompatActivity {
 
 
 
+
+
+
+    }
+
+    private void userDetailsDisplay(CircleImageView profImage, EditText fullNameUp, EditText contactUp, EditText emailUp, EditText passwordUp, EditText confirmPassUp) {
     }
 
 }
