@@ -55,4 +55,5 @@
     <string name="profButton">Edit Profile</string>
     <string name="reset_EP">Delete</string>
     <string name="update_EP">Update</string>
+    <string name="phoneReg">Enter Valid Phone Number..</string>
 </resources>

@@ -60,7 +60,8 @@ public class RegisterActivity extends AppCompatActivity {
         awesomeValidation.addValidation(this,R.id.ET2_Register, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
 
         //add validation for userName
-        awesomeValidation.addValidation(this,R.id.ET3_Register,RegexTemplate.NOT_EMPTY,R.string.invalid_username);
+        String PhoneVal ="[0-9]+";
+        awesomeValidation.addValidation(this,R.id.ET3_Register,PhoneVal,R.string.phoneReg);
 
         String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
         //add validation for password
