@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     DatabaseReference reference;
 
     TextView register, forgetPassword;
-    EditText eUserName, ePassword;
+    EditText eContact, ePassword;
     Button btnLogin;
     RelativeLayout relLay1, relLay2;
     ImageView googleButton;
@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
 
         relLay1 = findViewById( R.id.rl1Login );
         relLay2 = findViewById(R.id.rl3Login);
-        eUserName = findViewById(R.id.ET1_Login);
+        eContact = findViewById(R.id.ET1_Login);
         ePassword =  findViewById(R.id.ET2_Login);
         forgetPassword = findViewById(R.id.text5_Login);
         register = findViewById( R.id.text6_Login );
@@ -105,11 +105,11 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
 
-                final String un = eUserName.getText().toString().trim();
+                final String un = eContact.getText().toString().trim();
                 final String pw = ePassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(un)){
-                    eUserName.setError("Enter User Name.");
+                    eContact.setError("Enter Phone Number.");
                     return;
                 }
 
@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 reference = FirebaseDatabase.getInstance().getReference("users");
 
-                Query checkUser =reference.orderByChild("userNameCustomer").equalTo(un);
+                Query checkUser =reference.orderByChild("contactNo").equalTo(un);
                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -130,12 +130,12 @@ public class LoginActivity extends AppCompatActivity {
                             //String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
                             if(pwInDB.equals(pw)){
 
-                                String userNameDB = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
+                                String userNameDB = dataSnapshot.child(un).child("contactNo").getValue(String.class);
                                 String fnInDB = dataSnapshot.child(un).child("fullName").getValue(String.class);
                                 String emailDB = dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
 
                                 Intent logIntent = new Intent(getApplicationContext(),DashBoard.class);
-                                logIntent.putExtra("userNameCustomer",userNameDB);
+                                logIntent.putExtra("contactNo",userNameDB);
                                 logIntent.putExtra("fullName",fnInDB);
                                 logIntent.putExtra("emailCustomer",emailDB);
                                 logIntent.putExtra("passwordCustomer",pwInDB);
@@ -150,8 +150,8 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         }
                         else
-                            eUserName.setError("Not a valid user.");
-                            eUserName.requestFocus();
+                            eContact.setError("Not a valid user.");
+                            eContact.requestFocus();
                     }
 
                     @Override
