@@ -59,7 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
         //add validation for email
         awesomeValidation.addValidation(this,R.id.ET2_Register, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
 
-        //add validation for userName
+        //add validation for phoneNumber
         String PhoneVal ="[0-9]+";
         awesomeValidation.addValidation(this,R.id.ET3_Register,PhoneVal,R.string.phoneReg);
 
