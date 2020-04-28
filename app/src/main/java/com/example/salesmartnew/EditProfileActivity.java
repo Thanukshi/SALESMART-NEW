@@ -6,13 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
@@ -52,7 +57,7 @@ public class EditProfileActivity extends AppCompatActivity {
         updateProf = (Button)findViewById(R.id.buttonUp);
         closeProf = (Button)findViewById(R.id.buttonDel);
         
-        userDetailsDisplay();
+        userDetailsDisplay(profImage, fullNameUp, contactUp, emailUp, passwordUp, confirmPassUp);
 
         closeProf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +70,7 @@ public class EditProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(checker.equals("clicked")){
-                    userDetailsDisplay();
+                    userDetailsSave();
                 }else {
                     updateUserOnly();
                 }
@@ -87,21 +92,69 @@ public class EditProfileActivity extends AppCompatActivity {
 
     }
 
+    private void userDetailsSave() {
+    }
+
+    private void userDetailsDisplay(CircleImageView profImage, EditText fullNameUp, EditText contactUp, EditText emailUp, EditText passwordUp, EditText confirmPassUp) {
+        DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference().child(PrevelantUser.currentUser.getContactNo());
+
+        userDBRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    if(dataSnapshot.child("image").exists()){
+                        String image = dataSnapshot.child("image").getValue().toString();
+                        String uContactNu = dataSnapshot.child("contactNo").getValue().toString();
+                        String uFullName = dataSnapshot.child("fullName").getValue().toString();
+                        String uEmail = dataSnapshot.child("emailCustomer").getValue().toString();
+                        String uPassword = dataSnapshot.child("passwordCustomer").getValue().toString();
+                        String uConfirmPassword = dataSnapshot.child("confirmPasswordCustomer").getValue().toString();
+
+                        Piccas
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
     private void updateUserOnly() {
 
         DatabaseReference dbReference = FirebaseDatabase.getInstance().getReference().child("users");
 
         HashMap<String, Object> userMapDetails = new HashMap<>();
-        userMapDetails.put("")
+        userMapDetails.put("fullName", fullNameUp.getText().toString());
+        userMapDetails.put("contactNo", contactUp.getText().toString());
+        userMapDetails.put("emailCustomer", emailUp.getText().toString() );
+        userMapDetails.put("passwordCustomer", passwordUp.getText().toString());
+        userMapDetails.put("confirmPasswordCustomer", confirmPassUp.getText().toString());
+        dbReference.child(PrevelantUser.currentUser.getContactNo()).updateChildren(userMapDetails);
+
+        startActivity(new Intent(EditProfileActivity.this, DashBoard.class));
+        Toast.makeText(EditProfileActivity.this, "Profile Details update Successfully", Toast.LENGTH_SHORT).show();
+        finish();
+
     }
 
-    private void userDetailsDisplay() {
-    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK && data != null){
 
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            imageUri = result.getUri();
+            profImage.setImageURI(imageUri);
+
+        }else{
+            Toast.makeText(this, "Error , Try Again.", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(EditProfileActivity.this,EditProfileActivity.class));
+            finish();
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
