@@ -68,7 +68,7 @@ public class EditProfileActivity extends AppCompatActivity {
         updateProf = (Button) findViewById(R.id.buttonUp);
         closeProf = (Button) findViewById(R.id.buttonDel);
 
-       
+
         Intent intent = getIntent();
         contact = intent.getStringExtra("contactNo");
         dbref = FirebaseDatabase.getInstance().getReference().child("users").child(contact);
