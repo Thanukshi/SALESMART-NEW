@@ -63,7 +63,7 @@
                 android:id="@+id/image1_ProfLL"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_person_fill"
+                android:src="@drawable/ic_local_phone"
                 android:layout_marginLeft="10dp"/>
 
             <TextView
@@ -128,32 +128,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/inLL4_Prof"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:visibility="invisible">
-
-            <ImageView
-                android:id="@+id/image4_ProfLL"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_local_phone"
-                android:layout_marginLeft="10dp"/>
-
-            <TextView
-                android:id="@+id/text4__ProfLL"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="20sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"/>
-
-        </LinearLayout>
     </LinearLayout>
 
     <Button

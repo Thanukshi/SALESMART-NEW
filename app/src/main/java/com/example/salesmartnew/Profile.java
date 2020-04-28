@@ -68,9 +68,6 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-
-
-
     }
 
     private void showFullDetails() {
