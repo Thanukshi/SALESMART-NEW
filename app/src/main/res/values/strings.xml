@@ -5,7 +5,7 @@
     <string name="welcome">"Welcome "</string>
     <string name="invalid_username">Please Enter Valid User Name</string>
     <string name="invalid_password">Passwords must contain at least eight characters and maximum 12 characters, including uppercase, lowercase letters and numbers.</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed" translatable="false">"Login failed"</string>
     <string name="btnNext_Welcome">NextButton</string>
     <string name="start_btn">Get Started</string>
     <string name="tittle_login">"Login "</string>
@@ -53,6 +53,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="profButton">Edit Profile</string>
-    <string name="reset_EP">Reset</string>
+    <string name="reset_EP">Delete</string>
     <string name="update_EP">Update</string>
 </resources>
