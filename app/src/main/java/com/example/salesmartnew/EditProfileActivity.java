@@ -1,8 +1,11 @@
 package com.example.salesmartnew;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +16,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
+import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.util.HashMap;
@@ -29,15 +38,17 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class EditProfileActivity extends AppCompatActivity {
 
-   CircleImageView profImage;
-   EditText fullNameUp, contactUp, emailUp, passwordUp, confirmPassUp;
-   Button updateProf, closeProf;
-
-   private Uri imageUri;
-   private String myUrl = "";
-   private StorageReference storeProfImage;
-   private String checker = "";
-   private StorageTask uploadTask;
+    CircleImageView profImage;
+    EditText fullNameUp, contactUp, emailUp, passwordUp, confirmPassUp;
+    Button updateProf, closeProf;
+    DatabaseReference dbref;
+    private Uri imageUri;
+    private String myUrl = "";
+    private StorageReference storeProfImage;
+    private String checker = "";
+    private StorageTask uploadTask;
+    RegisterHelperClass rh, good;
+    String contact;
 
 
     @Override
@@ -48,71 +59,31 @@ public class EditProfileActivity extends AppCompatActivity {
         storeProfImage = FirebaseStorage.getInstance().getReference().child("image");
 
         //value assignment
-        profImage = (CircleImageView)findViewById(R.id.EPImage);
-        fullNameUp = (EditText)findViewById(R.id.text1_EP);
-        contactUp = (EditText)findViewById(R.id.text2_EP);
-        emailUp =  (EditText)findViewById(R.id.text3_EP);
-        passwordUp = (EditText)findViewById(R.id.text4_EP);
-        confirmPassUp = (EditText)findViewById(R.id.text5_EP);
-        updateProf = (Button)findViewById(R.id.buttonUp);
-        closeProf = (Button)findViewById(R.id.buttonDel);
-        
-        userDetailsDisplay(profImage, fullNameUp, contactUp, emailUp, passwordUp, confirmPassUp);
+        profImage = (CircleImageView) findViewById(R.id.EPImage);
+        fullNameUp = (EditText) findViewById(R.id.text1_EP);
+        contactUp = (EditText) findViewById(R.id.text2_EP);
+        emailUp = (EditText) findViewById(R.id.text3_EP);
+        passwordUp = (EditText) findViewById(R.id.text4_EP);
+        confirmPassUp = (EditText) findViewById(R.id.text5_EP);
+        updateProf = (Button) findViewById(R.id.buttonUp);
+        closeProf = (Button) findViewById(R.id.buttonDel);
 
-        closeProf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
-        updateProf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(checker.equals("clicked")){
-                    userDetailsSave();
-                }else {
-                    updateUserOnly();
-                }
+        Intent intent = getIntent();
+        contact = intent.getStringExtra("contactNo");
+        dbref = FirebaseDatabase.getInstance().getReference().child("users").child(contact);
 
-            }
-        });
-
-        profImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checker = "clicked";
-
-                CropImage.activity(imageUri)
-                        .setAspectRatio(1,1)
-                        .start(EditProfileActivity.this);
-
-            }
-        });
-
-    }
-
-    private void userDetailsSave() {
-    }
-
-    private void userDetailsDisplay(CircleImageView profImage, EditText fullNameUp, EditText contactUp, EditText emailUp, EditText passwordUp, EditText confirmPassUp) {
-        DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference().child(PrevelantUser.currentUser.getContactNo());
-
-        userDBRef.addValueEventListener(new ValueEventListener() {
+        dbref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    if(dataSnapshot.child("image").exists()){
-                        String image = dataSnapshot.child("image").getValue().toString();
-                        String uContactNu = dataSnapshot.child("contactNo").getValue().toString();
-                        String uFullName = dataSnapshot.child("fullName").getValue().toString();
-                        String uEmail = dataSnapshot.child("emailCustomer").getValue().toString();
-                        String uPassword = dataSnapshot.child("passwordCustomer").getValue().toString();
-                        String uConfirmPassword = dataSnapshot.child("confirmPasswordCustomer").getValue().toString();
+                rh = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
 
-                        Piccas
-                    }
-                }
+                fullNameUp.setText(rh.getFullName());
+                contactUp.setText(rh.contactNo);
+                emailUp.setText(rh.getEmailCustomer());
+                passwordUp.setText(rh.passwordCustomer);
+                confirmPassUp.setText(rh.confirmPasswordCustomer);
+                Picasso.get().load(rh.getImage()).into(profImage);
             }
 
             @Override
@@ -121,41 +92,27 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
 
-    }
+        updateProf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbref = FirebaseDatabase.getInstance().getReference().child("users");
+                //Validation();
+                good = new RegisterHelperClass();
 
-    private void updateUserOnly() {
+                good.setImage(rh.image);
+                good.setContactNo(contactUp.getText().toString());
+                good.setFullName(fullNameUp.getText().toString());
+                good.setEmailCustomer(emailUp.getText().toString());
+                good.setPasswordCustomer(passwordUp.getText().toString());
+                good.setConfirmPasswordCustomer(confirmPassUp.getText().toString());
 
-        DatabaseReference dbReference = FirebaseDatabase.getInstance().getReference().child("users");
+                dbref.child(good.getContactNo()).setValue(good);
 
-        HashMap<String, Object> userMapDetails = new HashMap<>();
-        userMapDetails.put("fullName", fullNameUp.getText().toString());
-        userMapDetails.put("contactNo", contactUp.getText().toString());
-        userMapDetails.put("emailCustomer", emailUp.getText().toString() );
-        userMapDetails.put("passwordCustomer", passwordUp.getText().toString());
-        userMapDetails.put("confirmPasswordCustomer", confirmPassUp.getText().toString());
-        dbReference.child(PrevelantUser.currentUser.getContactNo()).updateChildren(userMapDetails);
-
-        startActivity(new Intent(EditProfileActivity.this, DashBoard.class));
-        Toast.makeText(EditProfileActivity.this, "Profile Details update Successfully", Toast.LENGTH_SHORT).show();
-        finish();
-
-    }
-
+            }
+        });
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK && data != null){
-
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            imageUri = result.getUri();
-            profImage.setImageURI(imageUri);
-
-        }else{
-            Toast.makeText(this, "Error , Try Again.", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(EditProfileActivity.this,EditProfileActivity.class));
-            finish();
-        }
-        super.onActivityResult(requestCode, resultCode, data);
     }
 }
+
+
