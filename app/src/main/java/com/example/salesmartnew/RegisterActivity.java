@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
         awesomeValidation.addValidation(this,R.id.ET2_Register, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
 
         //add validation for phoneNumber
-        String PhoneVal ="[0-9]+";
+        String PhoneVal ="^[0-9]{10}$";
         awesomeValidation.addValidation(this,R.id.ET3_Register,PhoneVal,R.string.phoneReg);
 
         String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
@@ -90,47 +90,52 @@ public class RegisterActivity extends AppCompatActivity {
                 if(awesomeValidation.validate()){
                     //validate success
                     Toast.makeText(getApplicationContext(),"Use your phone number as a user name..",Toast.LENGTH_SHORT).show();
+                    String cFullName = rFullName.getText().toString().trim();
+                    String cEmail = rEmail.getText().toString().trim();
+                    String cPhone = rPhone.getText().toString().trim();
+                    String cPassword = rPassword.getText().toString().trim();
+                    String cConfirmPass = rConfirmPass.getText().toString().trim();
+
+                    if(TextUtils.isEmpty(cEmail)){
+                        rEmail.setError("Email is Required.");
+                        return;
+                    }
+                    if(TextUtils.isEmpty(cPhone)){
+                        rPhone.setError("Phone Number is Required.");
+                        return;
+                    }
+
+                    if(TextUtils.isEmpty(cPassword)){
+                        rPassword.setError("Password is Required.");
+                        return;
+                    }
+
+                    progressBar.setVisibility(View.VISIBLE);
+
+                    rootNode = FirebaseDatabase.getInstance();
+                    reference = rootNode.getReference("users");
+                    RegisterHelperClass registerHelperClass = new RegisterHelperClass(cFullName, cEmail, cPhone, cPassword, cConfirmPass);
+                    registerHelperClass.setImage("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.pngitem.com%2Fpimgs%2Fm%2F522-5220445_anonymous-profile-grey-person-sticker-glitch-empty-profile.png&imgrefurl=https%3A%2F%2Fwww.pngitem.com%2Fmiddle%2FhmhxiJi_anonymous-profile-grey-person-sticker-glitch-empty-profile%2F&tbnid=GHbdym26eAzRCM&vet=12ahUKEwivgZSt3I3pAhWpLLcAHTtyAY0QMygOegUIARCZAg..i&docid=DW6FqC3PlmkyYM&w=860&h=706&q=person%20image%20icon%20png%20grey&ved=2ahUKEwivgZSt3I3pAhWpLLcAHTtyAY0QMygOegUIARCZAg");
+                    reference.child(cPhone).setValue(registerHelperClass);
+
+                    Intent signUP = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(signUP);
+
 
                 }else {
                     Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
 
                 }
 
-                String cFullName = rFullName.getText().toString().trim();
-                String cEmail = rEmail.getText().toString().trim();
-                String cPhone = rPhone.getText().toString().trim();
-                String cPassword = rPassword.getText().toString().trim();
-                String cConfirmPass = rConfirmPass.getText().toString().trim();
+
 
                 //if(TextUtils.isEmpty(cFullName)){
                    // rFullName.setError("Full Name is Required.");
                    // return;
                // }
 
-                if(TextUtils.isEmpty(cEmail)){
-                rEmail.setError("Email is Required.");
-                    return;
-                }
-                if(TextUtils.isEmpty(cPhone)){
-                   rPhone.setError("Phone Number is Required.");
-                  return;
-                }
 
-                if(TextUtils.isEmpty(cPassword)){
-                    rPassword.setError("Password is Required.");
-                    return;
-                }
 
-                progressBar.setVisibility(View.VISIBLE);
-
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("users");
-                RegisterHelperClass registerHelperClass = new RegisterHelperClass(cFullName, cEmail, cPhone, cPassword, cConfirmPass);
-               // registerHelperClass.setImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.clipart.email%2Fclipart%2Fgrey-person-silhouette-122190.html&psig=AOvVaw3eaTiO3_hyroS9EJrIjHAN&ust=1588250291424000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCe9sbTjekCFQAAAAAdAAAAABAO");
-                reference.child(cPhone).setValue(registerHelperClass);
-
-                Intent signUP = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(signUP);
             }
         });
 
