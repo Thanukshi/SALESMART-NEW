@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.salesmartn.R;
+import com.example.salesmartne.R;
 
 public class MainActivity23 extends AppCompatActivity {
 
