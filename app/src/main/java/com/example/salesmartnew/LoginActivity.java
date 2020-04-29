@@ -51,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
     RelativeLayout relLay1, relLay2;
     ImageView googleButton;
     private ProgressDialog loadingDialog;
+    String userNameEditCon;
 
     //splash screen
     Handler handler = new Handler();
@@ -216,8 +217,15 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                userNameEditCon = eUserName.getText().toString().trim();
+                String PasswordOtp = ePassword.getText().toString().trim();
+
                 Intent log = new Intent(getApplicationContext(), OTPActivity.class);
+                log.putExtra("contact", userNameEditCon);
+                log.putExtra("pw", PasswordOtp);
                 startActivity(log);
+
+
             }
         });
     }
