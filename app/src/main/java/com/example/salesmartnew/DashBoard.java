@@ -165,6 +165,9 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             profIntent.putExtra("passwordCustomer",passwordEdit);
             startActivity(profIntent);
         }
+        else if(id == R.id.logOut_menu){
+            startActivity(new Intent(DashBoard.this,LoginActivity.class));
+        }
         else if (id == R.id.setting_menu){
 
             Intent intent = new Intent(DashBoard.this, SettingsActivity.class);
