@@ -77,7 +77,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         //navigation drawer
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
-        navigationView.setCheckedItem(R.id.db1);
+        navigationView.setCheckedItem(R.id.home_menu);
         final ImageView navImage = findViewById(R.id.navImage);
 
         DatabaseReference dbf = FirebaseDatabase.getInstance().getReference().child("users").child(userNameEdit);
