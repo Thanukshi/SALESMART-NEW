@@ -91,4 +91,7 @@
     <string name="buttonnext">buttonnext</string>
     <string name="Next">next</string>
     <string name="listalldel">List All Deliveries</string>
+    <string name="rating_us">Rating Us</string>
+    <string name="submit_your_rating">Submit Your Rating</string>
+    <string name="your_ratings">Your Ratings</string>
 </resources>
