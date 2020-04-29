@@ -75,8 +75,6 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 Intent goBack = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(goBack);
             }
@@ -128,7 +126,7 @@ public class RegisterActivity extends AppCompatActivity {
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
                 RegisterHelperClass registerHelperClass = new RegisterHelperClass(cFullName, cEmail, cPhone, cPassword, cConfirmPass);
-                registerHelperClass.setImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.clipart.email%2Fclipart%2Fgrey-person-silhouette-122190.html&psig=AOvVaw3eaTiO3_hyroS9EJrIjHAN&ust=1588250291424000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCe9sbTjekCFQAAAAAdAAAAABAO");
+               // registerHelperClass.setImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.clipart.email%2Fclipart%2Fgrey-person-silhouette-122190.html&psig=AOvVaw3eaTiO3_hyroS9EJrIjHAN&ust=1588250291424000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCe9sbTjekCFQAAAAAdAAAAABAO");
                 reference.child(cPhone).setValue(registerHelperClass);
 
                 Intent signUP = new Intent(RegisterActivity.this, LoginActivity.class);
