@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bcimg"
+        tools:context=".Delivery.aview_Delivery">
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="410dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="9dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/delivery" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="117dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:paddingLeft="10dp"
+                android:text="Search Delivery"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:fontFamily="casual" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="360dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginRight="37dp"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="254dp"
+                android:layout_height="45dp"
+                android:background="#B03F51B5"
+                android:ems="10"
+                android:hint="Search By Delivery ID"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteY="127dp" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="98dp"
+                android:layout_height="45dp"
+                android:background="#FBE736"
+                android:text="@string/search"
+                android:textColor="#131313"
+                tools:layout_editor_absoluteX="267dp"
+                tools:layout_editor_absoluteY="123dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="319dp"
+            android:layout_height="344dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginEnd="62dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginBottom="13dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/txtCusName"
+                android:layout_width="308dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:hint="Customer Name"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtCusAddress"
+                android:layout_width="309dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:hint="Customer Address"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:hint="Mobile Number"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtProID"
+                android:layout_width="308dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:hint="Product ID"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtProName"
+                android:layout_width="308dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:hint="Product Name"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtQty"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:hint="Quantity"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtPrice"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:hint="Price"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="329dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <Button
+                    android:id="@+id/btnUpdateDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style"
+                    android:text="@string/updatedelivery" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style"
+                    android:text="Clear All" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnViewDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="@string/viewalldelivery" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
