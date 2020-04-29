@@ -56,4 +56,40 @@
     <string name="reset_EP">Delete</string>
     <string name="update_EP">Update</string>
     <string name="phoneReg">Enter Valid Phone Number..</string>
+    <string name="app_name">SalesMartNew</string>
+    <string name="pydelivery">Place Your Delivery</string>
+    <string name="cname">Customer Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Contact Number</string>
+    <string name="productid">Product ID</string>
+    <string name="productname">Product Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="adddelivery">ADD DELIVERY</string>
+    <string name="clear">CLEAR</string>
+    <string name="myaccount">My Account</string>
+    <string name="search">Search</string>
+    <string name="firstnm">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="delivery">Delivery</string>
+    <string name="email">Email</string>
+    <string name="updatedelivery">UPDATE DELIVERY</string>
+    <string name="deletedelivery">DELETE DELIVERY</string>
+    <string name="viewalldelivery">VIEW ALL DELIVERY</string>
+    <string name="mydelivery">My Delivery</string>
+    <string name="value">price = 86000</string>
+    <string name="brand">ASUS</string>
+    <string name="quanti">Quantity = 10</string>
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
+    <string name="cupboard">Cupboard</string>
+    <string name="prices">Price = 55000</string>
+    <string name="quantit">Quantity = 8</string>
+    <string name="glaxy">samsung glaxy s10</string>
+    <string name="pric">Price = 1,44000</string>
+    <string name="frock">Frock</string>
+    <string name="pri">Price = 2900</string>
+    <string name="buttonnext">buttonnext</string>
+    <string name="Next">next</string>
+    <string name="listalldel">List All Deliveries</string>
 </resources>
