@@ -1,5 +1,5 @@
 package com.example.salesmart.delivery;
-import com.example.salesmart.R;
+import com.example.salesmartnew.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-//import com.salesmart.salesmart.R;
+
 
 public class cview_Delivery extends AppCompatActivity {
     EditText txtProID, txtproName, txtcusName, txtAddress,txtPhone, txtQty, txtPrice,editTextSearch;
