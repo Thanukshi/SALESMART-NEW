@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RatingUs">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/rating_us"
+        android:fontFamily="cursive"
+        android:textSize="45sp"
+        android:textColor="@color/yellowWelcome"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="60dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="@string/ratingText"
+        android:textColor="@color/colorAllBlack"
+        android:textSize="25sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:numStars="5"
+        android:rating="2.5"
+        android:stepSize="0.5"
+        android:isIndicator="false"
+        android:progressTint="@color/yellowWelcome"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp" tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="195dp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="cursive"
+            android:gravity="end"
+            android:text="@string/submit_your_rating"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="cursive"
+            android:gravity="end"
+            android:text="@string/edit_ratings"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

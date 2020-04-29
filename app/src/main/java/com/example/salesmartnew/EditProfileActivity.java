@@ -27,11 +27,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.StorageTask;
-import com.squareup.picasso.Picasso;
-import com.theartofdev.edmodo.cropper.CropImage;
+
 
 import java.util.HashMap;
 
@@ -45,9 +41,7 @@ public class EditProfileActivity extends AppCompatActivity {
     DatabaseReference dbref;
     private Uri imageUri;
     private String myUrl = "";
-    private StorageReference storeProfImage;
     private String checker = "";
-    private StorageTask uploadTask;
     RegisterHelperClass rh, upDetails;
     String contact;
     AwesomeValidation awesomeValidation;
@@ -57,8 +51,6 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-
-        storeProfImage = FirebaseStorage.getInstance().getReference().child("image");
 
         //value assignment
         profImage = (CircleImageView) findViewById(R.id.EPImage);
@@ -85,7 +77,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 emailUp.setText(rh.getEmailCustomer());
                 passwordUp.setText(rh.passwordCustomer);
                 confirmPassUp.setText(rh.confirmPasswordCustomer);
-                Picasso.get().load(rh.getImage()).into(profImage);
+
             }
 
             @Override
@@ -104,7 +96,7 @@ public class EditProfileActivity extends AppCompatActivity {
         awesomeValidation.addValidation(this,R.id.text3_EP, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
 
         //add validation for phoneNumber
-        String PhoneVal ="[0-9]+";
+        String PhoneVal ="^[0-9]{10}$";
         awesomeValidation.addValidation(this,R.id.text2_EP,PhoneVal,R.string.phoneReg);
 
         String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
@@ -121,23 +113,26 @@ public class EditProfileActivity extends AppCompatActivity {
                 if(awesomeValidation.validate()){
                     //validate success
                    //Toast.makeText(getApplicationContext(),"Details is Up",Toast.LENGTH_SHORT).show();
+                    dbref = FirebaseDatabase.getInstance().getReference().child("users");
+                    //Validation();
+                    upDetails = new RegisterHelperClass();
+
+                    upDetails.setImage(rh.image);
+                    upDetails.setContactNo(contactUp.getText().toString());
+                    upDetails.setFullName(fullNameUp.getText().toString());
+                    upDetails.setEmailCustomer(emailUp.getText().toString());
+                    upDetails.setPasswordCustomer(passwordUp.getText().toString());
+                    upDetails.setConfirmPasswordCustomer(confirmPassUp.getText().toString());
+
+                    dbref.child(upDetails.getContactNo()).setValue(upDetails);
+
+
 
                 }else {
                     Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
 
                 }
-                dbref = FirebaseDatabase.getInstance().getReference().child("users");
-                //Validation();
-                upDetails = new RegisterHelperClass();
 
-                upDetails.setImage(rh.image);
-                upDetails.setContactNo(contactUp.getText().toString());
-                upDetails.setFullName(fullNameUp.getText().toString());
-                upDetails.setEmailCustomer(emailUp.getText().toString());
-                upDetails.setPasswordCustomer(passwordUp.getText().toString());
-                upDetails.setConfirmPasswordCustomer(confirmPassUp.getText().toString());
-
-                dbref.child(upDetails.getContactNo()).setValue(upDetails);
 
             }
         });
