@@ -49,6 +49,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private StorageTask uploadTask;
     RegisterHelperClass rh, good;
     String contact;
+    AwesomeValidation awesomeValidation;
 
 
     @Override
