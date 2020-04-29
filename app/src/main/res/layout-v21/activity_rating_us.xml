@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RatingUs"
-    android:id="@+id/rateRL">
+    tools:context=".RatingUs">
 
     <TextView
         android:id="@+id/textView"
@@ -31,33 +30,45 @@
         android:gravity="center"
         android:text="@string/ratingText"
         android:textColor="@color/colorAllBlack"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="80dp"
-        android:isIndicator="false"
         android:numStars="5"
-        android:progressTint="@color/yellowWelcome"
         android:rating="2.5"
         android:stepSize="0.5"
-        android:layout_centerHorizontal="true"/>
+        android:isIndicator="false"
+        android:progressTint="@color/yellowWelcome"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp" />
 
     <LinearLayout
         android:layout_width="390dp"
         android:layout_height="195dp"
         android:layout_below="@+id/ratingBar"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:layout_centerHorizontal="true">
 
         <TextView
-            android:id="@+id/textView1R"
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_below="@+id/ratingBar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginEnd="30dp"
@@ -65,13 +76,18 @@
             android:fontFamily="cursive"
             android:gravity="end"
             android:text="@string/submit_your_rating"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView2R"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_below="@+id/ratingBar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="false"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginEnd="30dp"
@@ -79,7 +95,7 @@
             android:fontFamily="cursive"
             android:gravity="end"
             android:text="@string/edit_ratings"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:textStyle="bold" />
 
     </LinearLayout>
