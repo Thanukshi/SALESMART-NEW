@@ -1,5 +1,5 @@
 package com.example.salesmart.delivery;
-import com.example.salesmart.R;
+import com.example.salesmartn.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
