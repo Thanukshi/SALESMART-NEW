@@ -53,7 +53,7 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_local_phone" />
+                        android:src="@drawable/ic_person_fill" />
 
                     <EditText
                         android:id="@+id/text1_EP"
@@ -63,7 +63,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/text_bg"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:textSize="20sp" />
                 </LinearLayout>
 
@@ -78,7 +78,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_person_fill" />
+                        android:src="@drawable/ic_local_phone" />
 
                     <EditText
                         android:id="@+id/text2_EP"
@@ -88,7 +88,8 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/text_bg"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:inputType="number"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -113,7 +114,8 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/text_bg"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:inputType="textEmailAddress"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -138,7 +140,8 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/text_bg"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:inputType="textPassword"/>
 
                 </LinearLayout>
 
@@ -164,7 +167,8 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/text_bg"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:inputType="textPassword"/>
 
                 </LinearLayout>
 
