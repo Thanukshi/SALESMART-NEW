@@ -1,5 +1,5 @@
 package com.example.salesmart.delivery;
-import com.example.salesmart.R;
+import com.example.salesmartn.R;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
