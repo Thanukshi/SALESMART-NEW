@@ -86,12 +86,11 @@ public class LoginActivity extends AppCompatActivity {
         relLay2 = findViewById(R.id.rl3Login);
         eUserName = findViewById(R.id.ET1_Login);
         ePassword =  findViewById(R.id.ET2_Login);
-        forgetPassword = findViewById(R.id.text5_Login);
+        forgetPassword = findViewById(R.id.text4_Login);
         register = findViewById( R.id.text6_Login );
         googleButton = findViewById(R.id.google_Login);
         btnLogin = findViewById( R.id.button1_Login );
         loadingDialog = new ProgressDialog(this);
-
 
 
         //add validation for userName
@@ -207,6 +206,18 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
                 }
+
+            }
+
+        });
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent log = new Intent(getApplicationContext(), OTPActivity.class);
+                startActivity(log);
             }
         });
     }
