@@ -6,4 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".OTPActivity">
 
+    <LinearLayout
+        android:id="@+id/LOTP"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:layout_marginTop="300dp"
+            android:id="@+id/ET1_OTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/otp_Hint"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_otp" />
+
+        <ProgressBar
+            android:layout_marginTop="250dp"
+            android:id="@+id/progressBar_otp"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
