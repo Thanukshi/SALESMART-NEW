@@ -96,8 +96,7 @@
     <string name="your_ratings">Your Ratings</string>
     <string name="edit_ratings">Edit Ratings</string>
     <string name="ratingText">Are you satisfied with our services please rate us.........</string>
-    
-    <resources>
+   
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_password">Password</string>
     <string name="welcome">"Welcome "</string>
@@ -190,6 +189,5 @@
     <string name="buttonnext">buttonnext</string>
     <string name="Next">next</string>
     <string name="listalldel">List All Deliveries</string>
-</resources>
 
 </resources>
