@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -47,7 +48,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private StorageReference storeProfImage;
     private String checker = "";
     private StorageTask uploadTask;
-    RegisterHelperClass rh, good;
+    RegisterHelperClass rh, upDetails;
     String contact;
     AwesomeValidation awesomeValidation;
 
@@ -93,21 +94,41 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
 
+        //Initialize Validation Style
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        //add validation for name
+        awesomeValidation.addValidation(this,R.id.text1_EP, RegexTemplate.NOT_EMPTY,R.string.invalid_name);
+
+        //add validation for email
+        awesomeValidation.addValidation(this,R.id.text3_EP, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
+
+        //add validation for phoneNumber
+        String PhoneVal ="[0-9]+";
+        awesomeValidation.addValidation(this,R.id.text2_EP,PhoneVal,R.string.phoneReg);
+
+        String errorPassword = "[a-zA-Z0-9\\!\\@\\#\\$]{8,24}";
+        //add validation for password
+        awesomeValidation.addValidation(this,R.id.text4_EP,errorPassword,R.string.invalid_password);
+
+        //add validation for confirmPassword
+        awesomeValidation.addValidation(this,R.id.text5_EP,R.id.text4_EP,R.string.invalid_confirm_password);
+
         updateProf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dbref = FirebaseDatabase.getInstance().getReference().child("users");
                 //Validation();
-                good = new RegisterHelperClass();
+                upDetails = new RegisterHelperClass();
 
-                good.setImage(rh.image);
-                good.setContactNo(contactUp.getText().toString());
-                good.setFullName(fullNameUp.getText().toString());
-                good.setEmailCustomer(emailUp.getText().toString());
-                good.setPasswordCustomer(passwordUp.getText().toString());
-                good.setConfirmPasswordCustomer(confirmPassUp.getText().toString());
+                upDetails.setImage(rh.image);
+                upDetails.setContactNo(contactUp.getText().toString());
+                upDetails.setFullName(fullNameUp.getText().toString());
+                upDetails.setEmailCustomer(emailUp.getText().toString());
+                upDetails.setPasswordCustomer(passwordUp.getText().toString());
+                upDetails.setConfirmPasswordCustomer(confirmPassUp.getText().toString());
 
-                dbref.child(good.getContactNo()).setValue(good);
+                dbref.child(upDetails.getContactNo()).setValue(upDetails);
 
             }
         });
