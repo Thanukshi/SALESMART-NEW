@@ -25,7 +25,7 @@ public class aview_Delivery extends AppCompatActivity {
     Button btnSearch,btnUpdateDelivery,btnDelete,btnViewDelivery,btnClear;
 
     String id;
-    DatabaseRference dbf;
+    DatabaseReference dbf;
 
 
     @Override
