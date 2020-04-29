@@ -7,12 +7,12 @@
         android:checkableBehavior="single">
 
         <item
-            android:id="@+id/db1"
+            android:id="@+id/home_menu"
             android:title="@string/navItem1"
             android:icon="@drawable/ic_menu"/>
 
         <item
-            android:id="@+id/db2"
+            android:id="@+id/search_menu"
             android:title="@string/navItem2"
             android:icon="@drawable/ic_searched"/>
 
@@ -24,15 +24,15 @@
             <group android:checkableBehavior="single">
 
                 <item
-                    android:id="@+id/db4"
+                    android:id="@+id/profile_menu"
                     android:icon="@drawable/ic_person"
                     android:title="@string/navItem9" />
                 <item
-                    android:id="@+id/db5"
+                    android:id="@+id/logOut_menu"
                     android:icon="@drawable/ic_logout"
                     android:title="@string/navItem7" />
                 <item
-                    android:id="@+id/db9"
+                    android:id="@+id/setting_menu"
                     android:icon="@drawable/ic_settings"
                     android:title="@string/navItem3" />
 
@@ -44,12 +44,12 @@
         <menu>
             <group android:checkableBehavior="none">
                 <item
-                    android:id="@+id/db8"
+                    android:id="@+id/contact_menu"
                     android:icon="@drawable/ic_contacts"
                     android:title="@string/navItem6" />
 
                 <item
-                    android:id="@+id/db10"
+                    android:id="@+id/rating_menu"
                     android:icon="@drawable/ic_star"
                     android:title="@string/navItem10" />
 
