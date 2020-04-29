@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">SaleSmartNew</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_password">Password</string>
     <string name="welcome">"Welcome "</string>
@@ -56,6 +55,141 @@
     <string name="reset_EP">Delete</string>
     <string name="update_EP">Update</string>
     <string name="phoneReg">Enter Valid Phone Number..</string>
-    <string name="otp_Hint">Enter OTP</string>
-    <string name="verify_otp">Verify</string>
+    <string name="app_name">SalesMartNew</string>
+    <string name="pydelivery">Place Your Delivery</string>
+    <string name="cname">Customer Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Contact Number</string>
+    <string name="productid">Product ID</string>
+    <string name="productname">Product Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="adddelivery">ADD DELIVERY</string>
+    <string name="clear">CLEAR</string>
+    <string name="myaccount">My Account</string>
+    <string name="search">Search</string>
+    <string name="firstnm">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="delivery">Delivery</string>
+    <string name="email">Email</string>
+    <string name="updatedelivery">UPDATE DELIVERY</string>
+    <string name="deletedelivery">DELETE DELIVERY</string>
+    <string name="viewalldelivery">VIEW ALL DELIVERY</string>
+    <string name="mydelivery">My Delivery</string>
+    <string name="value">price = 86000</string>
+    <string name="brand">ASUS</string>
+    <string name="quanti">Quantity = 10</string>
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
+    <string name="cupboard">Cupboard</string>
+    <string name="prices">Price = 55000</string>
+    <string name="quantit">Quantity = 8</string>
+    <string name="glaxy">samsung glaxy s10</string>
+    <string name="pric">Price = 1,44000</string>
+    <string name="frock">Frock</string>
+    <string name="pri">Price = 2900</string>
+    <string name="buttonnext">buttonnext</string>
+    <string name="Next">next</string>
+    <string name="listalldel">List All Deliveries</string>
+    <string name="rating_us">Rating Us</string>
+    <string name="submit_your_rating">Submit Your Rating</string>
+    <string name="your_ratings">Your Ratings</string>
+    <string name="edit_ratings">Edit Ratings</string>
+    <string name="ratingText">Are you satisfied with our services please rate us.........</string>
+    
+    <resources>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_password">Password</string>
+    <string name="welcome">"Welcome "</string>
+    <string name="invalid_username">Please Enter Valid User Name</string>
+    <string name="invalid_password">Passwords must contain at least eight characters and maximum 12 characters, including uppercase, lowercase letters and numbers.</string>
+    <string name="login_failed" translatable="false">"Login failed"</string>
+    <string name="btnNext_Welcome">NextButton</string>
+    <string name="start_btn">Get Started</string>
+    <string name="tittle_login">"Login "</string>
+    <string name="signUpLogin">Register</string>
+    <string name="signUpText">You Don\'t Have An Account?</string>
+    <string name="rememberPass" translatable="false">Don\'t Remember Password?</string>
+    <string name="userName">Phone Number</string>
+    <string name="btnLogin">Login Here</string>
+    <string name="fullName_Register">Full Name</string>
+    <string name="userMail_Register">Email</string>
+    <string name="confirm_Register">Confirm Password</string>
+    <string name="back_Reg">backArrow</string>
+    <string name="logo_Reg">Logo</string>
+    <string name="reg_User" translatable="false">registerUser</string>
+    <string name="invalid_name">Please Enter Valid Name</string>
+    <string name="invalid_email">Please Enter Valid Email</string>
+    <string name="invalid_confirm_password">Password does not match</string>
+    <string name="cDescript">image</string>
+    <string name="navItem1">Home</string>
+    <string name="navItem2">Search</string>
+    <string name="navItem3">Settings</string>
+    <string name="navItem4">Cart</string>
+    <string name="navItem5">Payments</string>
+    <string name="navItem6">Contct Us</string>
+    <string name="navItem7">Log Out</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="navItem8">Log In</string>
+    <string name="navItem9">Profile</string>
+    <string name="navItem10">Rating Us</string>
+    <string name="vavTitle">Share</string>
+    <string name="navTittle">Share</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profButton">Edit Profile</string>
+    <string name="reset_EP">Delete</string>
+    <string name="update_EP">Update</string>
+    <string name="phoneReg">Enter Valid Phone Number..</string>
+    <string name="app_name">SalesMartNew</string>
+    <string name="pydelivery">Place Your Delivery</string>
+    <string name="cname">Customer Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Contact Number</string>
+    <string name="productid">Product ID</string>
+    <string name="productname">Product Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="adddelivery">ADD DELIVERY</string>
+    <string name="clear">CLEAR</string>
+    <string name="myaccount">My Account</string>
+    <string name="search">Search</string>
+    <string name="firstnm">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="delivery">Delivery</string>
+    <string name="email">Email</string>
+    <string name="updatedelivery">UPDATE DELIVERY</string>
+    <string name="deletedelivery">DELETE DELIVERY</string>
+    <string name="viewalldelivery">VIEW ALL DELIVERY</string>
+    <string name="mydelivery">My Delivery</string>
+    <string name="value">price = 86000</string>
+    <string name="brand">ASUS</string>
+    <string name="quanti">Quantity = 10</string>
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
+    <string name="cupboard">Cupboard</string>
+    <string name="prices">Price = 55000</string>
+    <string name="quantit">Quantity = 8</string>
+    <string name="glaxy">samsung glaxy s10</string>
+    <string name="pric">Price = 1,44000</string>
+    <string name="frock">Frock</string>
+    <string name="pri">Price = 2900</string>
+    <string name="buttonnext">buttonnext</string>
+    <string name="Next">next</string>
+    <string name="listalldel">List All Deliveries</string>
+</resources>
+
 </resources>
