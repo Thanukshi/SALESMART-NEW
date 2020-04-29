@@ -94,4 +94,6 @@
     <string name="rating_us">Rating Us</string>
     <string name="submit_your_rating">Submit Your Rating</string>
     <string name="your_ratings">Your Ratings</string>
+    <string name="edit_ratings">Edit Ratings</string>
+    <string name="ratingText">Are you satisfied with our services please rate us.........</string>
 </resources>
