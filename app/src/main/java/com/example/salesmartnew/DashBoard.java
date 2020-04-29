@@ -77,7 +77,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         //navigation drawer
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
-        navigationView.setCheckedItem(R.id.db1);
+        navigationView.setCheckedItem(R.id.home_menu);
         final ImageView navImage = findViewById(R.id.navImage);
 
         DatabaseReference dbf = FirebaseDatabase.getInstance().getReference().child("users").child(userNameEdit);
@@ -147,7 +147,11 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
         int id = item.getItemId();
 
-        if(id == R.id.db4){
+        if(id == R.id.home_menu){
+            startActivity(new Intent(DashBoard.this,DashBoard.class));
+        }
+
+        else if(id == R.id.profile_menu){
             Intent intent = getIntent();
              userNameEdit= intent.getStringExtra("contactNo");
             String fullNameEdit = intent.getStringExtra("fullName");
@@ -161,7 +165,10 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             profIntent.putExtra("passwordCustomer",passwordEdit);
             startActivity(profIntent);
         }
-        else if (id == R.id.db9){
+        else if(id == R.id.logOut_menu){
+            startActivity(new Intent(DashBoard.this,LoginActivity.class));
+        }
+        else if (id == R.id.setting_menu){
 
             Intent intent = new Intent(DashBoard.this, SettingsActivity.class);
             intent.putExtra("contactNo",userNameEdit);
