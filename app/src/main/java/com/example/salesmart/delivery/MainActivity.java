@@ -1,5 +1,5 @@
 package com.example.salesmart.delivery;
-import com.example.salesmartnew.R;
+import com.example.salesmartn.R;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
