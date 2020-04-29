@@ -1,5 +1,5 @@
 package com.example.salesmart.delivery;
-import com.example.salesmartn.R;
+import com.example.salesmartne.R;
 public class Validation {
 
 
