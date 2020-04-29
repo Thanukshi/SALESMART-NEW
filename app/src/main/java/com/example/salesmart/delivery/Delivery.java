@@ -1,5 +1,5 @@
 package com.example.salesmart.delivery;
-import com.example.salesmart.R;
+import com.example.salesmartnew.R;
 import java.io.Serializable;
 
 public class Delivery implements Serializable {
