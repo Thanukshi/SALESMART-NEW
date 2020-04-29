@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DataSnapshot;
@@ -64,7 +65,17 @@ public class LoginActivity extends AppCompatActivity {
     };
     private GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 123;
+    private FirebaseAuth mAuth;
 
+    @Override
+    protected void onStart() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user != null){
+            Intent intent = new Intent(getApplicationContext(), AdminView.class);
+            startActivity(intent);
+        }
+        super.onStart();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +115,9 @@ public class LoginActivity extends AppCompatActivity {
 
         register.setMovementMethod( LinkMovementMethod.getInstance() );
 
+
+        //google signIn
+        mAuth = FirebaseAuth.getInstance();
 
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
