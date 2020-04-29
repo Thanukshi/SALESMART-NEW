@@ -117,6 +117,15 @@ public class EditProfileActivity extends AppCompatActivity {
         updateProf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(awesomeValidation.validate()){
+                    //validate success
+                   //Toast.makeText(getApplicationContext(),"Details is Up",Toast.LENGTH_SHORT).show();
+
+                }else {
+                    Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
+
+                }
                 dbref = FirebaseDatabase.getInstance().getReference().child("users");
                 //Validation();
                 upDetails = new RegisterHelperClass();
