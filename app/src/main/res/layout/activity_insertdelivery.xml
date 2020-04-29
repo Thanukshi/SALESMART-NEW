@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgbg"
+    tools:context=".Delivery.insertdelivery">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="333dp"
+        android:layout_height="371dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+        <EditText
+            android:id="@+id/txtCusName"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="Customer Name"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtCusAddress"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="Customer Address"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtPhone"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtProID"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="Product ID"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtProName"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="Product Name"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtQty"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtPrice"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="Price"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="319dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/btnAddDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="Insert Delivery"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="Clear"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="192dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginLeft="109dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="29dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:text="Button"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="286dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            app:srcCompat="@drawable/deliverybg"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/tid45"
+            android:layout_width="272dp"
+            android:layout_height="54dp"
+            android:text="@string/pydelivery"
+            android:textAllCaps="true"
+            android:textColor="#070707"
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="69dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
