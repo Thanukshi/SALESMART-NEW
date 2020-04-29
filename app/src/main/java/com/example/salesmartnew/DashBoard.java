@@ -147,7 +147,11 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
         int id = item.getItemId();
 
-        if(id == R.id.db4){
+        if(id == R.id.home_menu){
+            startActivity(new Intent(DashBoard.this,DashBoard.class));
+        }
+
+        if(id == R.id.profile_menu){
             Intent intent = getIntent();
              userNameEdit= intent.getStringExtra("contactNo");
             String fullNameEdit = intent.getStringExtra("fullName");
