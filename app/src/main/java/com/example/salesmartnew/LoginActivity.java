@@ -220,10 +220,14 @@ public class LoginActivity extends AppCompatActivity {
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
                 // ...
             }
         }
+    }
+
+    private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
     }
 
 }
