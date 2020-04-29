@@ -151,7 +151,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             startActivity(new Intent(DashBoard.this,DashBoard.class));
         }
 
-        if(id == R.id.profile_menu){
+        else if(id == R.id.profile_menu){
             Intent intent = getIntent();
              userNameEdit= intent.getStringExtra("contactNo");
             String fullNameEdit = intent.getStringExtra("fullName");
@@ -165,7 +165,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             profIntent.putExtra("passwordCustomer",passwordEdit);
             startActivity(profIntent);
         }
-        else if (id == R.id.db9){
+        else if (id == R.id.setting_menu){
 
             Intent intent = new Intent(DashBoard.this, SettingsActivity.class);
             intent.putExtra("contactNo",userNameEdit);
