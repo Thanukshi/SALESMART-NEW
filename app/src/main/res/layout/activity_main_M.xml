@@ -29,7 +29,7 @@
             app:layout_constraintBottom_toTopOf="@+id/button4"
             app:layout_constraintEnd_toStartOf="@+id/buttonCustomer"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
+            app:layout_constraintTop_toBottomOf="@id/linearLayout10" />
 
         <Button
             android:id="@+id/buttonCustomer"
