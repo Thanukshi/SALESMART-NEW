@@ -43,6 +43,8 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="@color/yellowWelcome"
+            android:progressTint="@color/yellowWelcome"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
