@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-//import com.salesm
+//import com.sales
 
 public class cview_Delivery extends AppCompatActivity {
     EditText txtProID, txtproName, txtcusName, txtAddress,txtPhone, txtQty, txtPrice,editTextSearch;
