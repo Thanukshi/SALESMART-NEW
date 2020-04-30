@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.salesmart.delivery.Delivery_Customer;
+import com.example.salesmart.product.MainActivityProduct;
+import com.example.salesmart.purchase.ContactUs;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentAdapter;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentHelperClass;
 import com.google.android.material.navigation.NavigationView;
@@ -107,7 +109,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         //navigation drawer
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
-        navigationView.setCheckedItem(R.id.home_menu);
+        navigationView.setCheckedItem(R.id.Products);
         final ImageView navImage = findViewById(R.id.navImage);
 
         DatabaseReference dbf = FirebaseDatabase.getInstance().getReference().child("users").child(userNameEdit);
@@ -177,8 +179,8 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     public boolean onNavigationItemSelected(@NonNull MenuItem item)  {
         int id = item.getItemId();
 
-        if(id == R.id.home_menu){
-            Intent on = new Intent(DashBoard.this,DashBoard.class);
+        if(id == R.id.Products){
+            Intent on = new Intent(DashBoard.this, MainActivityProduct.class);
             startActivity(on);
         }
 
@@ -217,6 +219,9 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             Intent intent = new Intent(DashBoard.this, RatingUs.class);
             intent.putExtra("contactNo",userNameEdit);
             startActivity(intent);
+        }
+        else if ((id == R.id.contact_menu)){
+            startActivity(new Intent(DashBoard.this, ContactUs.class));
         }
 
 

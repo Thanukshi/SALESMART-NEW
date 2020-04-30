@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityProduct extends AppCompatActivity {
 
     DatabaseReference reference;
     RecyclerView recyclerView;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     list.add(p);
 
                 }
-                product_adapter = new Product_Adapter(MainActivity.this,list);
+                product_adapter = new Product_Adapter(MainActivityProduct.this,list);
                 recyclerView.setAdapter(product_adapter);
 
 
