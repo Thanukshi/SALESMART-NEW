@@ -5,13 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.salesmartnew.R;
-
-import java.lang.annotation.Annotation;
 
 public class Welcom_Adim extends AppCompatActivity {
 
@@ -29,7 +25,7 @@ public class Welcom_Adim extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Welcom_Adim.this,MainActivity.class);
+                Intent intent = new Intent(Welcom_Adim.this, MainActivityProduct.class);
                 startActivity(intent);
                 finish();
             }
