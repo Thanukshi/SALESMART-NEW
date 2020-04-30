@@ -81,7 +81,7 @@ public class Product_Adapter extends RecyclerView.Adapter<Product_Adapter.Produc
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(context, position+"Add to Cart.........", Toast.LENGTH_SHORT).show();
-                        \}
+                        }
                 });
         }
     }
