@@ -32,7 +32,6 @@ public class Product_View_Holder  extends RecyclerView.ViewHolder implements Vie
         this.listner= listner;
     }
 
-
     @Override
     public void onClick(View v) {
 
