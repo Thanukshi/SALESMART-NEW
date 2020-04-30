@@ -17,10 +17,8 @@ import android.widget.TextView;
 
 import com.example.salesmart.delivery.Delivery_Admin;
 import com.example.salesmart.delivery.Delivery_Customer;
-import com.example.salesmart.delivery.insertdelivery;
 import com.example.salesmart.product.List_All_P;
 import com.example.salesmart.product.MainActivityProduct;
-import com.example.salesmart.purchase.ContactUs;
 import com.example.salesmart.purchase.Contact_Us;
 import com.example.salesmart.purchase.ListAllCart;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentAdapter;
@@ -64,7 +62,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
 
         //called the item cycle
         equipmentRecyclerView();
-
+    
 
         //Hooks for the navigation
         drawerLayout = findViewById(R.id.RL1_Dash);
