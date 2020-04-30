@@ -178,7 +178,7 @@ public class LoginActivity extends AppCompatActivity {
                                     String fnInDB = dataSnapshot.child(un).child("fullName").getValue(String.class);
                                     String emailDB = dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
 
-                                   if(userNameDB.equalsIgnoreCase("0768551045")){
+                                   if(!userNameDB.equalsIgnoreCase("0768551045")){
                                        Intent logIntent = new Intent(getApplicationContext(), DashBoard.class);
                                        logIntent.putExtra("contactNo", userNameDB);
                                        logIntent.putExtra("fullName", fnInDB);

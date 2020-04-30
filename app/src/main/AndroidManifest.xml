@@ -17,6 +17,7 @@
         <activity android:name=".AllCustomerRegAdminView"></activity>
         <activity android:name=".ListAllUserCustomer" />
         <activity android:name=".LoginActivity" />
+        <activity android:name="com.example.salesmart.product.Admin_Panel"/>
         <activity android:name="com.example.salesmart.delivery.MainActivity" />
         <activity android:name="com.example.salesmart.delivery.aview_Delivery" />
         <activity android:name="com.example.salesmart.delivery.cview_Delivery" />
