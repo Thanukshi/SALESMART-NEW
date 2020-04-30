@@ -123,14 +123,14 @@
                 <LinearLayout
                     android:id="@+id/LL1_Dash"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_marginTop="15dp"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
                     <LinearLayout
                         android:id="@+id/LL2_Dash"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="100dp"
                         android:orientation="vertical">
 
                         <RelativeLayout
@@ -166,21 +166,21 @@
                     <LinearLayout
                         android:id="@+id/LL3_Dash"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="100dp"
                         android:orientation="vertical">
 
                         <RelativeLayout
                             android:id="@+id/RL5_Dash"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@drawable/dash_back"
+                            android:background="@drawable/dash_back3"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp">
 
                             <ImageView
                                 android:id="@+id/img2_menu_dash"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:layout_centerInParent="true"
                                 android:contentDescription="@string/cDescript"
                                 android:src="@drawable/blender" />
@@ -190,10 +190,10 @@
                         <TextView
                             android:id="@+id/img_txt2_dash"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:fontFamily="@font/lobster"
                             android:gravity="center_horizontal"
-                            android:text="@string/d_m_text1"
+                            android:text="@string/grind_mixer"
                             android:textAlignment="center"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp" />
@@ -202,14 +202,14 @@
                     <LinearLayout
                         android:id="@+id/LL5_Dash"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="100dp"
                         android:orientation="vertical">
 
                         <RelativeLayout
                             android:id="@+id/RL6_Dash"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@drawable/dash_back"
+                            android:background="@drawable/dash_back2"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp">
 
@@ -219,17 +219,17 @@
                                 android:layout_height="50dp"
                                 android:layout_centerInParent="true"
                                 android:contentDescription="@string/cDescript"
-                                android:src="@drawable/dashimage1" />
+                                android:src="@drawable/rice" />
 
                         </RelativeLayout>
 
                         <TextView
                             android:id="@+id/img_txt3_dash"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:fontFamily="@font/lobster"
                             android:gravity="center_horizontal"
-                            android:text="@string/d_m_text1"
+                            android:text="@string/rice_cooker"
                             android:textAlignment="center"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp" />
@@ -238,14 +238,14 @@
                     <LinearLayout
                         android:id="@+id/LL6_Dash"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="100dp"
                         android:orientation="vertical">
 
                         <RelativeLayout
                             android:id="@+id/RL7_Dash"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@drawable/dash_back"
+                            android:background="@drawable/dash_back4"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp">
 
@@ -255,17 +255,17 @@
                                 android:layout_height="50dp"
                                 android:layout_centerInParent="true"
                                 android:contentDescription="@string/cDescript"
-                                android:src="@drawable/dashimage1" />
+                                android:src="@drawable/pans" />
 
                         </RelativeLayout>
 
                         <TextView
                             android:id="@+id/img_txt4_dash"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:fontFamily="@font/lobster"
                             android:gravity="center_horizontal"
-                            android:text="@string/d_m_text1"
+                            android:text="Pans"
                             android:textAlignment="center"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp" />

@@ -108,6 +108,9 @@
     <string name="dddksdfdkffkmfdfsdlsd">dddksdfdkffkmfdfsdlsd</string>
     <string name="topicmost">TopicMost</string>
     <string name="navItem13">My Delivery</string>
+    <string name="grind_mixer">Grind Mixer</string>
+    <string name="refrigerators">Refrigerators</string>
+    <string name="rice_cooker">Rice Cooker</string>
 
 
 </resources>
