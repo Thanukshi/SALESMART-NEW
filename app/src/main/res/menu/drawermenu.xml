@@ -9,12 +9,8 @@
         <item
             android:id="@+id/home_menu"
             android:title="@string/navItem1"
-            android:icon="@drawable/ic_menu"/>
+            android:icon="@drawable/ic_apps_black_24dp"/>
 
-        <item
-            android:id="@+id/search_menu"
-            android:title="@string/navItem2"
-            android:icon="@drawable/ic_searched"/>
 
     </group>
 
@@ -29,7 +25,7 @@
                     android:title="@string/navItem9" />
                 <item
                     android:id="@+id/dilevery_menu"
-                    android:icon="@drawable/ic_person"
+                    android:icon="@drawable/ic_local_shipping_black_24dp"
                     android:title="@string/navItem13" />
                 <item
                     android:id="@+id/logOut_menu"
