@@ -34,8 +34,6 @@ public class Welcom_Adim extends AppCompatActivity {
 
       //  Annotation annotation = (Annotation) AnimationUtils.loadAnimation(Welcom_Adim.this,R.anim.welcomeanimation);
       //
-        //
-        //
         // imge.startAnimation((Animation) annotation);
 
 

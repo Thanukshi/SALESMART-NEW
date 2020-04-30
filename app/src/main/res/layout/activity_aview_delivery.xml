@@ -68,7 +68,7 @@
                 android:id="@+id/editTextSearch"
                 android:layout_width="254dp"
                 android:layout_height="45dp"
-                android:background="#B03F51B5"
+                android:background="#E3D87E"
                 android:ems="10"
                 android:hint="Search By Delivery ID"
                 android:inputType="textPersonName"
@@ -78,7 +78,7 @@
                 android:id="@+id/btnSearch"
                 android:layout_width="98dp"
                 android:layout_height="45dp"
-                android:background="#FBE736"
+                android:background="#C0FF5722"
                 android:text="@string/search"
                 android:textColor="#131313"
                 tools:layout_editor_absoluteX="267dp"
@@ -223,7 +223,7 @@
                 android:id="@+id/btnViewDelivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
+                android:background="#D1FF5722"
                 android:text="@string/viewalldelivery" />
 
         </LinearLayout>
