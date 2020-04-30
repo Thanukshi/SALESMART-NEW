@@ -28,15 +28,18 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:fontFamily="@font/baloo"
-            android:text="@string/rvT1"
-            android:textColor="@color/colorAllWhite"
+            android:text="All Equipments"
+            android:textColor="@color/colorAllBlack"
             android:textSize="20sp" />
         
         <RatingBar
+            android:layout_marginTop="10dp"
             android:id="@+id/rating_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:rating="3.5"
+            android:backgroundTint="@color/colorAllBlack"
+            android:progressTint="@color/welcome_description_color"
             style="@style/Widget.AppCompat.RatingBar.Small"/>
 
         <TextView
