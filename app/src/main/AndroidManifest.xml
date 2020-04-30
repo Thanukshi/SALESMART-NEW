@@ -13,6 +13,15 @@
         android:roundIcon="@drawable/logo1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.example.salesmart.delivery.MainActivity"/>
+        <activity android:name="com.example.salesmart.delivery.aview_Delivery"/>
+        <activity android:name="com.example.salesmart.delivery.cview_Delivery"/>
+        <activity android:name="com.example.salesmart.delivery.Delivery_Admin"/>
+        <activity android:name="com.example.salesmart.delivery.Delivery_Customer"/>
+        <activity android:name="com.example.salesmart.delivery.SelectDelivery"/>
+        <activity android:name="com.example.salesmart.delivery.insertdelivery"/>
+        <activity android:name="com.example.salesmart.delivery.ListAll"/>
+        <activity android:name="com.example.salesmart.delivery.ListAllCustomer"/>
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".EditProfileActivity" />
        <activity android:name=".DashBoard"/>
