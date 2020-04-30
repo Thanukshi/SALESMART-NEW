@@ -54,7 +54,7 @@
                 android:layout_margin="3dp"
                 android:ems="10"
                 android:hint="Mobile Number"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 android:textSize="16sp" />
 
             <EditText
@@ -84,7 +84,7 @@
                 android:layout_margin="3dp"
                 android:ems="10"
                 android:hint="Quantity"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:textSize="16sp" />
 
             <EditText
@@ -94,7 +94,7 @@
                 android:layout_margin="3dp"
                 android:ems="10"
                 android:hint="Price"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:textSize="16sp" />
 
         </LinearLayout>
