@@ -148,7 +148,8 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         int id = item.getItemId();
 
         if(id == R.id.home_menu){
-            startActivity(new Intent(DashBoard.this,DashBoard.class));
+            Intent on = new Intent(DashBoard.this,DashBoard.class);
+            startActivity(on);
         }
 
         else if(id == R.id.profile_menu){
@@ -174,6 +175,14 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             intent.putExtra("contactNo",userNameEdit);
             startActivity(intent);
         }
+
+        else if (id == R.id.rating_menu){
+
+            Intent intent = new Intent(DashBoard.this, RatingUs.class);
+            intent.putExtra("contactNo",userNameEdit);
+            startActivity(intent);
+        }
+
 
         return true;
     }
