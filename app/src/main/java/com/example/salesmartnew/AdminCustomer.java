@@ -43,7 +43,7 @@ public class AdminCustomer extends AppCompatActivity {
         txtPhone = findViewById(R.id.txtEmail__Customer);
         txtPass = findViewById(R.id.txtPassword_Customer);
         txtConfirm = findViewById(R.id.txtConfirm_Customer);
-        editTextSearch = findViewById(R.id.editTextSearch);
+        editTextSearch = findViewById(R.id.editTextSearch_Customer);
 
 
         btnSearch = findViewById(R.id.btnSearch_Customer);
@@ -149,12 +149,13 @@ public class AdminCustomer extends AppCompatActivity {
             public void onClick(View v) {
                 String  search = editTextSearch.getText().toString();
 
-                dbf = FirebaseDatabase.getInstance().getReference().child("users").child("0768561045");
+                dbf = FirebaseDatabase.getInstance().getReference().child("users").child(search);
 
                 dbf.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         RegisterHelperClass reh = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
+                        if(reh != null){
 
                         txtcusName.setText(reh.getFullName());
                         txtEmail.setText(reh.getEmailCustomer());
@@ -162,6 +163,10 @@ public class AdminCustomer extends AppCompatActivity {
                         txtPass.setText(reh.getPasswordCustomer());
                         txtConfirm.setText(reh.getConfirmPasswordCustomer());
                         editTextSearch.setText("");
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "Please Enter Valid Phone Number!", Toast.LENGTH_LONG).show();
+                        }
 
                     }
 
