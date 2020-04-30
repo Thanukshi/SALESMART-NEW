@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".EditProfileActivity" />
-        <activity android:name=".DashBoard" />
+       <activity android:name=".DashBoard"/>
         <activity android:name=".RatingUs"/>
         <activity android:name=".Profile" />
         <activity android:name=".AdminView" />
