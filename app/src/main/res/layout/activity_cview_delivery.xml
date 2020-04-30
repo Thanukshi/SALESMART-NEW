@@ -198,14 +198,6 @@
                 android:paddingBottom="10dp">
 
                 <Button
-                    android:id="@+id/btnUpdateDelivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_gradient_welcome"
-                    android:text="@string/updatedelivery" />
-
-                <Button
                     android:id="@+id/btnClear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
