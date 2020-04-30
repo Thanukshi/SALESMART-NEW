@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class aview_Delivery extends AppCompatActivity {
     EditText txtProID, txtproName, txtcusName, txtAddress,txtPhone, txtQty, txtPrice,editTextSearch;
     Button btnSearch,btnUpdateDelivery,btnDelete,btnViewDelivery,btnClear;
-//f
+
     String id;
     DatabaseReference dbf;
 

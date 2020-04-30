@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class Delivery_Customer extends AppCompatActivity {
     Button buttonInsert,buttonSearch,buttonListAll;
-    String username = "Default";
+    String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,13 @@ public class Delivery_Customer extends AppCompatActivity {
         buttonInsert = findViewById(R.id.buttonAdmin);
         buttonSearch = findViewById(R.id.buttonCustomer);
         buttonListAll = findViewById(R.id.buttonListAll);
+
+        Bundle extras = getIntent().getExtras();
+      //  username = extras.getString("username");
+       // username = "test" ;
+        Intent intent = getIntent();
+        username= intent.getStringExtra("contactNo");
+        System.out.println(username);
 
         buttonInsert.setOnClickListener(new View.OnClickListener() {
             @Override
