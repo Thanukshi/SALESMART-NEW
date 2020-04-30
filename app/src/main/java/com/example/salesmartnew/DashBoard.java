@@ -15,7 +15,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.salesmart.delivery.Delivery_Admin;
 import com.example.salesmart.delivery.Delivery_Customer;
+import com.example.salesmart.delivery.insertdelivery;
 import com.example.salesmart.product.MainActivityProduct;
 import com.example.salesmart.purchase.ContactUs;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentAdapter;
@@ -199,9 +201,16 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             startActivity(profIntent);
         }
         else if(id == R.id.dilevery_menu){
-            Intent intent = new Intent(DashBoard.this, Delivery_Customer.class);
-            intent.putExtra("username",userNameEdit);
-            startActivity(intent);
+            if(userNameEdit.equalsIgnoreCase("0768551045")){
+                Intent intent = new Intent(DashBoard.this, Delivery_Admin.class);
+                intent.putExtra("username",userNameEdit);
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(DashBoard.this,Delivery_Customer.class);
+                intent.putExtra("username",userNameEdit);
+                startActivity(intent);
+            }
 
         }
         else if(id == R.id.logOut_menu){

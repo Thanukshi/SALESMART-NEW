@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class AdminCustomer extends AppCompatActivity {
 
     EditText  txtcusName, txtEmail,editTextSearch, txtPhone;
-    TextView txtConfirm, txtPass;
+    TextView txtConfirm, txtPass,search;
     Button btnSearch,btnUpdate,btnDelete,btnView,btnClear;
 
     String cn;
@@ -43,10 +43,10 @@ public class AdminCustomer extends AppCompatActivity {
         txtPhone = findViewById(R.id.txtEmail__Customer);
         txtPass = findViewById(R.id.txtPassword_Customer);
         txtConfirm = findViewById(R.id.txtConfirm_Customer);
+        editTextSearch = findViewById(R.id.editTextSearch);
 
 
-
-        btnSearch = findViewById(R.id.btnSearch);
+        btnSearch = findViewById(R.id.btnSearch_Customer);
         btnUpdate = findViewById(R.id.btnUpdateCus);
         btnDelete = findViewById(R.id.btnDeleteCus);
         btnView = findViewById(R.id.btnViewCus);
@@ -142,6 +142,35 @@ public class AdminCustomer extends AppCompatActivity {
             }
 
 
+        });
+
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String  search = editTextSearch.getText().toString();
+
+                dbf = FirebaseDatabase.getInstance().getReference().child("users").child(search);
+
+                dbf.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        RegisterHelperClass reh = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
+
+                        txtcusName.setText(reh.getFullName());
+                        txtEmail.setText(reh.getEmailCustomer());
+                        txtPhone.setText(reh.getContactNo());
+                        txtPass.setText(reh.getPasswordCustomer());
+                        txtConfirm.setText(reh.getConfirmPasswordCustomer());
+                        editTextSearch.setText("");
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
         });
 
     }
