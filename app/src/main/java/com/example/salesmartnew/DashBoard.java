@@ -7,6 +7,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -38,6 +40,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     LinearLayout contentView;
     TextView viewName;
     String userNameEdit;
+    RecyclerView eqRecyclerView;
 
 
     @Override
@@ -48,7 +51,10 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         drawerMenu = findViewById(R.id.menuIcon_Dash);
         contentView = findViewById(R.id.contentL);
         viewName = findViewById(R.id.navText_menu);
+        eqRecyclerView = findViewById(R.id.rv_dash);
 
+        //called the item cycle
+        equipmentRecyclerView();
 
         //Hooks for the navigation
         drawerLayout = findViewById(R.id.RL1_Dash);
@@ -63,6 +69,12 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         showFullName();
 
     }
+
+    private void equipmentRecyclerView() {
+        eqRecyclerView.setHasFixedSize(true);
+        eqRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false));
+    }
+
     //display name in the nav bar
     private void showFullName() {
         Intent intent = getIntent();
