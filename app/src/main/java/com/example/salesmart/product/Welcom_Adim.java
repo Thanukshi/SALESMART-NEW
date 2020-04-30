@@ -40,7 +40,7 @@ public class Welcom_Adim extends AppCompatActivity {
       //
         //
         //
-        //    imge.startAnimation((Animation) annotation);
+        //   imge.startAnimation((Animation) annotation);
 
 
 
