@@ -149,7 +149,7 @@ public class AdminCustomer extends AppCompatActivity {
             public void onClick(View v) {
                 String  search = editTextSearch.getText().toString();
 
-                dbf = FirebaseDatabase.getInstance().getReference().child("users").child(search);
+                dbf = FirebaseDatabase.getInstance().getReference().child("users").child("0768561045");
 
                 dbf.addValueEventListener(new ValueEventListener() {
                     @Override
