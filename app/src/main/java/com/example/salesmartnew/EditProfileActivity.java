@@ -46,7 +46,6 @@ public class EditProfileActivity extends AppCompatActivity {
     String contact;
     AwesomeValidation awesomeValidation;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +61,6 @@ public class EditProfileActivity extends AppCompatActivity {
         updateProf = (Button) findViewById(R.id.buttonUp);
         closeProf = (Button) findViewById(R.id.buttonDel);
 
-
         Intent intent = getIntent();
         contact = intent.getStringExtra("contactNo");
         dbref = FirebaseDatabase.getInstance().getReference().child("users").child(contact);
@@ -77,7 +75,6 @@ public class EditProfileActivity extends AppCompatActivity {
                 emailUp.setText(rh.getEmailCustomer());
                 passwordUp.setText(rh.passwordCustomer);
                 confirmPassUp.setText(rh.confirmPasswordCustomer);
-
             }
 
             @Override
@@ -126,18 +123,12 @@ public class EditProfileActivity extends AppCompatActivity {
 
                     dbref.child(upDetails.getContactNo()).setValue(upDetails);
 
-
-
                 }else {
                     Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
 
                 }
-
-
             }
         });
-
-
     }
 }
 

@@ -93,7 +93,6 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById( R.id.button1_Login );
         loadingDialog = new ProgressDialog(this);
 
-
         //add validation for userName
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 

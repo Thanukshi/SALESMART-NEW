@@ -46,7 +46,7 @@ public class AdminView extends AppCompatActivity {
                             if (pwInDB.equals(pw)) {
 
                                 String userNameDB = dataSnapshot.child(un).child("contactNo").getValue(String.class);
-                                Intent logIntent = new Intent(getApplicationContext(), AdminCustomer.class);
+                                Intent logIntent = new Intent(getApplicationContext(), AdminView.class);
                                 logIntent.putExtra("contactNo", userNameDB);
                                 startActivity(logIntent);
                             }
