@@ -83,7 +83,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r2, "Spoons", "You can buy different types of spoons. Plastics Spoons, Stainless Steel Spoons"));
         equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r5, "Refrigerators", "All types of Refrigerators ae available. Single door, Two door and Side By Side."));
         equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r1, "Grind Mixer", "Easy to work with our mixers. Juice Mixer, Magic Bullet"));
-        equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r6, "All Equipments At One Place", "You can make a beautiful kitchen in your home after buying equipments from us. We have very goods items for you."));
+        equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r7, "Enjoy Your Life", "Enjoy at your kitchen with using our equipments.. Happy Life..."));
 
 
     }

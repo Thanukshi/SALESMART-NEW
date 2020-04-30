@@ -30,7 +30,7 @@
             android:fontFamily="@font/baloo"
             android:text="All Equipments"
             android:textColor="@color/colorAllBlack"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
         
         <RatingBar
             android:layout_marginTop="10dp"
