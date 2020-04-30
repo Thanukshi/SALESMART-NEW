@@ -7,8 +7,10 @@
         <item>@font/bangers</item>
         <item>@font/bevan</item>
         <item>@font/bitter_italic</item>
+        <item>@font/cherry_swash_bold</item>
         <item>@font/cormorant_garamond_bold</item>
         <item>@font/delius_swash_caps</item>
+        <item>@font/gabriela</item>
         <item>@font/lobster</item>
     </array>
 </resources>

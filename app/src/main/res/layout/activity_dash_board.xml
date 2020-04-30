@@ -17,7 +17,6 @@
         android:background="@color/colorAllWhite"
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
-        android:visibility="gone"
         app:headerLayout="@layout/menu_header">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -58,6 +57,7 @@
         android:background="@color/colorAllWhite">
 
         <RelativeLayout
+            android:id="@+id/RL2_Dash"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginLeft="10dp"
@@ -71,8 +71,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="9dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:contentDescription="@string/cDescript"
                 android:src="@drawable/ic_menu" />
@@ -93,145 +93,282 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/appName_Dash"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/delius_swash_caps"
-                android:text="@string/logo_name"
-                android:textSize="30sp"
-                android:layout_centerHorizontal="true"
-                android:textStyle="bold"
-                android:textColor="@color/yellowWelcome"/>
-        </RelativeLayout>
-        
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
+
                 <RelativeLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/dash_back"
-                    android:layout_marginLeft="10dp">
-                    
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/dashimage1"
-                        android:layout_centerInParent="true"/>
+                    android:id="@+id/RL3_Dash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/appName_Dash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/delius_swash_caps"
+                        android:text="@string/logo_name"
+                        android:textSize="30sp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/yellowWelcome"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL1_Dash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/LL2_Dash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/RL4_Dash"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/dash_back"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <ImageView
+                                android:id="@+id/img1_menu_dash"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/cDescript"
+                                android:src="@drawable/dashimage1" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/img_txt1_dash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lobster"
+                            android:gravity="center_horizontal"
+                            android:text="@string/d_m_text1"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL3_Dash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/RL5_Dash"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/dash_back"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <ImageView
+                                android:id="@+id/img2_menu_dash"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/cDescript"
+                                android:src="@drawable/dashimage1" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/img_txt2_dash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lobster"
+                            android:gravity="center_horizontal"
+                            android:text="@string/d_m_text1"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL5_Dash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/RL6_Dash"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/dash_back"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <ImageView
+                                android:id="@+id/img3_menu_dash"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/cDescript"
+                                android:src="@drawable/dashimage1" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/img_txt3_dash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lobster"
+                            android:gravity="center_horizontal"
+                            android:text="@string/d_m_text1"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL6_Dash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/RL7_Dash"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/dash_back"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <ImageView
+                                android:id="@+id/img4_menu_dash"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/cDescript"
+                                android:src="@drawable/dashimage1" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/img_txt4_dash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lobster"
+                            android:gravity="center_horizontal"
+                            android:text="@string/d_m_text1"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RL8_Dash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#F2F7AA"
+                    android:layout_marginStart="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/LL7_Dash"
+                        android:layout_width="170dp"
+                        android:layout_height="280dp"
+                        android:background="@color/yellowWelcome"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rv_text1_dash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cherry_swash_bold"
+                            android:text="@string/dash_descrip1"
+                            android:gravity="center"
+                            android:textColor="@color/colorAllBlack"
+                            android:layout_marginTop="50dp"
+                            android:textAllCaps="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:id="@+id/rv_sub_text1_dash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/dash_description_text1"/>
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_dash"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_toRightOf="@+id/LL7_Dash"
+                        android:background="@color/colorAllWhite"
+                        android:layout_toEndOf="@+id/LL7_Dash" />
 
                 </RelativeLayout>
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/RL9_Dash"
+                    android:layout_marginTop="30dp"
+                    android:padding="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lobster"
-                    android:gravity="center_horizontal"
-                    android:text="@string/d_m_text1"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="10dp"/>
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/RL10_Dash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/text1_Most"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gabriela"
+                            android:text="@string/text1_most"
+                            android:textColor="@color/colorAllBlack"
+                            android:textSize="20sp"
+                            android:textAllCaps="false"/>
+
+                        <TextView
+                            android:id="@+id/text2_Most"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_all"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="15sp" />
+
+
+
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+
             </LinearLayout>
+        </ScrollView>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/dash_back"
-                    android:layout_marginLeft="10dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/dashimage1"
-                        android:layout_centerInParent="true"/>
-
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/lobster"
-                    android:gravity="center_horizontal"
-                    android:text="@string/d_m_text1"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/dash_back"
-                    android:layout_marginLeft="10dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/dashimage1"
-                        android:layout_centerInParent="true"/>
-
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/lobster"
-                    android:gravity="center_horizontal"
-                    android:text="@string/d_m_text1"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/dash_back"
-                    android:layout_marginLeft="10dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/dashimage1"
-                        android:layout_centerInParent="true"/>
-
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/lobster"
-                    android:gravity="center_horizontal"
-                    android:text="@string/d_m_text1"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
-
-        </LinearLayout>
 
     </LinearLayout>
 

@@ -100,6 +100,10 @@
     <string name="verify_otp">Verify</string>
     <string name="logo_name">SALESMART</string>
     <string name="d_m_text1">Spoons</string>
+    <string name="dash_descrip1">All Having Good Quality Equipments</string>
+    <string name="dash_description_text1">You can make your dream kitchen with our good products. Our Products have quality conditions. Explore here to find what do you want ....</string>
+    <string name="text1_most">Most Viewed Items</string>
+    <string name="view_all">View All</string>
 
 
 </resources>
