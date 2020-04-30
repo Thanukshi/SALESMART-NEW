@@ -1,6 +1,7 @@
 package com.example.salesmart.product;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.salesmart.purchase.Order;
 import com.example.salesmartnew.R;
 import com.example.salesmart.product.Model.Product;
 import com.squareup.picasso.Picasso;
@@ -21,8 +23,13 @@ public class Product_Adapter extends RecyclerView.Adapter<Product_Adapter.Produc
 
     Context context;
     ArrayList<Product> products;
-
-
+    private OnItemClickListner mListner;
+    public interface OnItemClickListner{
+        void onItemClick(int position);
+    }
+    public void setOnItemClickListner(OnItemClickListner listner){
+        mListner = listner;
+    }
     public Product_Adapter(Context c, ArrayList<Product> pro){
 
         context = c;
@@ -71,6 +78,15 @@ public class Product_Adapter extends RecyclerView.Adapter<Product_Adapter.Produc
             prosts = (TextView)itemView.findViewById(R.id.productstsCV);
             proprice = (TextView)itemView.findViewById(R.id.productpriceCV);
             proimg = (ImageView) itemView.findViewById(R.id.productimg);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    //Intent i = new Intent(Order.class);
+
+                }
+            });
 
 
         }

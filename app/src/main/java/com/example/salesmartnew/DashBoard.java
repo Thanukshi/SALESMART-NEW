@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.example.salesmart.delivery.Delivery_Admin;
 import com.example.salesmart.delivery.Delivery_Customer;
 import com.example.salesmart.delivery.insertdelivery;
+import com.example.salesmart.product.List_All_P;
 import com.example.salesmart.product.MainActivityProduct;
 import com.example.salesmart.purchase.ContactUs;
 import com.example.salesmart.purchase.Contact_Us;
@@ -238,6 +239,10 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         else if(id == R.id.cart_Menu){
             startActivity(new Intent(DashBoard.this, ListAllCart.class));
 
+        }
+        else if(id == R.id.order_menu){
+            Intent on = new Intent(DashBoard.this, List_All_P.class);
+            startActivity(on);
         }
 
         return true;

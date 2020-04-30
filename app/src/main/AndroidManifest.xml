@@ -9,24 +9,22 @@
 
     <application
         android:allowBackup="true"
-
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AllCustomerRegAdminView"></activity>
+        <activity android:name=".AllCustomerRegAdminView" />
         <activity android:name=".ListAllUserCustomer" />
         <activity android:name=".LoginActivity" />
-        <activity android:name="com.example.salesmart.product.Admin_Panel"/>
-        <activity android:name="com.example.salesmart.product.MainActivityProduct"/>
-        <activity android:name="com.example.salesmart.product.Add_Product"/>
-        <activity android:name="com.example.salesmart.product.Admin"/>
-        <activity android:name="com.example.salesmart.product.Admin_View"/>
-        <activity android:name="com.example.salesmart.product.Category_Product"/>
-        <activity android:name="com.example.salesmart.product.Edit_Product"/>
-        <activity android:name="com.example.salesmart.product.Home"/>
-        <activity android:name="com.example.salesmart.product.List_All_P"/>
-        <activity android:name="com.example.salesmart.product.Welcom_Adim"/>
+        <activity android:name="com.example.salesmart.product.Admin_Panel" />
+        <activity android:name="com.example.salesmart.product.MainActivityProduct" />
+        <activity android:name="com.example.salesmart.product.Add_Product" />
+        <activity android:name="com.example.salesmart.product.Admin" />
+        <activity android:name="com.example.salesmart.product.Admin_View" />
+        <activity android:name="com.example.salesmart.product.Category_Product" />
+        <activity android:name="com.example.salesmart.product.Edit_Product" />
+        <activity android:name="com.example.salesmart.product.Home" />
+        <activity android:name="com.example.salesmart.product.List_All_P" />
+        <activity android:name="com.example.salesmart.product.Welcom_Adim" />
         <activity android:name="com.example.salesmart.delivery.MainActivity" />
         <activity android:name="com.example.salesmart.delivery.aview_Delivery" />
         <activity android:name="com.example.salesmart.delivery.cview_Delivery" />
@@ -36,12 +34,12 @@
         <activity android:name="com.example.salesmart.delivery.insertdelivery" />
         <activity android:name="com.example.salesmart.delivery.ListAll" />
         <activity android:name="com.example.salesmart.delivery.ListAllCustomer" />
-        <activity android:name="com.example.salesmart.purchase.Contact_Us"/>
-        <activity android:name="com.example.salesmart.purchase.ListAllCart"/>
-        <activity android:name="com.example.salesmart.purchase.ListAllContact"/>
-        <activity android:name="com.example.salesmart.purchase.updatedeletecart"/>
-        <activity android:name="com.example.salesmart.purchase.Order"/>
-        <activity android:name="com.example.salesmart.purchase.MainActivity"/>
+        <activity android:name="com.example.salesmart.purchase.Contact_Us" />
+        <activity android:name="com.example.salesmart.purchase.ListAllCart" />
+        <activity android:name="com.example.salesmart.purchase.ListAllContact" />
+        <activity android:name="com.example.salesmart.purchase.updatedeletecart" />
+        <activity android:name="com.example.salesmart.purchase.Order" />
+        <activity android:name="com.example.salesmart.purchase.MainActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".DashBoard" />

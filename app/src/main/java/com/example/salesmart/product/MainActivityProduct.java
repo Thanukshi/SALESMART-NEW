@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
+import com.example.salesmart.product.ViewHolder.Product_View_Holder;
+import com.example.salesmart.purchase.Order;
 import com.example.salesmartnew.R;
 import com.example.salesmart.product.Model.Product;
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +28,7 @@ public class MainActivityProduct extends AppCompatActivity {
     ArrayList<Product> list;
     Product_Adapter product_adapter;
     ImageView cardView;
+    ImageView imgClick;
 
 
 
@@ -39,7 +44,6 @@ public class MainActivityProduct extends AppCompatActivity {
         cardView = (ImageView) findViewById(R.id.productimg);
 
 
-
         reference = FirebaseDatabase.getInstance().getReference().child("products");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -53,6 +57,7 @@ public class MainActivityProduct extends AppCompatActivity {
                 }
                 product_adapter = new Product_Adapter(MainActivityProduct.this,list);
                 recyclerView.setAdapter(product_adapter);
+
 
 
             }

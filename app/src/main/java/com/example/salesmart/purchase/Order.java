@@ -26,7 +26,7 @@ public class Order extends AppCompatActivity {
     private ElegantNumberButton numberButton;
     private TextView productPrice , productDescription ,productName;
     EditText Total;
-    private String productID; ///meka comment karala
+    private String productID;
     Product products;
     int shpID =0;
 
@@ -35,7 +35,7 @@ public class Order extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
 
-        productID = getIntent().getStringExtra("pid");   ///meka uncomment karanna
+       productID = getIntent().getStringExtra("pid");
 
         addToCartButton =(Button) findViewById(R.id.updatesp);
         numberButton =(ElegantNumberButton) findViewById(R.id.number_btn);

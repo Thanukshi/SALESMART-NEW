@@ -8,7 +8,7 @@
 
         <item
             android:id="@+id/Products"
-            android:title="@string/navItem1"
+            android:title="Products"
             android:icon="@drawable/ic_local_dining_black_24dp"/>
 
 
@@ -23,6 +23,11 @@
                     android:id="@+id/profile_menu"
                     android:icon="@drawable/ic_person"
                     android:title="@string/navItem9" />
+
+                <item
+                    android:id="@+id/order_menu"
+                    android:icon="@drawable/ic_shop_black_24dp"
+                    android:title="@string/order" />
                 <item
                     android:id="@+id/dilevery_menu"
                     android:icon="@drawable/ic_local_shipping_black_24dp"

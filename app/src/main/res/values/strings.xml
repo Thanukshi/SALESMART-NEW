@@ -151,6 +151,7 @@
     <string name="clear_all">Clear All</string>
     <string name="view_all_customer">View All Customer</string>
     <string name="my_cart">My Cart</string>
+    <string name="order">Order</string>
 
 
 </resources>
