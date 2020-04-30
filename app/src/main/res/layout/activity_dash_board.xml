@@ -17,7 +17,7 @@
         android:background="@color/colorAllWhite"
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
-
+        android:visibility="gone"
         app:headerLayout="@layout/menu_header">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -121,12 +121,12 @@
                 <RelativeLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="#5F6F6F">
+                    android:background="dac">
                     
-                    <de.hdodenhof.circleimageview.CircleImageView
+                    <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/dash_image1"
+                        android:src="@drawable/dashimage1"
                         android:layout_centerInParent="true"/>
 
                 </RelativeLayout>
