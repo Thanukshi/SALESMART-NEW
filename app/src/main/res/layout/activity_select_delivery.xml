@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bcimg"
+    android:background="@drawable/deliverbg"
     tools:context=".delivery.aview_Delivery ">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/newimg7">
+        android:background="@drawable/newimg1">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -21,7 +21,7 @@
             android:layout_marginEnd="62dp"
             android:layout_marginRight="62dp"
             android:layout_marginBottom="31dp"
-            android:background="#EFE58A"
+            android:background="#C5FFC107"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#C8B829"
+                    android:background="#CD29A8C8"
                     android:text="@string/updatedelivery" />
 
                 <Button
@@ -147,7 +147,7 @@
                 android:id="@+id/btnViewDelivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FF5722"
+                android:background="#E7FF5722"
                 android:text="@string/viewalldelivery" />
 
         </LinearLayout>
