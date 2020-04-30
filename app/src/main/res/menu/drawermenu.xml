@@ -28,6 +28,10 @@
                     android:icon="@drawable/ic_person"
                     android:title="@string/navItem9" />
                 <item
+                    android:id="@+id/dilevery_menu"
+                    android:icon="@drawable/ic_person"
+                    android:title="@string/navItem13" />
+                <item
                     android:id="@+id/logOut_menu"
                     android:icon="@drawable/ic_logout"
                     android:title="@string/navItem7" />
