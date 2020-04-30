@@ -6,130 +6,132 @@
          android:layout_height="match_parent"
           tools:context=".Delivery.Delivery_Admin">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/newimge">
 
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="407dp"
-                android:layout_height="116dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="29dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="407dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="9dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/delivery" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="9dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/delivery" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="115dp"
-                    android:layout_height="129dp"
-                    android:layout_weight="1"
-                    android:includeFontPadding="false"
-                    android:padding="20dp"
-                    android:paddingLeft="10dp"
-                    android:text="My Deliveries Admin View"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    app:fontFamily="casual" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/buttonAdmin"
-                android:layout_width="120dp"
-                android:layout_height="66dp"
-
-                android:layout_marginStart="65dp"
-
-                android:layout_marginLeft="65dp"
-                android:layout_marginTop="133dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginBottom="13dp"
-                android:background="@drawable/button_style"
-                android:text="Insert Delivery"
-                android:textColor="#fff"
-                android:textSize="20dp"
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="115dp"
+                android:layout_height="129dp"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:paddingLeft="10dp"
+                android:text="My Deliveries Admin View"
+                android:textColor="#151515"
+                android:textSize="30sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/buttonListAll"
-                app:layout_constraintEnd_toStartOf="@+id/buttonCustomer"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+                app:fontFamily="casual" />
+        </LinearLayout>
 
-            <Button
-                android:id="@+id/buttonCustomer"
-                android:layout_width="120dp"
-                android:layout_height="66dp"
+        <Button
+            android:id="@+id/buttonAdmin"
+            android:layout_width="120dp"
+            android:layout_height="66dp"
 
-                android:layout_marginStart="12dp"
+            android:layout_marginStart="65dp"
 
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="133dp"
-                android:layout_marginEnd="94dp"
-                android:layout_marginRight="94dp"
-                android:layout_marginBottom="13dp"
-                android:background="@drawable/button_style"
-                android:text="Search Delivery"
-                android:textColor="#fff"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/button4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/buttonAdmin"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="133dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/button_style"
+            android:text="Insert Delivery"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonListAll"
+            app:layout_constraintEnd_toStartOf="@+id/buttonCustomer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
-            <Button
-                android:id="@+id/buttonListAll"
-                android:layout_width="120dp"
-                android:layout_height="66dp"
+        <Button
+            android:id="@+id/buttonCustomer"
+            android:layout_width="120dp"
+            android:layout_height="66dp"
 
-                android:layout_marginStart="65dp"
+            android:layout_marginStart="12dp"
 
-                android:layout_marginLeft="65dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:background="@drawable/button_style"
-                android:text="List All Deliveries"
-                android:textColor="#fff"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/button4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonAdmin" />
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="133dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginRight="94dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/button_style"
+            android:text="Search Delivery"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/button4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonAdmin"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="120dp"
-                android:layout_height="66dp"
+        <Button
+            android:id="@+id/buttonListAll"
+            android:layout_width="120dp"
+            android:layout_height="66dp"
 
-                android:layout_marginStart="12dp"
+            android:layout_marginStart="65dp"
 
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginEnd="94dp"
-                android:layout_marginRight="94dp"
-                android:background="@drawable/button_style"
-                android:text="Home"
-                android:textColor="#fff"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/buttonListAll"
-                app:layout_constraintTop_toBottomOf="@+id/buttonCustomer" />
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/button_style"
+            android:text="List All Deliveries"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/button4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAdmin" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="120dp"
+            android:layout_height="66dp"
+
+            android:layout_marginStart="12dp"
+
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginRight="94dp"
+            android:background="@drawable/button_style"
+            android:text="Home"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonListAll"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCustomer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>
