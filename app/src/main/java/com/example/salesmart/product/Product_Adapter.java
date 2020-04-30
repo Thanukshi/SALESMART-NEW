@@ -80,8 +80,7 @@ public class Product_Adapter extends RecyclerView.Adapter<Product_Adapter.Produc
                 proimg.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(context, position+"Add to Cart.........", Toast.LENGTH_SHORT).show();
-                    }
+                        Toast.makeText(context, position+"Add to Cart.........", Toast.LENGTH_SHORT).show(); }
                 });
         }
     }
