@@ -30,6 +30,8 @@ public class SelectDelivery extends AppCompatActivity {
     // Delivery del;
     ProgressBar proSerch;
     private Dialog deleteAllDialog;
+    Delivery del1;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,8 @@ public class SelectDelivery extends AppCompatActivity {
                     StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-
+        Bundle extras = getIntent().getExtras();
+        username = extras.getString("username");
         txtcusName = findViewById(R.id.txtCusName);
         txtAddress = findViewById(R.id.txtCusAddress);
         txtPhone = findViewById(R.id.txtPhone);
@@ -124,7 +127,7 @@ public class SelectDelivery extends AppCompatActivity {
                     String qty = txtQty.getText().toString();
                     String price = txtPrice.getText().toString();
                     clearControls();
-                    Delivery del1 = new Delivery();
+                     del1 = new Delivery();
 
                     del1.setProID(ProID);
                     del1.setProName(ProName);
@@ -134,6 +137,7 @@ public class SelectDelivery extends AppCompatActivity {
                     del1.setQuantity(qty);
                     del1.setPrice(price);
                     del1.setId(id);
+                    del1.setUsername(username);
 
                     dbf = FirebaseDatabase.getInstance().getReference().child("Delivery");
 
@@ -142,8 +146,18 @@ public class SelectDelivery extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), del1.getId()+" Data Updated Successfully!", Toast.LENGTH_SHORT).show();
 
                 }
-                Intent intent = new Intent(SelectDelivery.this, ListAll.class);
-                startActivity(intent);
+               // Intent intent = new Intent(SelectDelivery.this, ListAll.class);
+               // startActivity(intent);
+                if(del1.getUsername().equalsIgnoreCase("0768551045")){
+                    Intent intent1 = new Intent(SelectDelivery.this,ListAll.class);
+                    intent1.putExtra("username",username);
+                    startActivity(intent1);
+                }
+                else{
+                    Intent intent1 = new Intent(SelectDelivery.this,ListAllCustomer.class);
+                    intent1.putExtra("username",username);
+                    startActivity(intent1);
+                }
             }
         });
 

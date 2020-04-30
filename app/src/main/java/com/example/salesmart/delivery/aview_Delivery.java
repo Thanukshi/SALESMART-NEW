@@ -38,7 +38,8 @@ public class aview_Delivery extends AppCompatActivity {
                     StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-
+        final Bundle extras = getIntent().getExtras();
+        final String username = extras.getString("username");
         txtcusName = findViewById(R.id.txtCusName);
         txtAddress = findViewById(R.id.txtCusAddress);
         txtPhone = findViewById(R.id.txtPhone);
@@ -131,6 +132,9 @@ public class aview_Delivery extends AppCompatActivity {
                     del1.setQuantity(qty);
                     del1.setPrice(price);
                     del1.setId(id);
+                    del1.setUsername(username);
+
+
 
                     dbf = FirebaseDatabase.getInstance().getReference().child("Delivery");
 
@@ -138,7 +142,9 @@ public class aview_Delivery extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), del1.getId()+" Data Updated Successfully!", Toast.LENGTH_SHORT).show();
 
-
+                 Intent intent1 = new Intent(aview_Delivery.this,Delivery_Admin.class);
+                 intent1.putExtra("username",username);
+                 startActivity(intent1);
 
                 }clearControls();
             }

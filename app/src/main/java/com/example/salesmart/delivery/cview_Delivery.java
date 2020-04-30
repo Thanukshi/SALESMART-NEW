@@ -137,6 +137,7 @@ public class cview_Delivery extends AppCompatActivity {
                     del1.setQuantity(qty);
                     del1.setPrice(price);
                     del1.setId(id);
+                    del1.setUsername(username);
 
                     dbf = FirebaseDatabase.getInstance().getReference().child("Delivery");
 
@@ -145,8 +146,14 @@ public class cview_Delivery extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), del1.getId()+" Data Updated Successfully!", Toast.LENGTH_SHORT).show();
 
 
+                     Intent intent1 = new Intent(cview_Delivery.this,Delivery_Customer.class);
+                     intent1.putExtra("username",username);
+                     startActivity(intent1);
 
-                }clearControls();
+
+
+
+                }
             }
         });
 
@@ -177,6 +184,7 @@ public class cview_Delivery extends AppCompatActivity {
                                 txtQty.setText(del.getQuantity());
                                 txtPrice.setText(del.getPrice());
                                 id = del.getId();
+
 
                                 if(!del.getCustomername().isEmpty()){
                                     editTextSearch.setText("");
