@@ -198,7 +198,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         }
         else if(id == R.id.dilevery_menu){
             Intent intent = new Intent(DashBoard.this, Delivery_Customer.class);
-            intent.putExtra("contactNo",userNameEdit);
+            intent.putExtra("username",userNameEdit);
             startActivity(intent);
 
         }

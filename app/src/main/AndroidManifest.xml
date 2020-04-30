@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.salesmartnew">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,26 +14,28 @@
         android:roundIcon="@drawable/logo1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.salesmart.delivery.MainActivity"/>
-        <activity android:name="com.example.salesmart.delivery.aview_Delivery"/>
-        <activity android:name="com.example.salesmart.delivery.cview_Delivery"/>
-        <activity android:name="com.example.salesmart.delivery.Delivery_Admin"/>
-        <activity android:name="com.example.salesmart.delivery.Delivery_Customer"/>
-        <activity android:name="com.example.salesmart.delivery.SelectDelivery"/>
-        <activity android:name="com.example.salesmart.delivery.insertdelivery"/>
-        <activity android:name="com.example.salesmart.delivery.ListAll"/>
-        <activity android:name="com.example.salesmart.delivery.ListAllCustomer"/>
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".AllCustomerRegAdminView"></activity>
+        <activity android:name=".ListAllUserCustomer" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name="com.example.salesmart.delivery.MainActivity" />
+        <activity android:name="com.example.salesmart.delivery.aview_Delivery" />
+        <activity android:name="com.example.salesmart.delivery.cview_Delivery" />
+        <activity android:name="com.example.salesmart.delivery.Delivery_Admin" />
+        <activity android:name="com.example.salesmart.delivery.Delivery_Customer" />
+        <activity android:name="com.example.salesmart.delivery.SelectDelivery" />
+        <activity android:name="com.example.salesmart.delivery.insertdelivery" />
+        <activity android:name="com.example.salesmart.delivery.ListAll" />
+        <activity android:name="com.example.salesmart.delivery.ListAllCustomer" />
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".EditProfileActivity" />
-        <activity android:name="com.example.salesmart.delivery.Delivery_Customer"/>
-       <activity android:name=".DashBoard"/>
-        <activity android:name=".RatingUs"/>
+        <activity android:name=".DashBoard" />
+        <activity android:name=".RatingUs" />
         <activity android:name=".Profile" />
+        <activity android:name=".AdminCustomer" />
         <activity android:name=".AdminView" />
-        <activity android:name=".WelcomeScreen" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".WelcomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

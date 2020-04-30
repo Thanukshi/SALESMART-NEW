@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LL1AC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/editTextSearch_Customer"
+            android:layout_width="254dp"
+            android:layout_height="45dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Search By Delivery ID"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <Button
+            android:id="@+id/btnSearch_Customer"
+            android:layout_width="98dp"
+            android:layout_height="45dp"
+            android:background="#FBE736"
+            android:text="@string/search"
+            android:textColor="#131313"
+            tools:layout_editor_absoluteX="267dp"
+            tools:layout_editor_absoluteY="123dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_below="@+id/LL1AC"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/txtCusName__Customer"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Customer Name"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtCusPgone__Customer"
+            android:layout_width="309dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/customer_phone"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/txtEmail__Customer"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/customer_email"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtPassword_Customer"
+            android:layout_width="307dp"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/password"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtConfirm_Customer"
+            android:layout_width="305dp"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/confirm_password"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/btnUpdateCus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gradient_welcome"
+                android:text="@string/update" />
+
+            <Button
+                android:id="@+id/btnDeleteCus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gradient_welcome"
+                android:text="@string/delete" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gradient_welcome"
+                android:text="@string/clear_all" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp">
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnViewCus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_gradient_welcome"
+            android:text="@string/view_all_customer" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
