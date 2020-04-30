@@ -20,8 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AdminCustomer extends AppCompatActivity {
 
-    EditText  txtcusName, txtEmail,editTextSearch, txtPhone;
-    TextView txtConfirm, txtPass,search;
+    TextView   editTextSearch;
+    TextView txtcusName, txtEmail,txtConfirm, txtPass,txtPhone;
     Button btnSearch,btnUpdate,btnDelete,btnView,btnClear;
 
     String cn;
@@ -47,102 +47,19 @@ public class AdminCustomer extends AppCompatActivity {
 
 
         btnSearch = findViewById(R.id.btnSearch_Customer);
-        btnUpdate = findViewById(R.id.btnUpdateCus);
-        btnDelete = findViewById(R.id.btnDeleteCus);
         btnView = findViewById(R.id.btnViewCus);
-        btnClear = findViewById(R.id.btnClear);
-
-        btnClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                txtcusName.setText("");
-                txtEmail.setText("");
-                txtPhone.setText("");
 
 
 
-            }
-        });
 
         btnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdminCustomer.this, ListAllUserCustomer.class);
+                Intent intent = new Intent(AdminCustomer.this, AdminView.class);
                 startActivity(intent);
             }
         });
 
-        btnUpdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (txtcusName.getText().toString().isEmpty()) {
-                    txtcusName.setError("Please Enter Name");
-
-
-                } else if (txtPhone.getText().toString().isEmpty()) {
-                    txtPhone.setError("Please Enter Phone Number");
-
-
-                } else if (txtEmail.getText().toString().isEmpty()) {
-                    txtEmail.setError("Please Enter Email");
-
-
-                } else {
-                    /////////////////////////////////////
-
-                    String cusPhone = txtPhone.getText().toString();
-                    String cusName = txtcusName.getText().toString();
-                    String cusEmail = txtEmail.getText().toString();
-                    clearControls();
-
-                    RegisterHelperClass reg = new RegisterHelperClass();
-                    reg.setContactNo(cusPhone);
-                    reg.setFullName(cusName);
-                    reg.setEmailCustomer(cusEmail);
-
-                    dbf = FirebaseDatabase.getInstance().getReference().child("users");
-                    dbf.child(cn).setValue(reg);
-
-                    Toast.makeText(getApplicationContext(), reg.getContactNo()+" Data Updated Successfully!", Toast.LENGTH_SHORT).show();
-
-                }clearControls();
-            }
-
-        });
-
-
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(cn.charAt(0) != 'D'){
-                    Intent intent = new Intent(AdminCustomer.this, AdminView.class);
-                    startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "Please Search for theCustomer By a Valid Phone Number!", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    dbf.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            dbf = FirebaseDatabase.getInstance().getReference().child("users").child(cn);
-                            dbf.removeValue();
-                            clearControls();
-                            cn ="";
-                            Toast.makeText(getApplicationContext(), "Successfully Deleted Customer of Phone Number "+cn, Toast.LENGTH_LONG).show();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                    clearControls();
-                }
-            }
-
-
-        });
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,12 +97,5 @@ public class AdminCustomer extends AppCompatActivity {
 
     }
 
-
-    private void clearControls() {
-        txtcusName.setText("");
-        txtEmail.setText("");
-        txtPhone.setText("");
-
-    }
 }
 

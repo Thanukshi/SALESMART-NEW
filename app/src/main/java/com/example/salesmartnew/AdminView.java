@@ -6,14 +6,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.salesmart.delivery.Delivery;
+import com.example.salesmart.delivery.ListAll;
+import com.example.salesmart.delivery.SelectDelivery;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class AdminView extends AppCompatActivity {
 
@@ -21,36 +29,47 @@ public class AdminView extends AppCompatActivity {
     String un;
     String pw;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_view);
+    private DatabaseReference mDatabase;
+    private ListView list_users;
 
-        Add = findViewById(R.id.buttonAd);
-
-        Add.setOnClickListener(new View.OnClickListener() {
+    private ArrayList<String> deliveries = new ArrayList<>();
+    private ArrayList<RegisterHelperClass> delList = new ArrayList<>();
             @Override
-            public void onClick(View v) {
-                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+            protected void onCreate(Bundle savedInstanceState) {
+                    super.onCreate(savedInstanceState);
+                    setContentView(R.layout.activity_admin_view);
+
+                mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
+                list_users = (ListView) findViewById(R.id.list_users);
 
 
-                Query checkUser = reference.orderByChild("contactNo").equalTo(un);
-                checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                mDatabase.addValueEventListener(new ValueEventListener() {
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(AdminView.this, android.R.layout.simple_list_item_1,deliveries);
+
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()) {
+                        deliveries.clear();
+                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                            RegisterHelperClass delivery = ds.getValue(RegisterHelperClass.class);
+                            String id = delivery.getFullName();
+                            delList.add(delivery);
+                            deliveries.add(id);
 
-                            String pwInDB = dataSnapshot.child(un).child("passwordCustomer").getValue(String.class);
-                            //String unIDb = dataSnapshot.child(un).child("userNameCustomer").getValue(String.class);
-
-                            if (pwInDB.equals(pw)) {
-
-                                String userNameDB = dataSnapshot.child(un).child("contactNo").getValue(String.class);
-                                Intent logIntent = new Intent(getApplicationContext(), AdminView.class);
-                                logIntent.putExtra("contactNo", userNameDB);
-                                startActivity(logIntent);
-                            }
                         }
+                        list_users.setAdapter(arrayAdapter);
+/*
+                        DeliveryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                String id1 = deliveries.get(position);
+                                Toast.makeText(ListAll.this,"ID: "+ id1+" Selected",Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(ListAll.this, SelectDelivery.class);
+                                intent.putExtra("id", id1);
+                                startActivity(intent);
+
+                            }
+                        });*/
+
                     }
 
                     @Override
@@ -58,7 +77,8 @@ public class AdminView extends AppCompatActivity {
 
                     }
                 });
+
             }
-        });
-    }
-}
+        }
+
+
