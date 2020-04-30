@@ -62,14 +62,17 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:padding = "20dp">
-            
+
             <ImageView
                 android:id="@+id/menuIcon_Dash"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_menu"/>
-            
+                android:layout_width="58dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="314dp"
+                android:layout_marginRight="314dp"
+                android:src="@drawable/ic_menu" />
+
         </RelativeLayout>
 
     </LinearLayout>
