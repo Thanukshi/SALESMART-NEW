@@ -59,6 +59,7 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.Equi
             image = itemView.findViewById(R.id.image_card);
             title = itemView.findViewById(R.id.text1_card);
             desc = itemView.findViewById(R.id.text2_card);
+
         }
     }
 

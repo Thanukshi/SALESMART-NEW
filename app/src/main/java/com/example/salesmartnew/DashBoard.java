@@ -1,15 +1,11 @@
 package com.example.salesmartnew;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,10 +15,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.salesmart.delivery.Delivery_Customer;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentAdapter;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentHelperClass;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,8 +40,8 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     LinearLayout contentView;
     TextView viewName;
     String userNameEdit;
-    RecyclerView eqRecyclerView;
-    RecyclerView.Adapter adapter;
+    RecyclerView eqRecyclerView, mostRecyclerView;
+    RecyclerView.Adapter adapter, adapter2;
 
 
     @Override
@@ -57,9 +53,11 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         contentView = findViewById(R.id.contentL);
         viewName = findViewById(R.id.navText_menu);
         eqRecyclerView = findViewById(R.id.rv_dash);
+        mostRecyclerView = findViewById(R.id.rv2_Dash);
 
         //called the item cycle
         equipmentRecyclerView();
+
 
         //Hooks for the navigation
         drawerLayout = findViewById(R.id.RL1_Dash);
@@ -75,6 +73,9 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
 
     }
 
+
+
+
     private void equipmentRecyclerView() {
         eqRecyclerView.setHasFixedSize(true);
         eqRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false));
@@ -86,9 +87,10 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r1, "Grind Mixer", "Easy to work with our mixers. Juice Mixer, Magic Bullet"));
         equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r7, "Enjoy Your Life", "Enjoy at your kitchen with using our equipments.. Happy Life..."));
 
-
         adapter = new EquipmentAdapter(equipmentLocation);
         eqRecyclerView.setAdapter(adapter);
+
+
     }
 
     //display name in the nav bar
@@ -193,6 +195,12 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             profIntent.putExtra("emailCustomer",emailEdit);
             profIntent.putExtra("passwordCustomer",passwordEdit);
             startActivity(profIntent);
+        }
+        else if(id == R.id.dilevery_menu){
+            Intent intent = new Intent(DashBoard.this, Delivery_Customer.class);
+            intent.putExtra("contactNo",userNameEdit);
+            startActivity(intent);
+
         }
         else if(id == R.id.logOut_menu){
             startActivity(new Intent(DashBoard.this,LoginActivity.class));
