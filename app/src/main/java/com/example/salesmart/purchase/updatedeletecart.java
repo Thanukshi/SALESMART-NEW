@@ -118,4 +118,3 @@ public class updatedeletecart extends AppCompatActivity {
         }
     }
 
-
