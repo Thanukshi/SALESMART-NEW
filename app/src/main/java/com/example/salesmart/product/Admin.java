@@ -17,7 +17,7 @@ public class Admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
-        add = findViewById(R.id.buttonpur);
+        add = findViewById(R.id.buttonProduct);
         view = findViewById(R.id.buttonfeed);
         cst = findViewById(R.id.buttonviewcust);
 

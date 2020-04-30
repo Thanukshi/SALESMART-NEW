@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+import com.example.salesmart.product.Admin_Panel;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -177,15 +178,31 @@ public class LoginActivity extends AppCompatActivity {
                                     String fnInDB = dataSnapshot.child(un).child("fullName").getValue(String.class);
                                     String emailDB = dataSnapshot.child(un).child("emailCustomer").getValue(String.class);
 
-                                    Intent logIntent = new Intent(getApplicationContext(), DashBoard.class);
-                                    logIntent.putExtra("contactNo", userNameDB);
-                                    logIntent.putExtra("fullName", fnInDB);
-                                    logIntent.putExtra("emailCustomer", emailDB);
-                                    logIntent.putExtra("passwordCustomer", pwInDB);
-                                    RegisterHelperClass rf = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
-                                    String url = rf.getImage();
-                                    logIntent.putExtra("url", url);
-                                    startActivity(logIntent);
+                                   if(userNameDB.equalsIgnoreCase("0768551045")){
+                                       Intent logIntent = new Intent(getApplicationContext(), DashBoard.class);
+                                       logIntent.putExtra("contactNo", userNameDB);
+                                       logIntent.putExtra("fullName", fnInDB);
+                                       logIntent.putExtra("emailCustomer", emailDB);
+                                       logIntent.putExtra("passwordCustomer", pwInDB);
+                                       RegisterHelperClass rf = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
+                                       String url = rf.getImage();
+                                       logIntent.putExtra("url", url);
+                                       startActivity(logIntent);
+                                   }
+                                   else{
+                                       Intent logIntent = new Intent(getApplicationContext(), Admin_Panel.class);
+                                       logIntent.putExtra("contactNo", userNameDB);
+                                       logIntent.putExtra("fullName", fnInDB);
+                                       logIntent.putExtra("emailCustomer", emailDB);
+                                       logIntent.putExtra("passwordCustomer", pwInDB);
+                                       RegisterHelperClass rf = (RegisterHelperClass) dataSnapshot.getValue(RegisterHelperClass.class);
+                                       String url = rf.getImage();
+                                       logIntent.putExtra("url", url);
+                                       startActivity(logIntent);
+                                   }
+
+
+
 
                                 } else {
                                     loadingDialog.dismiss();

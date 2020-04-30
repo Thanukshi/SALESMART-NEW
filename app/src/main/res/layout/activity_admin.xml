@@ -18,7 +18,7 @@
         />
 
     <Button
-        android:id="@+id/buttonpur"
+        android:id="@+id/buttonProduct"
         android:layout_width="388dp"
         android:layout_height="48dp"
         android:layout_margin="10dp"

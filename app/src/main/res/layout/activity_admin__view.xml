@@ -74,7 +74,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/buttonDelivery"
                 android:layout_width="123dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
