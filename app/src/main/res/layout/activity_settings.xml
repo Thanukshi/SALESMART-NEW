@@ -7,45 +7,42 @@
     tools:context=".SettingsActivity"
     android:orientation="vertical">
 
-    <TextView
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="30dp"
+            android:fontFamily="@font/amarante"/>
+
+
+    </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp">
 
 
-        <TextView
-            android:id="@+id/text2_Settings"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:text="TextView" />
 
         <TextView
             android:id="@+id/textViewDelete"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="Delete Account" />
+            android:text="Delete Account"
+            android:textSize="20dp"
+            android:fontFamily="@font/aclonica"/>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:text="TextView" />
 
     </LinearLayout>
 
