@@ -21,8 +21,12 @@ public class Delivery_Customer extends AppCompatActivity {
         buttonSearch = findViewById(R.id.buttonCustomer);
         buttonListAll = findViewById(R.id.buttonListAll);
 
-        Intent i = new Intent();
-        i.getStringArrayExtra("username");
+        Bundle extras = getIntent().getExtras();
+      //  username = extras.getString("username");
+       // username = "test" ;
+        Intent intent = getIntent();
+        username= intent.getStringExtra("contactNo");
+        System.out.println(username);
 
         buttonInsert.setOnClickListener(new View.OnClickListener() {
             @Override
