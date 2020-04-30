@@ -26,14 +26,13 @@
         <TextView
             android:id="@+id/text1_card"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="30dp"
             android:fontFamily="@font/baloo"
             android:text="All Equipments"
             android:textColor="@color/colorAllBlack"
             android:textSize="18sp" />
         
         <RatingBar
-            android:layout_marginTop="10dp"
             android:id="@+id/rating_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

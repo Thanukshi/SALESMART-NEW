@@ -308,7 +308,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:text="@string/dash_description_text1"/>
+                            android:fontFamily="@font/gilda_display"
+                            android:text="@string/dash_description_text1"
+                            android:textSize="12sp" />
 
                     </LinearLayout>
 
@@ -316,7 +318,7 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_dash"
                         android:layout_width="match_parent"
-                        android:layout_height="280dp"
+                        android:layout_height="300dp"
                         android:layout_toRightOf="@+id/LL7_Dash"
                         android:background="@color/colorAllWhite"
                         android:layout_toEndOf="@+id/LL7_Dash" />

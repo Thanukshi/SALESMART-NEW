@@ -44,7 +44,7 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.Equi
 
     @Override
     public int getItemCount() {
-        return 0;
+        return equipmentHelperClasses.size();
     }
 
     public static class EquipmentViewHolder extends RecyclerView.ViewHolder{
