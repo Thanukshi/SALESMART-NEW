@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/newimge2"
-    tools:context=".Delivery.insertdelivery">
+    tools:context=".delivery.insertdelivery">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -51,7 +51,7 @@
             android:layout_margin="3dp"
             android:ems="10"
             android:hint="Mobile Number"
-            android:inputType="textPersonName"
+            android:inputType="phone"
             android:textSize="18sp"
             android:textStyle="bold|italic" />
 
@@ -84,7 +84,7 @@
             android:layout_margin="3dp"
             android:ems="10"
             android:hint="Quantity"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -95,7 +95,7 @@
             android:layout_margin="3dp"
             android:ems="10"
             android:hint="Price"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textSize="18sp"
             android:textStyle="bold|italic" />
 
