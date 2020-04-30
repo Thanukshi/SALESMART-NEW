@@ -124,11 +124,6 @@ public class SelectDelivery extends AppCompatActivity {
                     String qty = txtQty.getText().toString();
                     String price = txtPrice.getText().toString();
                     clearControls();
-
-
-
-
-
                     Delivery del1 = new Delivery();
 
                     del1.setProID(ProID);
@@ -145,8 +140,6 @@ public class SelectDelivery extends AppCompatActivity {
                     dbf.child(id).setValue(del1);
 
                     Toast.makeText(getApplicationContext(), del1.getId()+" Data Updated Successfully!", Toast.LENGTH_SHORT).show();
-
-
 
                 }
                 Intent intent = new Intent(SelectDelivery.this, ListAll.class);
