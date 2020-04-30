@@ -43,10 +43,10 @@
         android:orientation="vertical"
         android:layout_centerHorizontal="true">
 
-        <EditText
+        <TextView
             android:id="@+id/txtCusName__Customer"
             android:layout_width="308dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_margin="3dp"
             android:layout_marginTop="10dp"
             android:ems="10"
@@ -54,10 +54,10 @@
             android:inputType="textPersonName"
             android:textSize="16sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/txtCusPgone__Customer"
             android:layout_width="309dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_margin="3dp"
             android:layout_marginTop="10dp"
             android:ems="10"
@@ -66,10 +66,10 @@
             android:textSize="16sp" />
 
 
-        <EditText
+        <TextView
             android:id="@+id/txtEmail__Customer"
             android:layout_width="308dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_margin="3dp"
             android:layout_marginTop="10dp"
             android:ems="10"
@@ -97,51 +97,6 @@
             android:hint="@string/confirm_password"
             android:inputType="textPersonName"
             android:textSize="16sp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="50dp">
-
-            <Button
-                android:id="@+id/btnUpdateCus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_gradient_welcome"
-                android:text="@string/update" />
-
-            <Button
-                android:id="@+id/btnDeleteCus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_gradient_welcome"
-                android:text="@string/delete" />
-
-            <Button
-                android:id="@+id/btnClear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_gradient_welcome"
-                android:text="@string/clear_all" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:layout_marginTop="50dp">
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
         <Button
             android:layout_marginTop="20dp"
