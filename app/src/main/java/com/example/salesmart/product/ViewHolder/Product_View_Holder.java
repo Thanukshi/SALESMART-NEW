@@ -35,6 +35,6 @@ public class Product_View_Holder  extends RecyclerView.ViewHolder implements Vie
     @Override
     public void onClick(View v) {
 
-         listner.onClick(v, getAdapterPosition() , false);
+          listner.onClick(v, getAdapterPosition() , false);
     }
 }
