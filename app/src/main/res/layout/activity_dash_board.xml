@@ -17,6 +17,7 @@
         android:background="@color/colorAllWhite"
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
+        android:visibility="gone"
         app:headerLayout="@layout/menu_header">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -89,6 +90,39 @@
                 android:contentDescription="@string/cDescript"
                 app:srcCompat="@drawable/ic_add_black"
                 tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/appName_Dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/delius_swash_caps"
+                android:text="@string/logo_name"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textColor="@color/yellowWelcome"/>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp">
+
+                </RelativeLayout>
+            </LinearLayout>
 
         </RelativeLayout>
 
