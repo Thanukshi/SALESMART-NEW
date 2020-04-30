@@ -89,23 +89,23 @@ public class aview_Delivery extends AppCompatActivity {
 
 
                 }else if(txtPhone.getText().toString().isEmpty()){
-                    txtPhone.setError("Please Enter Description");
+                    txtPhone.setError("Please Enter Phone Number");
 
 
                 }else if(txtProID.getText().toString().isEmpty()){
-                    txtProID.setError("Please Enter Description");
+                    txtProID.setError("Please Enter Product ID");
 
 
                 }else if(txtproName.getText().toString().isEmpty()){
-                    txtproName.setError("Please Enter Description");
+                    txtproName.setError("Please Enter Product Name");
 
 
                 }else if(txtQty.getText().toString().isEmpty()){
-                    txtQty.setError("Please Enter Description");
+                    txtQty.setError("Please Enter Quantity");
 
 
                 }else if(txtPrice.getText().toString().isEmpty()){
-                    txtPrice.setError("Please Enter Description");
+                    txtPrice.setError("Please Enter Price");
 
 
                 }
@@ -121,11 +121,6 @@ public class aview_Delivery extends AppCompatActivity {
                     String qty = txtQty.getText().toString();
                     String price = txtPrice.getText().toString();
                     clearControls();
-
-
-
-
-
                     Delivery del1 = new Delivery();
 
                     del1.setProID(ProID);
