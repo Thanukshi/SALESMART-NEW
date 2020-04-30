@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -142,6 +143,16 @@ public class insertdelivery extends AppCompatActivity {
                    dbf.child(del.getId()).setValue(del);
                     Toast.makeText(getApplicationContext(), "Data Inserted Successfully!, Created Delivery ID: " + del.getId(), Toast.LENGTH_SHORT).show();
                     clearControls();
+                    if(del.getUsername().equalsIgnoreCase("0768551045")){
+                        Intent intent = new Intent(insertdelivery.this,Delivery_Admin.class);
+                        intent.putExtra("username",username);
+                        startActivity(intent);
+                    }
+                    else{
+                        Intent intent = new Intent(insertdelivery.this,Delivery_Customer.class);
+                        intent.putExtra("username",username);
+                        startActivity(intent);
+                    }
 
                 }
 
