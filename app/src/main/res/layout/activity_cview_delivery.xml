@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bcimg"
+        android:background="@drawable/newimg1"
         tools:context=".Delivery.aview_Delivery">
 
         <LinearLayout
@@ -44,6 +44,7 @@
                 android:padding="20dp"
                 android:paddingLeft="10dp"
                 android:text="Search Delivery"
+                android:textColor="#1B1A1A"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 app:fontFamily="casual" />
@@ -69,17 +70,18 @@
                 android:id="@+id/editTextSearch"
                 android:layout_width="254dp"
                 android:layout_height="45dp"
-                android:background="#B03F51B5"
+                android:background="#E3D87E"
                 android:ems="10"
                 android:hint="Search By Delivery ID"
                 android:inputType="textPersonName"
+                android:textColor="#151414"
                 tools:layout_editor_absoluteY="127dp" />
 
             <Button
                 android:id="@+id/btnSearch"
                 android:layout_width="98dp"
                 android:layout_height="45dp"
-                android:background="#FBE736"
+                android:background="#C0FF5722"
                 android:text="@string/search"
                 android:textColor="#131313"
                 tools:layout_editor_absoluteX="267dp"
@@ -96,7 +98,7 @@
             android:layout_marginEnd="62dp"
             android:layout_marginRight="62dp"
             android:layout_marginBottom="13dp"
-            android:background="@color/colorPrimary"
+            android:background="#C5FFC107"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
@@ -200,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/button_style"
+                    android:background="@drawable/btn_gradient_welcome"
                     android:text="@string/updatedelivery" />
 
                 <Button
@@ -208,7 +210,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/button_style"
+                    android:background="@drawable/btn_gradient_welcome"
                     android:text="Clear All" />
             </LinearLayout>
 
@@ -216,7 +218,7 @@
                 android:id="@+id/btnViewDelivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
+                android:background="#E7FF5722"
                 android:text="@string/viewalldelivery" />
 
         </LinearLayout>

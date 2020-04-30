@@ -25,7 +25,7 @@ public class Delivery_Customer extends AppCompatActivity {
       //  username = extras.getString("username");
        // username = "test" ;
         Intent intent = getIntent();
-        username= intent.getStringExtra("contactNo");
+        username= intent.getStringExtra("username");
         System.out.println(username);
 
         buttonInsert.setOnClickListener(new View.OnClickListener() {
