@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.salesmart.delivery.ListAllCustomer;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -77,6 +76,7 @@ public class AdminCustomer extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (txtcusName.getText().toString().isEmpty()) {
                     txtcusName.setError("Please Enter Name");
 
@@ -125,7 +125,7 @@ public class AdminCustomer extends AppCompatActivity {
                     dbf.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            dbf = FirebaseDatabase.getInstance().getReference().child("Delivery").child(cn);
+                            dbf = FirebaseDatabase.getInstance().getReference().child("users").child(cn);
                             dbf.removeValue();
                             clearControls();
                             cn ="";
@@ -143,52 +143,8 @@ public class AdminCustomer extends AppCompatActivity {
 
 
         });
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                editTextSearch = findViewById(R.id.editTextSearch_Customer);
-                String searchvalue = editTextSearch.getText().toString();
 
-                if (searchvalue.isEmpty())
-                    editTextSearch.setHint("Please Enter ID to Search ");
-
-                else {
-
-                    dbf = FirebaseDatabase.getInstance().getReference().child("Delivery").child(searchvalue);
-                    dbf.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            dataSnapshot.getChildrenCount();
-                            RegisterHelperClass reg = dataSnapshot.getValue(RegisterHelperClass.class);
-                            if (reg != null) {
-                                txtcusName.setText(reg.getFullName());
-                                txtPhone.setText(reg.getContactNo());
-                                txtEmail.setText(reg.getEmailCustomer());
-                                txtPass.setText(reg.getPasswordCustomer());
-                                txtConfirm.setText(reg.getConfirmPasswordCustomer());
-                                cn = reg.getContactNo();
-
-                                if (!reg.getContactNo().isEmpty()) {
-                                    editTextSearch.setText("");
-                                }
-
-                            } else {
-                                Toast.makeText(getApplicationContext(), "Please Enter Valid Contact Number!", Toast.LENGTH_LONG).show();
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-            }
-        });
     }
-
-
-
 
 
     private void clearControls() {
