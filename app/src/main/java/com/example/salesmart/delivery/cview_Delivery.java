@@ -49,7 +49,7 @@ public class cview_Delivery extends AppCompatActivity {
 
 
         btnSearch = findViewById(R.id.btnSearch);
-        btnUpdateDelivery = findViewById(R.id.btnUpdateDelivery);
+     //   btnUpdateDelivery = findViewById(R.id.btnUpdateDelivery);
 
         btnViewDelivery = findViewById(R.id.btnViewDelivery);
         btnClear = findViewById(R.id.btnClear);
@@ -76,7 +76,7 @@ public class cview_Delivery extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+/*
         btnUpdateDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,7 +156,7 @@ public class cview_Delivery extends AppCompatActivity {
                 }
             }
         });
-
+*/
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override

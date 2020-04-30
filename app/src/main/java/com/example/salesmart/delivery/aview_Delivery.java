@@ -50,7 +50,7 @@ public class aview_Delivery extends AppCompatActivity {
 
 
         btnSearch = findViewById(R.id.btnSearch);
-        btnUpdateDelivery = findViewById(R.id.btnUpdateDelivery);
+  //      btnUpdateDelivery = findViewById(R.id.btnUpdateDelivery);
         btnDelete = findViewById(R.id.btnDeleteDelivery);
         btnViewDelivery = findViewById(R.id.btnViewDelivery);
         btnClear = findViewById(R.id.btnClear);
@@ -77,7 +77,7 @@ public class aview_Delivery extends AppCompatActivity {
             }
         });
 
-        btnUpdateDelivery.setOnClickListener(new View.OnClickListener() {
+ /*       btnUpdateDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
              if(txtcusName.getText().toString().isEmpty()){
@@ -148,7 +148,7 @@ public class aview_Delivery extends AppCompatActivity {
 
                 }clearControls();
             }
-        });
+        });*/
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
