@@ -21,6 +21,7 @@ import com.example.salesmart.delivery.insertdelivery;
 import com.example.salesmart.product.MainActivityProduct;
 import com.example.salesmart.purchase.ContactUs;
 import com.example.salesmart.purchase.Contact_Us;
+import com.example.salesmart.purchase.ListAllCart;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentAdapter;
 import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentHelperClass;
 import com.google.android.material.navigation.NavigationView;
@@ -234,6 +235,10 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             startActivity(new Intent(DashBoard.this, Contact_Us.class));
         }
 
+        else if(id == R.id.cart_Menu){
+            startActivity(new Intent(DashBoard.this, ListAllCart.class));
+
+        }
 
         return true;
     }

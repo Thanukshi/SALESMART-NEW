@@ -28,6 +28,10 @@
                     android:icon="@drawable/ic_local_shipping_black_24dp"
                     android:title="@string/navItem13" />
                 <item
+                    android:id="@+id/cart_Menu"
+                    android:icon="@drawable/ic_add_shopping"
+                    android:title="@string/my_cart" />
+                <item
                     android:id="@+id/logOut_menu"
                     android:icon="@drawable/ic_logout"
                     android:title="@string/navItem7" />
