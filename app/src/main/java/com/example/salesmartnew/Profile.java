@@ -65,9 +65,7 @@ public class Profile extends AppCompatActivity {
                 startActivity(profIntent);
             }
         });
-
     }
-
     private void showFullDetails() {
         Intent intent = getIntent();
 
@@ -82,7 +80,6 @@ public class Profile extends AppCompatActivity {
         fullNameText.setText(fullNameEdit);
         emailText.setText(emailEdit);
         passwordText.setText(passwordEdit);
-
 
     }
 }
