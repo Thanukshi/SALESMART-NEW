@@ -59,9 +59,8 @@ public class EditProfileActivity extends AppCompatActivity {
         passwordUp = (EditText) findViewById(R.id.text4_EP);
         confirmPassUp = (EditText) findViewById(R.id.text5_EP);
         updateProf = (Button) findViewById(R.id.buttonUp);
-        closeProf = (Button) findViewById(R.id.buttonDel);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         contact = intent.getStringExtra("contactNo");
         dbref = FirebaseDatabase.getInstance().getReference().child("users").child(contact);
 
@@ -122,7 +121,8 @@ public class EditProfileActivity extends AppCompatActivity {
                     upDetails.setConfirmPasswordCustomer(confirmPassUp.getText().toString());
 
                     dbref.child(upDetails.getContactNo()).setValue(upDetails);
-
+                    Intent intent = new Intent(EditProfileActivity.this, LoginActivity.class);
+                    startActivity(intent);
                 }else {
                     Toast.makeText(getApplicationContext(),"All fields are required..",Toast.LENGTH_SHORT).show();
 
