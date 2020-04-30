@@ -1,4 +1,5 @@
 package com.example.salesmart.delivery;
+import com.example.salesmartnew.DashBoard;
 import com.example.salesmartnew.R;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +11,7 @@ import android.widget.Button;
 //import com.salesmart.salesmart.R;
 
 public class Delivery_Customer extends AppCompatActivity {
-    Button buttonInsert,buttonSearch,buttonListAll;
+    Button buttonInsert,buttonSearch,buttonListAll,home;
     String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,16 @@ public class Delivery_Customer extends AppCompatActivity {
         buttonInsert = findViewById(R.id.buttonAdmin);
         buttonSearch = findViewById(R.id.buttonCustomer);
         buttonListAll = findViewById(R.id.buttonListAll);
+        home = findViewById(R.id.button4);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intenthome = new Intent(Delivery_Customer.this, DashBoard.class);
+                intenthome.putExtra("username", username);
+                startActivity(intenthome);
+            }
+        });
 
         Bundle extras = getIntent().getExtras();
       //  username = extras.getString("username");

@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-//import com.salesmart.salesmart.R;
+import com.example.salesmartnew.*;
 
 public class Delivery_Admin extends AppCompatActivity {
-    Button buttonInsert,buttonSearch,buttonListAll;
+    Button buttonInsert,buttonSearch,buttonListAll,home;
     String username = "Default";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,16 @@ public class Delivery_Admin extends AppCompatActivity {
         buttonInsert = findViewById(R.id.buttonAdmin);
         buttonSearch = findViewById(R.id.buttonCustomer);
         buttonListAll = findViewById(R.id.buttonListAll);
+        home = findViewById(R.id.button4);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intenthome = new Intent(Delivery_Admin.this, DashBoard.class);
+                intenthome.putExtra("username", username);
+                startActivity(intenthome);
+            }
+        });
 
         buttonInsert.setOnClickListener(new View.OnClickListener() {
             @Override
