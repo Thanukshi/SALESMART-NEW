@@ -32,10 +32,10 @@
         <activity android:name=".RatingUs" />
         <activity android:name=".Profile" />
         <activity android:name=".AdminCustomer" />
-        <activity android:name=".WelcomeScreen" />
+        <activity android:name=".AdminView" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".AdminView">
+        <activity android:name=".WelcomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
