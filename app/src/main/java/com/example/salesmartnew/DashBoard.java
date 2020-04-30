@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentAdapter;
+import com.example.salesmartnew.HomeAdapterHelperClass.EquipmentHelperClass;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +29,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 public class DashBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -73,6 +77,15 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     private void equipmentRecyclerView() {
         eqRecyclerView.setHasFixedSize(true);
         eqRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false));
+
+        ArrayList<EquipmentHelperClass> equipmentLocation = new ArrayList<>();
+        equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r6, "All Equipments At One Place", "You can make a beautiful kitchen in your home after buying equipments from us. We have very goods items for you."));
+        equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r2, "Spoons", "You can buy different types of spoons. Plastics Spoons, Stainless Steel Spoons"));
+        equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r5, "Refrigerators", "All types of Refrigerators ae available. Single door, Two door and Side By Side."));
+        equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r1, "Grind Mixer", "Easy to work with our mixers. Juice Mixer, Magic Bullet"));
+        equipmentLocation.add(new EquipmentHelperClass(R.drawable.kitchen_r6, "All Equipments At One Place", "You can make a beautiful kitchen in your home after buying equipments from us. We have very goods items for you."));
+
+
     }
 
     //display name in the nav bar
