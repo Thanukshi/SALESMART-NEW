@@ -22,7 +22,8 @@ public class Delivery_Customer extends AppCompatActivity {
         buttonSearch = findViewById(R.id.buttonCustomer);
         buttonListAll = findViewById(R.id.buttonListAll);
         home = findViewById(R.id.button4);
-
+        final Bundle extras = getIntent().getExtras();
+        final String username = extras.getString("username");
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,11 +33,7 @@ public class Delivery_Customer extends AppCompatActivity {
             }
         });
 
-        Bundle extras = getIntent().getExtras();
-      //  username = extras.getString("username");
-       // username = "test" ;
-        Intent intent = getIntent();
-        username= intent.getStringExtra("username");
+
         System.out.println(username);
 
         buttonInsert.setOnClickListener(new View.OnClickListener() {

@@ -11,7 +11,7 @@ import com.example.salesmartnew.*;
 
 public class Delivery_Admin extends AppCompatActivity {
     Button buttonInsert,buttonSearch,buttonListAll,home;
-    String username = "Default";
+   //String username = "Default";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,8 @@ public class Delivery_Admin extends AppCompatActivity {
         buttonSearch = findViewById(R.id.buttonCustomer);
         buttonListAll = findViewById(R.id.buttonListAll);
         home = findViewById(R.id.button4);
+        final Bundle extras = getIntent().getExtras();
+        final String username = extras.getString("username");
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,7 @@ public class Delivery_Admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Delivery_Admin.this, aview_Delivery.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });

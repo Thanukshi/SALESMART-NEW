@@ -66,6 +66,7 @@ public class ListAllCustomer extends AppCompatActivity {
                         Toast.makeText(ListAllCustomer.this,"ID: "+ id1+" Selected",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(ListAllCustomer.this, SelectDelivery.class);
                         intent.putExtra("id", id1);
+                        intent.putExtra("username",username);
                         startActivity(intent);
 
                     }

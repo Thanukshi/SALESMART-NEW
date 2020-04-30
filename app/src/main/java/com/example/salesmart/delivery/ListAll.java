@@ -37,7 +37,8 @@ public class ListAll extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Delivery");
         DeliveryList = (ListView) findViewById(R.id.del_list);
-
+        final Bundle extras = getIntent().getExtras();
+        final String username = extras.getString("username");
 
         mDatabase.addValueEventListener(new ValueEventListener() {
             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ListAll.this, android.R.layout.simple_list_item_1,deliveries);
@@ -61,6 +62,7 @@ public class ListAll extends AppCompatActivity {
                         Toast.makeText(ListAll.this,"ID: "+ id1+" Selected",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(ListAll.this, SelectDelivery.class);
                         intent.putExtra("id", id1);
+                        intent.putExtra("username",username);
                         startActivity(intent);
 
                     }

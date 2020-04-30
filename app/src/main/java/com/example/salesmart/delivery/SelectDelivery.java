@@ -78,6 +78,7 @@ public class SelectDelivery extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SelectDelivery.this, ListAll.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
@@ -185,6 +186,7 @@ public class SelectDelivery extends AppCompatActivity {
                     });
                 }
                 Intent intent = new Intent(SelectDelivery.this, ListAll.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });

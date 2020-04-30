@@ -155,6 +155,7 @@ public class aview_Delivery extends AppCompatActivity {
             public void onClick(View v) {
                 if(id.charAt(0) != 'D'){
                     Intent intent = new Intent(aview_Delivery.this, insertdelivery.class);
+                    intent.putExtra("username",username);
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Please Search for the Delivery By a Valid Id!", Toast.LENGTH_SHORT).show();
                 }
