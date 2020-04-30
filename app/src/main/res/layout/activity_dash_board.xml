@@ -355,12 +355,10 @@
                             android:layout_centerVertical="true"
                             android:textSize="15sp" />
 
-
-
-
                     </RelativeLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv2_Dash"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"/>
 
