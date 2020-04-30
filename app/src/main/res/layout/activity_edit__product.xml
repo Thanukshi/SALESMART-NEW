@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/card"
+    tools:context=".product.Edit_Product">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="EDIT PRODUCT"
+        android:textAlignment="center"
+        android:textColor="#E91E98"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageViewEP"
+        android:layout_width="390dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/images" />
+
+    <EditText
+        android:id="@+id/editTextNameEP"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/text"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextDescripEP"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/text"
+        android:ems="10"
+        android:hint="@string/description"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextStsEP"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/text"
+        android:ems="10"
+        android:hint="@string/status"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextPriceEP"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/text"
+        android:ems="10"
+        android:hint="@string/price"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnUPEP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:onClick="update"
+            android:text="@string/edit"
+            android:textAllCaps="false"
+            android:textColor="#E91E98"
+            android:textSize="30sp"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnDeleteEP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textColor="#E91E98"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/btnCnclEP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="#E91E98"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</LinearLayout>

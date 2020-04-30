@@ -1,4 +1,36 @@
 <resources>
+
+    <string name="topic">SaleSmart</string>
+    <string name="addProduct">Add Product</string>
+    <string name="name">Name...</string>
+    <string name="description">Description</string>
+    <string name="status">Status</string>
+    <string name="rate">Rate</string>
+    <string name="price2">Price</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="image">Image</string>
+    <string name="editproduct">Edit Product</string>
+    <string name="idpro">ID</string>
+    <string name="delete2">Delete</string>
+    <string name="edit">Updated</string>
+    <string name="adminview">Admin View</string>
+    <string name="allproducts">All Products</string>
+    <string name="select">Select</string>
+    <string name="i7plus" translatable="false">Apple</string>
+    <string name="descrip">I phone 7 plus</string>
+    <string name="pricephone">69,000</string>
+
+    <string name="listview">List View</string>
+
+    <string name="addbtn">btnAddAP</string>
+
+    <string name="proname">Product Name</string>
+    <string name="btnorder">Select</string>
+    <string name="btnordercv">Select</string>
+    <string name="custviewbtn">Customer View</string>
+    <string name="weladmin">welcome admin</string>
+    <string name="adminpanel">Admin Panel</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_password">Password</string>
     <string name="welcome">"Welcome "</string>

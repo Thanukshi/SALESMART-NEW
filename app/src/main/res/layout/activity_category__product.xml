@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".product.Category_Product"
+    android:background="#FFEB3B">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATAGORY"
+            android:textStyle="bold"
+            android:textSize="70dp"
+            android:padding="10dp"
+            android:textColor="#E91E98"
+            android:layout_gravity="center"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/card"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shadowRadius="@integer/google_play_services_version"
+                android:text="RACKS"
+                android:textColor="#A9ACCF"
+                android:textSize="50dp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/pan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-274dp"
+                android:src="@drawable/rack"
+
+
+
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/card"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shadowRadius="@integer/google_play_services_version"
+                android:text="ELECTRIC"
+                android:textColor="#A9ACCF"
+                android:textSize="50dp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/electric"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-274dp"
+                android:src="@drawable/electric"
+
+
+
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/card"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shadowRadius="@integer/google_play_services_version"
+                android:text="SPOONS"
+                android:textColor="#A9ACCF"
+                android:textSize="50dp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/spoons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-274dp"
+                android:src="@drawable/spoons"
+
+
+
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/card"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shadowRadius="@integer/google_play_services_version"
+                android:text="PRANTY"
+                android:textColor="#A9ACCF"
+                android:textSize="50dp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/sinck"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-272dp"
+                android:src="@drawable/pranty"
+
+
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/card"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shadowRadius="@integer/google_play_services_version"
+                android:text="SINKS"
+                android:textColor="#A9ACCF"
+                android:textSize="50dp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/mixers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-272dp"
+                android:src="@drawable/sink"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+
