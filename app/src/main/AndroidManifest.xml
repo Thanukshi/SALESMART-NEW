@@ -24,6 +24,7 @@
         <activity android:name="com.example.salesmart.delivery.ListAllCustomer"/>
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".EditProfileActivity" />
+        <activity android:name="com.example.salesmart.delivery.Delivery_Customer"/>
        <activity android:name=".DashBoard"/>
         <activity android:name=".RatingUs"/>
         <activity android:name=".Profile" />
