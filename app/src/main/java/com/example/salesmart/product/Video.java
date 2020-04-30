@@ -38,5 +38,5 @@ public class Video extends AppCompatActivity {
             }
         });
 
-       }
+    }
 }
