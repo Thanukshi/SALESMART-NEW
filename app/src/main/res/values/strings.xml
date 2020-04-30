@@ -99,6 +99,7 @@
     <string name="otp_Hint">Enter OTP</string>
     <string name="verify_otp">Verify</string>
     <string name="logo_name">SALESMART</string>
+    <string name="d_m_text1">Spoons</string>
 
 
 </resources>
