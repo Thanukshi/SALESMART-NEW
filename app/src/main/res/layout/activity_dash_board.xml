@@ -17,7 +17,6 @@
         android:background="@color/colorAllWhite"
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
-        android:visibility="gone"
         app:headerLayout="@layout/menu_header">
 
         <de.hdodenhof.circleimageview.CircleImageView
