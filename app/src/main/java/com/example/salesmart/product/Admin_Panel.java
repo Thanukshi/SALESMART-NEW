@@ -33,7 +33,7 @@ public class Admin_Panel extends AppCompatActivity {
         buttonfeed = findViewById(R.id.buttonfeed);
 
         Intent intent = getIntent();
-        username= intent.getStringExtra("username");
+        username= intent.getStringExtra("contacno");
 
 
         buttoncust.setOnClickListener(new View.OnClickListener() {
