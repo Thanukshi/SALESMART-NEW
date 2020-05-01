@@ -64,7 +64,7 @@ public class Admin_Panel extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Admin_Panel.this, Delivery_Admin.class);
-                intent.putExtra("contactNo",username);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
