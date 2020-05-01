@@ -46,6 +46,9 @@ public class cview_Delivery extends AppCompatActivity {
         txtproName = findViewById(R.id.txtProName);
         txtQty = findViewById(R.id.txtQty);
         txtPrice = findViewById(R.id.txtPrice);
+        editTextSearch = findViewById(R.id.editTextSearch);
+
+        editTextSearch.setText("DEL-");
 
 
         btnSearch = findViewById(R.id.btnSearch);
@@ -161,7 +164,7 @@ public class cview_Delivery extends AppCompatActivity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editTextSearch = findViewById(R.id.editTextSearch);
+                //editTextSearch = findViewById(R.id.editTextSearch);
                 String searchvalue = editTextSearch.getText().toString();
 
                 if(searchvalue.isEmpty())
