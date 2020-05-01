@@ -33,14 +33,14 @@ public class Admin_Panel extends AppCompatActivity {
         buttonfeed = findViewById(R.id.buttonfeed);
 
         Intent intent = getIntent();
-        username= intent.getStringExtra("contacNo");
+        username= intent.getStringExtra("contactNo");
 
 
         buttoncust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Admin_Panel.this, AdminCustomer.class);
-                intent.putExtra("contacNo",username);
+                intent.putExtra("contactNo",username);
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class Admin_Panel extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Admin_Panel.this, Admin.class);
-                intent.putExtra("contacNo",username);
+                intent.putExtra("contactNo",username);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class Admin_Panel extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Admin_Panel.this, AdminCustomer.class);
-                intent.putExtra("contacNo",username);
+                intent.putExtra("contactNo",username);
                 startActivity(intent);
             }
         });
@@ -64,7 +64,7 @@ public class Admin_Panel extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Admin_Panel.this, Delivery_Admin.class);
-                intent.putExtra("contacNo",username);
+                intent.putExtra("contactNo",username);
                 startActivity(intent);
             }
         });
@@ -72,7 +72,7 @@ public class Admin_Panel extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Admin_Panel.this, ListAllContact.class);
-                intent.putExtra("contacNo",username);
+                intent.putExtra("contactNo",username);
                 startActivity(intent);
             }
         });
