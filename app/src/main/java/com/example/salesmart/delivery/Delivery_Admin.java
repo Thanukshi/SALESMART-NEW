@@ -45,6 +45,7 @@ public class Delivery_Admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Delivery_Admin.this, ListAll.class);
+                intent.putExtra("username", username);
                 startActivity(intent);
             }
         });
