@@ -21,7 +21,7 @@ public class Delivery_Admin extends AppCompatActivity {
         buttonListAll = findViewById(R.id.buttonListAll);
         home = findViewById(R.id.button4);
         final Bundle extras = getIntent().getExtras();
-        final String username = extras.getString("username");
+        final String username = extras.getString("contacNo");
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
