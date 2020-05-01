@@ -190,7 +190,7 @@ public class cview_Delivery extends AppCompatActivity {
 
 
                                 if(!del.getCustomername().isEmpty()){
-                                    editTextSearch.setText("");
+                                    editTextSearch.setText("DEL-");
                                 }
 
                             }
